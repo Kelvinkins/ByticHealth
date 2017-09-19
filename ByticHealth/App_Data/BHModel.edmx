@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BHDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Billee">
+          <Key>
+            <PropertyRef Name="BilleeID" />
+          </Key>
+          <Property Name="BilleeID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsPatient" Type="bit" />
+          <Property Name="IsCoveredByInsurance" Type="bit" />
+          <Property Name="PrimaryInsuranceID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="SecondaryInsuranceID" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Employer">
+          <Key>
+            <PropertyRef Name="EmployerID" />
+          </Key>
+          <Property Name="EmployerID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="PatNum" />
+          </Key>
+          <Property Name="PatNum" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="int" />
+          <Property Name="IsLegalName" Type="bit" />
+          <Property Name="LegalName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="SSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployerID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Referral" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReferredByDoctor" Type="bit" />
+          <Property Name="BilleeID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PrimaryInsuranceID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="OtherPrimaryInsurance" Type="nvarchar" MaxLength="50" />
+          <Property Name="SecondaryInsuranceID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="RelativeID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Signature" Type="image" />
+          <Property Name="PassportPhoto" Type="image" />
+          <Property Name="Barcode" Type="image" />
+          <Property Name="StaffID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="StaffCategoryID" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="PrimaryInsurance">
+          <Key>
+            <PropertyRef Name="PrimaryInsuranceID" />
+          </Key>
+          <Property Name="PrimaryInsuranceID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="InsuranceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubscriberName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubscriberSSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="GroupNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="GroupPolicy" Type="nvarchar" MaxLength="50" />
+          <Property Name="Copayment" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Relative">
+          <Key>
+            <PropertyRef Name="RelativeID" />
+          </Key>
+          <Property Name="RelativeID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="RelationshipToPatient" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomePhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="WorkPhoneNo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SecondaryInsurance">
+          <Key>
+            <PropertyRef Name="SecondaryInsuranceID" />
+          </Key>
+          <Property Name="SecondaryInsuranceID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="InsuranceName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubscriberName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="GroupNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PolicyNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="RelationshipToPatient" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="StaffID" />
+          </Key>
+          <Property Name="StaffID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="HomeAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="emailAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="StaffCategoryCode" Type="int" />
+        </EntityType>
+        <Association Name="FK_Billee_ToPrimaryInsurance">
+          <End Role="PrimaryInsurance" Type="Self.PrimaryInsurance" Multiplicity="0..1" />
+          <End Role="Billee" Type="Self.Billee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrimaryInsurance">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Billee">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Billee_ToSecondaryInsurance">
+          <End Role="SecondaryInsurance" Type="Self.SecondaryInsurance" Multiplicity="0..1" />
+          <End Role="Billee" Type="Self.Billee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecondaryInsurance">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Billee">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_Billee">
+          <End Role="Billee" Type="Self.Billee" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Billee">
+              <PropertyRef Name="BilleeID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="BilleeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToEmployer">
+          <End Role="Employer" Type="Self.Employer" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employer">
+              <PropertyRef Name="EmployerID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="EmployerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToPrimaryInsurance">
+          <End Role="PrimaryInsurance" Type="Self.PrimaryInsurance" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrimaryInsurance">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToRelative">
+          <End Role="Relative" Type="Self.Relative" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relative">
+              <PropertyRef Name="RelativeID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="RelativeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToSecondaryInsurance">
+          <End Role="SecondaryInsurance" Type="Self.SecondaryInsurance" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecondaryInsurance">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BHDBModelStoreContainer">
+          <EntitySet Name="Billee" EntityType="Self.Billee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employer" EntityType="Self.Employer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrimaryInsurance" EntityType="Self.PrimaryInsurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Relative" EntityType="Self.Relative" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SecondaryInsurance" EntityType="Self.SecondaryInsurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Billee_ToPrimaryInsurance" Association="Self.FK_Billee_ToPrimaryInsurance">
+            <End Role="PrimaryInsurance" EntitySet="PrimaryInsurance" />
+            <End Role="Billee" EntitySet="Billee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Billee_ToSecondaryInsurance" Association="Self.FK_Billee_ToSecondaryInsurance">
+            <End Role="SecondaryInsurance" EntitySet="SecondaryInsurance" />
+            <End Role="Billee" EntitySet="Billee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_Billee" Association="Self.FK_Patient_Billee">
+            <End Role="Billee" EntitySet="Billee" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToEmployer" Association="Self.FK_Patient_ToEmployer">
+            <End Role="Employer" EntitySet="Employer" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToPrimaryInsurance" Association="Self.FK_Patient_ToPrimaryInsurance">
+            <End Role="PrimaryInsurance" EntitySet="PrimaryInsurance" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToRelative" Association="Self.FK_Patient_ToRelative">
+            <End Role="Relative" EntitySet="Relative" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToSecondaryInsurance" Association="Self.FK_Patient_ToSecondaryInsurance">
+            <End Role="SecondaryInsurance" EntitySet="SecondaryInsurance" />
+            <End Role="Patient" EntitySet="Patient" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BHDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Billee">
+          <Key>
+            <PropertyRef Name="BilleeID" />
+          </Key>
+          <Property Name="BilleeID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsPatient" Type="Boolean" />
+          <Property Name="IsCoveredByInsurance" Type="Boolean" />
+          <Property Name="PrimaryInsuranceID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SecondaryInsuranceID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="PrimaryInsurance" Relationship="Self.FK_Billee_ToPrimaryInsurance" FromRole="Billee" ToRole="PrimaryInsurance" />
+          <NavigationProperty Name="SecondaryInsurance" Relationship="Self.FK_Billee_ToSecondaryInsurance" FromRole="Billee" ToRole="SecondaryInsurance" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_Billee" FromRole="Billee" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Employer">
+          <Key>
+            <PropertyRef Name="EmployerID" />
+          </Key>
+          <Property Name="EmployerID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_ToEmployer" FromRole="Employer" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="PatNum" />
+          </Key>
+          <Property Name="PatNum" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaritalStatus" Type="Int32" />
+          <Property Name="IsLegalName" Type="Boolean" />
+          <Property Name="LegalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FormerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="SSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployerID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Referral" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReferredByDoctor" Type="Boolean" />
+          <Property Name="BilleeID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PrimaryInsuranceID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="OtherPrimaryInsurance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SecondaryInsuranceID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="RelativeID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Signature" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PassportPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Barcode" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="StaffID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="StaffCategoryID" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Billee" Relationship="Self.FK_Patient_Billee" FromRole="Patient" ToRole="Billee" />
+          <NavigationProperty Name="Employer" Relationship="Self.FK_Patient_ToEmployer" FromRole="Patient" ToRole="Employer" />
+          <NavigationProperty Name="PrimaryInsurance" Relationship="Self.FK_Patient_ToPrimaryInsurance" FromRole="Patient" ToRole="PrimaryInsurance" />
+          <NavigationProperty Name="Relative" Relationship="Self.FK_Patient_ToRelative" FromRole="Patient" ToRole="Relative" />
+          <NavigationProperty Name="SecondaryInsurance" Relationship="Self.FK_Patient_ToSecondaryInsurance" FromRole="Patient" ToRole="SecondaryInsurance" />
+        </EntityType>
+        <EntityType Name="PrimaryInsurance">
+          <Key>
+            <PropertyRef Name="PrimaryInsuranceID" />
+          </Key>
+          <Property Name="PrimaryInsuranceID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="InsuranceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriberName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriberSSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="GroupNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GroupPolicy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Copayment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Billees" Relationship="Self.FK_Billee_ToPrimaryInsurance" FromRole="PrimaryInsurance" ToRole="Billee" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_ToPrimaryInsurance" FromRole="PrimaryInsurance" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Relative">
+          <Key>
+            <PropertyRef Name="RelativeID" />
+          </Key>
+          <Property Name="RelativeID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RelationshipToPatient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkPhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_ToRelative" FromRole="Relative" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="SecondaryInsurance">
+          <Key>
+            <PropertyRef Name="SecondaryInsuranceID" />
+          </Key>
+          <Property Name="SecondaryInsuranceID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="InsuranceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubscriberName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="GroupNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RelationshipToPatient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Billees" Relationship="Self.FK_Billee_ToSecondaryInsurance" FromRole="SecondaryInsurance" ToRole="Billee" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patient_ToSecondaryInsurance" FromRole="SecondaryInsurance" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="StaffID" />
+          </Key>
+          <Property Name="StaffID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HomeAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="emailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StaffCategoryCode" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_Billee_ToPrimaryInsurance">
+          <End Role="PrimaryInsurance" Type="Self.PrimaryInsurance" Multiplicity="0..1" />
+          <End Role="Billee" Type="Self.Billee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrimaryInsurance">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Billee">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Billee_ToSecondaryInsurance">
+          <End Role="SecondaryInsurance" Type="Self.SecondaryInsurance" Multiplicity="0..1" />
+          <End Role="Billee" Type="Self.Billee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecondaryInsurance">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Billee">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_Billee">
+          <End Role="Billee" Type="Self.Billee" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Billee">
+              <PropertyRef Name="BilleeID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="BilleeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToEmployer">
+          <End Role="Employer" Type="Self.Employer" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employer">
+              <PropertyRef Name="EmployerID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="EmployerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToPrimaryInsurance">
+          <End Role="PrimaryInsurance" Type="Self.PrimaryInsurance" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrimaryInsurance">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="PrimaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToRelative">
+          <End Role="Relative" Type="Self.Relative" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relative">
+              <PropertyRef Name="RelativeID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="RelativeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Patient_ToSecondaryInsurance">
+          <End Role="SecondaryInsurance" Type="Self.SecondaryInsurance" Multiplicity="0..1" />
+          <End Role="Patient" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecondaryInsurance">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Principal>
+            <Dependent Role="Patient">
+              <PropertyRef Name="SecondaryInsuranceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BHDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Billees" EntityType="Self.Billee" />
+          <EntitySet Name="Employers" EntityType="Self.Employer" />
+          <EntitySet Name="Patients" EntityType="Self.Patient" />
+          <EntitySet Name="PrimaryInsurances" EntityType="Self.PrimaryInsurance" />
+          <EntitySet Name="Relatives" EntityType="Self.Relative" />
+          <EntitySet Name="SecondaryInsurances" EntityType="Self.SecondaryInsurance" />
+          <EntitySet Name="Staffs" EntityType="Self.Staff" />
+          <AssociationSet Name="FK_Billee_ToPrimaryInsurance" Association="Self.FK_Billee_ToPrimaryInsurance">
+            <End Role="PrimaryInsurance" EntitySet="PrimaryInsurances" />
+            <End Role="Billee" EntitySet="Billees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Billee_ToSecondaryInsurance" Association="Self.FK_Billee_ToSecondaryInsurance">
+            <End Role="SecondaryInsurance" EntitySet="SecondaryInsurances" />
+            <End Role="Billee" EntitySet="Billees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_Billee" Association="Self.FK_Patient_Billee">
+            <End Role="Billee" EntitySet="Billees" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToEmployer" Association="Self.FK_Patient_ToEmployer">
+            <End Role="Employer" EntitySet="Employers" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToPrimaryInsurance" Association="Self.FK_Patient_ToPrimaryInsurance">
+            <End Role="PrimaryInsurance" EntitySet="PrimaryInsurances" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToRelative" Association="Self.FK_Patient_ToRelative">
+            <End Role="Relative" EntitySet="Relatives" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patient_ToSecondaryInsurance" Association="Self.FK_Patient_ToSecondaryInsurance">
+            <End Role="SecondaryInsurance" EntitySet="SecondaryInsurances" />
+            <End Role="Patient" EntitySet="Patients" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BHDBModelStoreContainer" CdmEntityContainer="BHDBEntities">
+          <EntitySetMapping Name="Billees">
+            <EntityTypeMapping TypeName="BHDBModel.Billee">
+              <MappingFragment StoreEntitySet="Billee">
+                <ScalarProperty Name="BilleeID" ColumnName="BilleeID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="IsPatient" ColumnName="IsPatient" />
+                <ScalarProperty Name="IsCoveredByInsurance" ColumnName="IsCoveredByInsurance" />
+                <ScalarProperty Name="PrimaryInsuranceID" ColumnName="PrimaryInsuranceID" />
+                <ScalarProperty Name="SecondaryInsuranceID" ColumnName="SecondaryInsuranceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employers">
+            <EntityTypeMapping TypeName="BHDBModel.Employer">
+              <MappingFragment StoreEntitySet="Employer">
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Patients">
+            <EntityTypeMapping TypeName="BHDBModel.Patient">
+              <MappingFragment StoreEntitySet="Patient">
+                <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="IsLegalName" ColumnName="IsLegalName" />
+                <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+                <ScalarProperty Name="FormerName" ColumnName="FormerName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="Referral" ColumnName="Referral" />
+                <ScalarProperty Name="ReferredByDoctor" ColumnName="ReferredByDoctor" />
+                <ScalarProperty Name="BilleeID" ColumnName="BilleeID" />
+                <ScalarProperty Name="PrimaryInsuranceID" ColumnName="PrimaryInsuranceID" />
+                <ScalarProperty Name="OtherPrimaryInsurance" ColumnName="OtherPrimaryInsurance" />
+                <ScalarProperty Name="SecondaryInsuranceID" ColumnName="SecondaryInsuranceID" />
+                <ScalarProperty Name="RelativeID" ColumnName="RelativeID" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="PassportPhoto" ColumnName="PassportPhoto" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+                <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+                <ScalarProperty Name="StaffCategoryID" ColumnName="StaffCategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrimaryInsurances">
+            <EntityTypeMapping TypeName="BHDBModel.PrimaryInsurance">
+              <MappingFragment StoreEntitySet="PrimaryInsurance">
+                <ScalarProperty Name="PrimaryInsuranceID" ColumnName="PrimaryInsuranceID" />
+                <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+                <ScalarProperty Name="SubscriberName" ColumnName="SubscriberName" />
+                <ScalarProperty Name="SubscriberSSN" ColumnName="SubscriberSSN" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="GroupNo" ColumnName="GroupNo" />
+                <ScalarProperty Name="GroupPolicy" ColumnName="GroupPolicy" />
+                <ScalarProperty Name="Copayment" ColumnName="Copayment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Relatives">
+            <EntityTypeMapping TypeName="BHDBModel.Relative">
+              <MappingFragment StoreEntitySet="Relative">
+                <ScalarProperty Name="RelativeID" ColumnName="RelativeID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="RelationshipToPatient" ColumnName="RelationshipToPatient" />
+                <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+                <ScalarProperty Name="WorkPhoneNo" ColumnName="WorkPhoneNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SecondaryInsurances">
+            <EntityTypeMapping TypeName="BHDBModel.SecondaryInsurance">
+              <MappingFragment StoreEntitySet="SecondaryInsurance">
+                <ScalarProperty Name="SecondaryInsuranceID" ColumnName="SecondaryInsuranceID" />
+                <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+                <ScalarProperty Name="SubscriberName" ColumnName="SubscriberName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="GroupNo" ColumnName="GroupNo" />
+                <ScalarProperty Name="PolicyNo" ColumnName="PolicyNo" />
+                <ScalarProperty Name="RelationshipToPatient" ColumnName="RelationshipToPatient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staffs">
+            <EntityTypeMapping TypeName="BHDBModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+                <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+                <ScalarProperty Name="StaffCategoryCode" ColumnName="StaffCategoryCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
