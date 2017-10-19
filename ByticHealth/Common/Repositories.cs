@@ -5,82 +5,83 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ByticHealth.Common
 {
     class Repositories
     {
-        BHDBEntities db = new BHDBEntities();
-        public int AddPatient(Patient patient, PrimaryInsurance insurance, SecondaryInsurance secInsurance,Employer employer, Relative relative, Billee billee)
+        BHModel db = new BHModel();
+        public Patient AddPatient(Patient patient)
         {
-            int statusCode = 0;
-
-            var bill = new Billee
-            {
-                Fullname = billee.Fullname,
-                DateOfBirth = billee.DateOfBirth,
-                Address = billee.Address,
-                BilleeID = billee.BilleeID,
-                HomePhone = billee.HomePhone,
-                IsCoveredByInsurance = billee.IsCoveredByInsurance,
-                IsPatient = billee.IsPatient
-
+            #region Commented out
+            //var bill = new Billee
+            //{
+            //    Fullname = billee.Fullname,
+            //    DateOfBirth = billee.DateOfBirth,
+            //    Address = billee.Address,
+            //    BilleeID = billee.BilleeID,
+            //    HomePhone = billee.HomePhone,
+            //    IsCoveredByInsurance = billee.IsCoveredByInsurance,
+            //    IsPatient = billee.IsPatient
 
 
-            };
 
-            var emp = new Employer
-            {
-                EmployerID = employer.EmployerID,
-                Fullname = employer.Fullname,
-                PhoneNo = employer.PhoneNo
-            };
-            db.Employers.Add(emp);
+            //};
+            //db.Billees.Add(bill);
+            //var emp = new Employer
+            //{
+            //    EmployerID = employer.EmployerID,
+            //    Fullname = employer.Fullname,
+            //    PhoneNo = employer.PhoneNo
+            //};
+            //db.Employers.Add(emp);
 
-            var rel = new Relative
-            {
-                Fullname = relative.Fullname,
-                HomePhoneNo = relative.HomePhoneNo,
-                RelationshipToPatient = relative.RelationshipToPatient,
-                RelativeID = relative.RelativeID,
-                WorkPhoneNo = relative.WorkPhoneNo
-            };
-            db.Relatives.Add(rel);
+            //var rel = new Relative
+            //{
+            //    Fullname = relative.Fullname,
+            //    HomePhoneNo = relative.HomePhoneNo,
+            //    RelationshipToPatient = relative.RelationshipToPatient,
+            //    RelativeID = relative.RelativeID,
+            //    WorkPhoneNo = relative.WorkPhoneNo
+            //};
+            //db.Relatives.Add(rel);
 
 
-            var secondInsurance = new SecondaryInsurance
-            {
-                InsuranceName = secInsurance.InsuranceName,
-                DateOfBirth = secInsurance.DateOfBirth,
-                GroupNo = insurance.GroupNo,
-                SecondaryInsuranceID = secInsurance.SecondaryInsuranceID,
-                SubscriberName = secInsurance.SubscriberName,
-                PolicyNo = secInsurance.PolicyNo
-            };
-            db.SecondaryInsurances.Add(secondInsurance);
+            //var secondInsurance = new SecondaryInsurance
+            //{
+            //    InsuranceName = secInsurance.InsuranceName,
+            //    DateOfBirth = secInsurance.DateOfBirth,
+            //    GroupNo = insurance.GroupNo,
+            //    SecondaryInsuranceID = secInsurance.SecondaryInsuranceID,
+            //    SubscriberName = secInsurance.SubscriberName,
+            //    PolicyNo = secInsurance.PolicyNo
+            //};
+            //db.SecondaryInsurances.Add(secondInsurance);
 
-            var primaryInsurance = new PrimaryInsurance
-            {
-                InsuranceName = insurance.InsuranceName,
-                Copayment = insurance.Copayment,
-                DateOfBirth = insurance.DateOfBirth,
-                GroupNo = insurance.GroupNo,
-                GroupPolicy = insurance.GroupPolicy,
-                PrimaryInsuranceID = insurance.PrimaryInsuranceID,
-                SubscriberName = insurance.SubscriberName,
-                SubscriberSSN = insurance.SubscriberSSN
+            //var primaryInsurance = new PrimaryInsurance
+            //{
+            //    InsuranceName = insurance.InsuranceName,
+            //    Copayment = insurance.Copayment,
+            //    DateOfBirth = insurance.DateOfBirth,
+            //    GroupNo = insurance.GroupNo,
+            //    GroupPolicy = insurance.GroupPolicy,
+            //    PrimaryInsuranceID = insurance.PrimaryInsuranceID,
+            //    SubscriberName = insurance.SubscriberName,
+            //    SubscriberSSN = insurance.SubscriberSSN
 
-            };
-            db.PrimaryInsurances.Add(primaryInsurance);
+            //};
+            //db.PrimaryInsurances.Add(primaryInsurance);
+            ////try
+            ////{
+            //    if (db.SaveChanges() > 4)
+            //    {
 
-            if (db.SaveChanges() > 4)
-            {
+            //        bill.PrimaryInsuranceID = primaryInsurance.PrimaryInsuranceID;
+            //        bill.SecondaryInsuranceID = secInsurance.SecondaryInsuranceID;
 
-                bill.PrimaryInsuranceID = primaryInsurance.PrimaryInsuranceID;
-                bill.SecondaryInsuranceID = secInsurance.SecondaryInsuranceID;
-            
-              
-                    var pat = new Patient
+            #endregion 
+            var pat = new Patient
                     {
                         PatNum = patient.PatNum,
                         FirstName = patient.FirstName,
@@ -100,30 +101,33 @@ namespace ByticHealth.Common
                         ReferredByDoctor = patient.ReferredByDoctor,
                         SSN = patient.SSN,
                         StaffCategoryID = patient.StaffCategoryID,
-                        StaffID=patient.StaffID,
-                        EmployerID = emp.EmployerID,
-                        RelativeID=relative.RelativeID,
-                        PrimaryInsuranceID=primaryInsurance.PrimaryInsuranceID,
-                        SecondaryInsuranceID=secondInsurance.SecondaryInsuranceID,
-                        PassportPhoto=patient.PassportPhoto,
-                        Signature=patient.Signature
+                        StaffID = patient.StaffID,
+                        //EmployerID = emp.EmployerID,
+                        //RelativeID = relative.RelativeID,
+                        //PrimaryInsuranceID = primaryInsurance.PrimaryInsuranceID,
+                        //SecondaryInsuranceID = secondInsurance.SecondaryInsuranceID,
+                        PassportPhoto = patient.PassportPhoto,
+                        Signature = patient.Signature
                     };
 
-                db.Patients.Add(pat);
-                statusCode=db.SaveChanges();
-                
+                    db.Patients.Add(pat);
+                     db.SaveChanges();
+
+                       return pat;
             }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error saving patient record. Details: " + ex.Message);
+            //    return statusCode;
 
-
-
-
-            return statusCode;
+            //}
         }
     }
 
 
     class CommonCode
     {
+    BHModel db = new BHModel();
 
         public static byte[] converterTo(Image x)
         {
@@ -134,5 +138,106 @@ namespace ByticHealth.Common
     }
 
 
+    class Computation
+    {
+       static BHModel db = new BHModel();
+
+       
+        //public static int ComputeID<T>(T obj, int id)
+        //{
+        //    foreach (var prop in typeof(T).GetProperties())
+        //    {
+        //        var temp = temp.Replace("{" + prop.Name + "}", prop.GetValue(obj));
+        //    }
+        //    return temp;
+
+
+        //    return 0;
+        //}
+
+        public static int GetPatientID(int id)
+        {
+            int Id = db.Patients.Count();
+
+            return Id+id;
+        }
+        public static int GetEmployerID(int id)
+        {
+            int Id = db.Employers.Count();
+            return Id+id;
+        }
+
+        public static int GetRelativeID(int id)
+        {
+            int Id = db.Relatives.Count();
+            return Id + id;
+        }
+        public static int GetPrimaryInsuranceID(int id)
+        {
+        int Id = db.PrimaryInsurances.Count();
+            return Id + id;
+        }
+        public static int GetSecondaryInsuranceID(int id)
+        {
+            int Id = db.SecondaryInsurances.Count();
+            return Id + id;
+        }
+        public static int GetBilleeID(int id)
+        {
+            int Id = db.Billees.Count();
+            return Id + id;
+        }
+        public static int GetStaffD(int id)
+        {
+            int Id = db.Staffs.Count();
+            return Id + id;
+        }
+    public static int GetPastHistoryID(int id)
+    {
+        int Id = db.PastMedicalHistories.Count();
+        return Id + id;
+    }
+    public static int GetCurMedID(int id)
+    {
+        int Id = db.CurrentMedications.Count();
+        return Id + id;
+    }
+    public static int GetDrugAllerg(int id)
+    {
+        int Id = db.DrugAllergies.Count();
+        return Id + id;
+    }
+
+    public static int GetFamilyHistoryID(int id)
+    {
+        int Id = db.FamilyHistories.Count();
+        return Id + id;
+    }
+
+
+    public static int GetFamilyPsychiaPromblemID(int id)
+    {
+        int Id = db.FamilyPsychiaPromblems.Count();
+        return Id + id;
+    }
+
+    public static int GetPatientSystemReviewID(int id)
+    {
+        int Id = db.PatientSystemReviews.Count();
+        return Id + id;
+    }
+    public static int GetSystemReviewListID(int id)
+    {
+        int Id = db.SystemReviewLists.Count();
+        return Id + id;
+    }
+    public static int GetGetDrugCategoryID(int id)
+    {
+        int Id = db.DrugCategories.Count();
+        return Id + id;
+    }
+    
 
 }
+
+

@@ -130,11 +130,20 @@
   <data name="Align Right_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Align Right_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="legal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\legal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="number" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\number.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Increase Indent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Increase Indent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blank-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="list" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -147,6 +156,9 @@
   </data>
   <data name="narrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\narrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="size" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\size.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="align_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\align_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +175,9 @@
   <data name="ShrinkFont16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShrinkFont16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="changecas (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\changecas (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Align Center" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Align Center.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,17 +187,20 @@
   <data name="Shape-Square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Shape-Square.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rightndent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightndent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="list 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="oie_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oie_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FontColor16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FontColor16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Print" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FormatPainter16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormatPainter16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +210,9 @@
   </data>
   <data name="alpha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alpha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="incindent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\incindent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +235,8 @@
   <data name="Italic16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Italic16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="oie_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oie_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pictureflat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pictureflat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,6 +250,9 @@
   <data name="Paste32flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paste32flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="medBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\medBackground1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Bold16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bold16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -240,6 +264,9 @@
   </data>
   <data name="Align Center_011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Align Center_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="letter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\letter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="spec" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\spec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +280,14 @@
   <data name="GrowFont16flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GrowFont16flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="decindent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\decindent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Align Center_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Align Center_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabloid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabloid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="align_left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\align_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,34 +295,7 @@
   <data name="resume" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resume.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blank-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="changecas (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\changecas (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="decindent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\decindent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="incindent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\incindent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="legal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\legal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="letter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\letter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rightndent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rightndent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="size" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\size.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tabloid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tabloid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\MedIcon\placeholder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

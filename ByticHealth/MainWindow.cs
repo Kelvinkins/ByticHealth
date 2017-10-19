@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ByticHealth
 {
-    public partial class MainWindow : Form
+    public  partial class MainWindow : Form
     {
         private int childFormNumber = 0;
 
@@ -27,7 +27,7 @@ namespace ByticHealth
             //childForm.MdiParent = this;
             //childForm.Text = "Window " + childFormNumber++;
             //childForm.Show();
-
+            uscPatientRegistration.PatNum = 0;
             frmPatRegistration frm = new frmPatRegistration();         
             frm.MdiParent = this;
             frm.AutoScroll = true;
@@ -116,6 +116,12 @@ namespace ByticHealth
             //frm.Text = "DASHBOARD";
             //frm.WindowState = FormWindowState.Maximized;
             //frm.Show();
+        }
+
+        private void printPreviewToolStripButton_Click(object sender, EventArgs e)
+        {
+            Find frm = new Find();
+            frm.ShowDialog();
         }
     }
 }

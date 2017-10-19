@@ -8,7 +8,8 @@ namespace ByticHealth.Enumerations
 {
     enum enumStaffCategory
     {
-        Doctor=1,
+        NA = 0,
+        Doctor = 1,
         Nurse=2,
         Pharmacy=3,
         Reception=4,
@@ -18,26 +19,30 @@ namespace ByticHealth.Enumerations
 
     enum enumMaritalStatus
     {
-        Single=1,
+        NA = 0,
+        Single = 1,
         Married=2,
         Divorced=3,
         Widowed=4
     }
     enum enumSex
     {
+        NA=0,
         Male=1,
         Female=2,
         Unknown=3
     }
     enum enumPatientType
     {
-        InPatient=1,
+        NA = 0,
+        InPatient = 1,
         OutPatient2
     }
 
     enum enumRelationType
     {
-        Mother=1,
+        NA = 0,
+        Mother = 1,
         Father=2,
         Child=3,
         Uncle=4,
