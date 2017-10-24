@@ -236,8 +236,24 @@ namespace ByticHealth.Common
         int Id = db.DrugCategories.Count();
         return Id + id;
     }
-    
 
+    public static int GetBillID(int id)
+    {
+        int Id = db.Bills.Count();
+        return Id + id;
+    }
+
+    public static int GetBillDetailID(int id)
+    {
+        int Id = db.BillDetails.Count();
+        return Id + id;
+    }
+
+    public static int GetPatientVitalID(int id)
+    {
+        int Id = db.PatientVitals.Count();
+        return Id + id;
+    }
 }
 
 

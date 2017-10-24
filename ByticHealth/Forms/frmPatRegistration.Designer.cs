@@ -30,29 +30,45 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePatientBio = new System.Windows.Forms.TabPage();
+            this.tabPagePatientHistory = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPageRelative = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPagePatientVitals = new System.Windows.Forms.TabPage();
+            this.tabPagePatientBill = new System.Windows.Forms.TabPage();
+            this.splitContainerPatientBills = new System.Windows.Forms.SplitContainer();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.Diagnosis = new System.Windows.Forms.TabPage();
             this.Prescriptions = new System.Windows.Forms.TabPage();
             this.Insurance = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.tabPagePatientHistory = new System.Windows.Forms.TabPage();
             this.uscInsuranceInfo1 = new ByticHealth.UserControls.uscInsuranceInfo();
+            this.splitContainerPatientVital = new System.Windows.Forms.SplitContainer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.Insurance.SuspendLayout();
+            this.tabPagePatientHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPagePatientHistory.SuspendLayout();
+            this.tabPagePatientVitals.SuspendLayout();
+            this.tabPagePatientBill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientBills)).BeginInit();
+            this.splitContainerPatientBills.Panel1.SuspendLayout();
+            this.splitContainerPatientBills.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.Insurance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientVital)).BeginInit();
+            this.splitContainerPatientVital.Panel1.SuspendLayout();
+            this.splitContainerPatientVital.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,8 +78,8 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPageRelative);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPagePatientVitals);
+            this.tabControl1.Controls.Add(this.tabPagePatientBill);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage10);
@@ -89,6 +105,50 @@
             this.tabPagePatientBio.TabIndex = 0;
             this.tabPagePatientBio.Text = "Patient\'s Bio Data";
             this.tabPagePatientBio.UseVisualStyleBackColor = true;
+            // 
+            // tabPagePatientHistory
+            // 
+            this.tabPagePatientHistory.Controls.Add(this.splitContainer1);
+            this.tabPagePatientHistory.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatientHistory.Name = "tabPagePatientHistory";
+            this.tabPagePatientHistory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePatientHistory.Size = new System.Drawing.Size(1031, 582);
+            this.tabPagePatientHistory.TabIndex = 1;
+            this.tabPagePatientHistory.Text = "Medical History";
+            this.tabPagePatientHistory.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.panel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1025, 576);
+            this.splitContainer1.SplitterDistance = 30;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.Label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1025, 30);
+            this.panel1.TabIndex = 13;
+            // 
+            // Label1
+            // 
+            this.Label1.Location = new System.Drawing.Point(361, 3);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(150, 13);
+            this.Label1.TabIndex = 3;
+            this.Label1.Text = "MEDICAL HISTORY";
             // 
             // tabPage3
             // 
@@ -117,23 +177,58 @@
             this.tabPage5.Text = "Dependants";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage9
+            // tabPagePatientVitals
             // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1031, 582);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "Vitals";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.tabPagePatientVitals.Controls.Add(this.splitContainerPatientVital);
+            this.tabPagePatientVitals.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatientVitals.Name = "tabPagePatientVitals";
+            this.tabPagePatientVitals.Size = new System.Drawing.Size(1031, 582);
+            this.tabPagePatientVitals.TabIndex = 8;
+            this.tabPagePatientVitals.Text = "Vitals";
+            this.tabPagePatientVitals.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // tabPagePatientBill
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1031, 582);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Bills";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPagePatientBill.Controls.Add(this.splitContainerPatientBills);
+            this.tabPagePatientBill.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatientBill.Name = "tabPagePatientBill";
+            this.tabPagePatientBill.Size = new System.Drawing.Size(1031, 582);
+            this.tabPagePatientBill.TabIndex = 5;
+            this.tabPagePatientBill.Text = "Bills";
+            this.tabPagePatientBill.UseVisualStyleBackColor = true;
+            // 
+            // splitContainerPatientBills
+            // 
+            this.splitContainerPatientBills.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerPatientBills.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerPatientBills.Name = "splitContainerPatientBills";
+            this.splitContainerPatientBills.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerPatientBills.Panel1
+            // 
+            this.splitContainerPatientBills.Panel1.Controls.Add(this.panel2);
+            this.splitContainerPatientBills.Size = new System.Drawing.Size(1031, 582);
+            this.splitContainerPatientBills.SplitterDistance = 30;
+            this.splitContainerPatientBills.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1031, 30);
+            this.panel2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(361, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "PATIENT BILLS";
             // 
             // tabPage7
             // 
@@ -192,50 +287,6 @@
             this.Insurance.Text = "Insurance";
             this.Insurance.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1025, 576);
-            this.splitContainer1.SplitterDistance = 30;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.Label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1025, 30);
-            this.panel1.TabIndex = 13;
-            // 
-            // Label1
-            // 
-            this.Label1.Location = new System.Drawing.Point(361, 3);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(150, 13);
-            this.Label1.TabIndex = 3;
-            this.Label1.Text = "MEDICAL HISTORY";
-            // 
-            // tabPagePatientHistory
-            // 
-            this.tabPagePatientHistory.Controls.Add(this.splitContainer1);
-            this.tabPagePatientHistory.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePatientHistory.Name = "tabPagePatientHistory";
-            this.tabPagePatientHistory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePatientHistory.Size = new System.Drawing.Size(1031, 582);
-            this.tabPagePatientHistory.TabIndex = 1;
-            this.tabPagePatientHistory.Text = "Medical History";
-            this.tabPagePatientHistory.UseVisualStyleBackColor = true;
-            // 
             // uscInsuranceInfo1
             // 
             this.uscInsuranceInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -243,6 +294,39 @@
             this.uscInsuranceInfo1.Name = "uscInsuranceInfo1";
             this.uscInsuranceInfo1.Size = new System.Drawing.Size(1025, 576);
             this.uscInsuranceInfo1.TabIndex = 0;
+            // 
+            // splitContainerPatientVital
+            // 
+            this.splitContainerPatientVital.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerPatientVital.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerPatientVital.Name = "splitContainerPatientVital";
+            this.splitContainerPatientVital.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerPatientVital.Panel1
+            // 
+            this.splitContainerPatientVital.Panel1.Controls.Add(this.panel3);
+            this.splitContainerPatientVital.Size = new System.Drawing.Size(1031, 582);
+            this.splitContainerPatientVital.SplitterDistance = 30;
+            this.splitContainerPatientVital.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1031, 30);
+            this.panel3.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(361, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "PATIENT VITALS";
             // 
             // frmPatRegistration
             // 
@@ -256,12 +340,22 @@
             this.Text = "frmPatRegistration";
             this.Load += new System.EventHandler(this.frmPatRegistration_Load);
             this.tabControl1.ResumeLayout(false);
-            this.Insurance.ResumeLayout(false);
+            this.tabPagePatientHistory.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.tabPagePatientHistory.ResumeLayout(false);
+            this.tabPagePatientVitals.ResumeLayout(false);
+            this.tabPagePatientBill.ResumeLayout(false);
+            this.splitContainerPatientBills.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientBills)).EndInit();
+            this.splitContainerPatientBills.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.Insurance.ResumeLayout(false);
+            this.splitContainerPatientVital.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientVital)).EndInit();
+            this.splitContainerPatientVital.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,8 +365,8 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPageRelative;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPagePatientBill;
+        private System.Windows.Forms.TabPage tabPagePatientVitals;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage10;
@@ -284,6 +378,12 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.SplitContainer splitContainerPatientBills;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SplitContainer splitContainerPatientVital;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
 
         #endregion
 

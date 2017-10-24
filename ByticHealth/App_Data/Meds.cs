@@ -38,6 +38,8 @@ namespace ByticHealth.App_Data
         [ForeignKey("DrugCategoryID")]
         public virtual DrugCategory DrugCategory { get; set; }
         public int DrugCategoryID { get; set; }
+        public decimal SalePrice { get; set; }
+
     }
 
 
@@ -135,6 +137,23 @@ namespace ByticHealth.App_Data
         public int? DrugCategoryID { get; set; }
         public bool? CurrentlyUsed { get; set; }
 
+
+    }
+
+
+    public class PatientVital
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int PatientVitalID { get; set; }
+        public float BP { get; set; }
+        public float BT { get; set; }
+        public float PR { get; set; }
+        public float RR { get; set; }
+        [ForeignKey("PatNum")]
+        public virtual Patient Patient { get; set; }
+        public int PatNum { get; set; }
+        public DateTime DateTime { get; set; }
 
     }
 

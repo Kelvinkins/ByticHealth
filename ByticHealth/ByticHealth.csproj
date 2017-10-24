@@ -132,8 +132,14 @@
   <ItemGroup>
     <Compile Include="App_Data\BHModel.cs" />
     <Compile Include="App_Data\Billee.cs" />
+    <Compile Include="App_Data\Billing.cs" />
     <Compile Include="App_Data\CurrentMedication.cs" />
     <Compile Include="App_Data\C__MigrationHistory.cs" />
+    <Compile Include="App_Data\DataSet\BHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BHDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="App_Data\FamilyHistory.cs" />
     <Compile Include="App_Data\Meds.cs" />
     <Compile Include="App_Data\Employer.cs" />
@@ -168,6 +174,12 @@
     <Compile Include="Forms\frmPatRegistration.Designer.cs">
       <DependentUpon>frmPatRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmPdfToExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPdfToExcel.Designer.cs">
+      <DependentUpon>frmPdfToExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,18 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\uscBilling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscBilling.Designer.cs">
+      <DependentUpon>uscBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscBills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscBills.Designer.cs">
+      <DependentUpon>uscBills.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uscCurrentMedication.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +236,12 @@
     </Compile>
     <Compile Include="UserControls\uscInsuranceInfo.Designer.cs">
       <DependentUpon>uscInsuranceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscNewBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscNewBill.Designer.cs">
+      <DependentUpon>uscNewBill.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uscPastMedicalHistory.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +279,12 @@
     <Compile Include="UserControls\uscSubstanceUse.Designer.cs">
       <DependentUpon>uscSubstanceUse.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\uscVital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscVital.Designer.cs">
+      <DependentUpon>uscVital.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uscWomensProductiveHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPatRegistration.resx">
       <DependentUpon>frmPatRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPdfToExcel.resx">
+      <DependentUpon>frmPdfToExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -277,6 +316,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\uscBilling.resx">
+      <DependentUpon>uscBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uscBills.resx">
+      <DependentUpon>uscBills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscCurrentMedication.resx">
       <DependentUpon>uscCurrentMedication.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscInsuranceInfo.resx">
       <DependentUpon>uscInsuranceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uscNewBill.resx">
+      <DependentUpon>uscNewBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscPastMedicalHistory.resx">
       <DependentUpon>uscPastMedicalHistory.cs</DependentUpon>
@@ -310,11 +358,25 @@
     <EmbeddedResource Include="UserControls\uscSubstanceUse.resx">
       <DependentUpon>uscSubstanceUse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uscVital.resx">
+      <DependentUpon>uscVital.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscWomensProductiveHistory.resx">
       <DependentUpon>uscWomensProductiveHistory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\DataSet\BHDataSet.xsc">
+      <DependentUpon>BHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="App_Data\DataSet\BHDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BHDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\DataSet\BHDataSet.xss">
+      <DependentUpon>BHDataSet.xsd</DependentUpon>
     </None>
     <None Include="ByticHealth_1_TemporaryKey.pfx" />
     <None Include="packages.config" />

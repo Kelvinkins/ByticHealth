@@ -123,5 +123,16 @@ namespace ByticHealth
             Find frm = new Find();
             frm.ShowDialog();
         }
+
+        private void pDFEXCELToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            frmPdfToExcel frm = new frmPdfToExcel();
+            frm.MdiParent = this;
+            frm.AutoScroll = true;
+            frm.Text = "PDF TO EXCEL";
+            frm.Show();
+
+        }
     }
 }
