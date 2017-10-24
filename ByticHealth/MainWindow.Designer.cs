@@ -72,22 +72,22 @@
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.billPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allAppointmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.todaysAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newAppointmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yesterdaysAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tomorrowsAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convertersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pDFEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.convertersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pDFEXCELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -436,8 +436,8 @@
             // appointmentToolStripMenuItem
             // 
             this.appointmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allAppointmentsToolStripMenuItem,
-            this.todaysAppointmentToolStripMenuItem,
+            this.newAppointmentsToolStripMenuItem,
+            this.newAppointmentToolStripMenuItem,
             this.yesterdaysAppointmentToolStripMenuItem,
             this.tomorrowsAppointmentToolStripMenuItem});
             this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
@@ -445,17 +445,18 @@
             this.appointmentToolStripMenuItem.Text = "Appointment";
             this.appointmentToolStripMenuItem.Click += new System.EventHandler(this.appointmentToolStripMenuItem_Click);
             // 
-            // allAppointmentsToolStripMenuItem
+            // newAppointmentsToolStripMenuItem
             // 
-            this.allAppointmentsToolStripMenuItem.Name = "allAppointmentsToolStripMenuItem";
-            this.allAppointmentsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.allAppointmentsToolStripMenuItem.Text = "All Appointments";
+            this.newAppointmentsToolStripMenuItem.Name = "newAppointmentsToolStripMenuItem";
+            this.newAppointmentsToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.newAppointmentsToolStripMenuItem.Text = "New Appointment";
+            this.newAppointmentsToolStripMenuItem.Click += new System.EventHandler(this.newAppointmentsToolStripMenuItem_Click);
             // 
-            // todaysAppointmentToolStripMenuItem
+            // newAppointmentToolStripMenuItem
             // 
-            this.todaysAppointmentToolStripMenuItem.Name = "todaysAppointmentToolStripMenuItem";
-            this.todaysAppointmentToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.todaysAppointmentToolStripMenuItem.Text = "Today\'s Appointment";
+            this.newAppointmentToolStripMenuItem.Name = "newAppointmentToolStripMenuItem";
+            this.newAppointmentToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.newAppointmentToolStripMenuItem.Text = "Today\'s Appointment";
             // 
             // yesterdaysAppointmentToolStripMenuItem
             // 
@@ -483,20 +484,35 @@
             // backUpToolStripMenuItem
             // 
             this.backUpToolStripMenuItem.Name = "backUpToolStripMenuItem";
-            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.backUpToolStripMenuItem.Text = "Back up";
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // maintenanceToolStripMenuItem
             // 
             this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
-            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.maintenanceToolStripMenuItem.Text = "Maintenance";
+            // 
+            // convertersToolStripMenuItem
+            // 
+            this.convertersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pDFEXCELToolStripMenuItem});
+            this.convertersToolStripMenuItem.Name = "convertersToolStripMenuItem";
+            this.convertersToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.convertersToolStripMenuItem.Text = "Converters";
+            // 
+            // pDFEXCELToolStripMenuItem
+            // 
+            this.pDFEXCELToolStripMenuItem.Name = "pDFEXCELToolStripMenuItem";
+            this.pDFEXCELToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.pDFEXCELToolStripMenuItem.Text = "PDF-EXCEL";
+            this.pDFEXCELToolStripMenuItem.Click += new System.EventHandler(this.pDFEXCELToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -540,21 +556,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
-            // 
-            // convertersToolStripMenuItem
-            // 
-            this.convertersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pDFEXCELToolStripMenuItem});
-            this.convertersToolStripMenuItem.Name = "convertersToolStripMenuItem";
-            this.convertersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.convertersToolStripMenuItem.Text = "Converters";
-            // 
-            // pDFEXCELToolStripMenuItem
-            // 
-            this.pDFEXCELToolStripMenuItem.Name = "pDFEXCELToolStripMenuItem";
-            this.pDFEXCELToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pDFEXCELToolStripMenuItem.Text = "PDF-EXCEL";
-            this.pDFEXCELToolStripMenuItem.Click += new System.EventHandler(this.pDFEXCELToolStripMenuItem_Click);
             // 
             // newToolStripButton
             // 
@@ -854,8 +855,8 @@
         private System.Windows.Forms.ToolStripMenuItem creditNoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem invoiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem billPaymentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allAppointmentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem todaysAppointmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newAppointmentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yesterdaysAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tomorrowsAppointmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem convertersToolStripMenuItem;

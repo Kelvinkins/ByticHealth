@@ -134,5 +134,15 @@ namespace ByticHealth
             frm.Show();
 
         }
+
+        private void newAppointmentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewAppointment frm = new frmNewAppointment();
+            frm.MdiParent = this;
+            frm.AutoScroll = true;
+            frm.Text = "NEW APPOINTMENT";
+            frm.Show();
+
+        }
     }
 }

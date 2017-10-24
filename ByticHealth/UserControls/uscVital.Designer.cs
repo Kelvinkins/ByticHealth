@@ -45,12 +45,12 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.picPassport = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvVitalHistory = new System.Windows.Forms.DataGridView();
+            this.picPassport = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,13 +66,13 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPassport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVitalHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassport)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -272,16 +272,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // picPassport
-            // 
-            this.picPassport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picPassport.Location = new System.Drawing.Point(3, 16);
-            this.picPassport.Name = "picPassport";
-            this.picPassport.Size = new System.Drawing.Size(121, 95);
-            this.picPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPassport.TabIndex = 0;
-            this.picPassport.TabStop = false;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -338,6 +328,16 @@
             this.dgvVitalHistory.Size = new System.Drawing.Size(644, 178);
             this.dgvVitalHistory.TabIndex = 0;
             // 
+            // picPassport
+            // 
+            this.picPassport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picPassport.Location = new System.Drawing.Point(3, 16);
+            this.picPassport.Name = "picPassport";
+            this.picPassport.Size = new System.Drawing.Size(121, 95);
+            this.picPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPassport.TabIndex = 0;
+            this.picPassport.TabStop = false;
+            // 
             // uscVital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,13 +364,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPassport)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVitalHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassport)).EndInit();
             this.ResumeLayout(false);
 
         }
