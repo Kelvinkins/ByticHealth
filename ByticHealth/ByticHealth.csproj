@@ -161,6 +161,7 @@
       <DependentUpon>BHModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Common\Repositories.cs" />
+    <Compile Include="Enumerations\AptStatus.cs" />
     <Compile Include="Enumerations\enumStaffCategory.cs" />
     <Compile Include="Enumerations\enumSystemsReview.cs" />
     <Compile Include="Forms\Find.cs">

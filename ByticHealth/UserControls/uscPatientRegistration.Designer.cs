@@ -98,12 +98,14 @@
             this.Label52 = new System.Windows.Forms.Label();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.groupBox38 = new System.Windows.Forms.GroupBox();
+            this.picBarcode = new System.Windows.Forms.PictureBox();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnUploadThumbPrint = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
+            this.picThumbPrint = new System.Windows.Forms.PictureBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
@@ -121,8 +123,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.picSignature = new System.Windows.Forms.PictureBox();
-            this.picBarcode = new System.Windows.Forms.PictureBox();
-            this.picThumbPrint = new System.Windows.Forms.PictureBox();
             this.groupBox6.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -146,17 +146,17 @@
             this.groupBox4.SuspendLayout();
             this.groupBox33.SuspendLayout();
             this.groupBox38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBarcode)).BeginInit();
             this.groupBox36.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picThumbPrint)).BeginInit();
             this.groupBox35.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox39.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSignature)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBarcode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picThumbPrint)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox6
@@ -524,6 +524,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.Label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(3, 46);
@@ -746,6 +747,7 @@
             // 
             // Label52
             // 
+            this.Label52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Label52.Location = new System.Drawing.Point(25, 620);
             this.Label52.Name = "Label52";
             this.Label52.Size = new System.Drawing.Size(810, 53);
@@ -760,6 +762,7 @@
             this.groupBox33.Controls.Add(this.groupBox37);
             this.groupBox33.Controls.Add(this.groupBox35);
             this.groupBox33.Controls.Add(this.groupBox34);
+            this.groupBox33.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox33.Location = new System.Drawing.Point(5, 65);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(843, 176);
@@ -775,6 +778,17 @@
             this.groupBox38.TabIndex = 55;
             this.groupBox38.TabStop = false;
             this.groupBox38.Text = "Patient No. (Barcode)";
+            // 
+            // picBarcode
+            // 
+            this.picBarcode.BackColor = System.Drawing.Color.LightGray;
+            this.picBarcode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picBarcode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBarcode.Location = new System.Drawing.Point(3, 16);
+            this.picBarcode.Name = "picBarcode";
+            this.picBarcode.Size = new System.Drawing.Size(275, 106);
+            this.picBarcode.TabIndex = 46;
+            this.picBarcode.TabStop = false;
             // 
             // groupBox36
             // 
@@ -846,6 +860,18 @@
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Thumb Print";
             this.groupBox37.Visible = false;
+            // 
+            // picThumbPrint
+            // 
+            this.picThumbPrint.BackColor = System.Drawing.Color.LightGray;
+            this.picThumbPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picThumbPrint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picThumbPrint.Location = new System.Drawing.Point(3, 16);
+            this.picThumbPrint.Name = "picThumbPrint";
+            this.picThumbPrint.Size = new System.Drawing.Size(209, 109);
+            this.picThumbPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picThumbPrint.TabIndex = 46;
+            this.picThumbPrint.TabStop = false;
             // 
             // groupBox35
             // 
@@ -984,13 +1010,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 747);
+            this.panel2.Location = new System.Drawing.Point(0, 743);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(853, 34);
+            this.panel2.Size = new System.Drawing.Size(849, 34);
             this.panel2.TabIndex = 58;
             // 
             // button8
@@ -1023,6 +1050,7 @@
             // 
             // picSignature
             // 
+            this.picSignature.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picSignature.Location = new System.Drawing.Point(63, 679);
             this.picSignature.Name = "picSignature";
             this.picSignature.Size = new System.Drawing.Size(220, 50);
@@ -1030,34 +1058,12 @@
             this.picSignature.TabIndex = 52;
             this.picSignature.TabStop = false;
             // 
-            // picBarcode
-            // 
-            this.picBarcode.BackColor = System.Drawing.Color.LightGray;
-            this.picBarcode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBarcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBarcode.Location = new System.Drawing.Point(3, 16);
-            this.picBarcode.Name = "picBarcode";
-            this.picBarcode.Size = new System.Drawing.Size(275, 106);
-            this.picBarcode.TabIndex = 46;
-            this.picBarcode.TabStop = false;
-            // 
-            // picThumbPrint
-            // 
-            this.picThumbPrint.BackColor = System.Drawing.Color.LightGray;
-            this.picThumbPrint.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picThumbPrint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picThumbPrint.Location = new System.Drawing.Point(3, 16);
-            this.picThumbPrint.Name = "picThumbPrint";
-            this.picThumbPrint.Size = new System.Drawing.Size(209, 109);
-            this.picThumbPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picThumbPrint.TabIndex = 46;
-            this.picThumbPrint.TabStop = false;
-            // 
             // uscPatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox39);
             this.Controls.Add(this.picSignature);
@@ -1070,7 +1076,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "uscPatientRegistration";
-            this.Size = new System.Drawing.Size(853, 781);
+            this.Size = new System.Drawing.Size(849, 777);
             this.Load += new System.EventHandler(this.uscPatientRegistration_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
@@ -1108,17 +1114,17 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox33.ResumeLayout(false);
             this.groupBox38.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBarcode)).EndInit();
             this.groupBox36.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox37.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picThumbPrint)).EndInit();
             this.groupBox35.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox39.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSignature)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBarcode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picThumbPrint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,11 +33,13 @@
             // 
             // uscAptNew1
             // 
+            this.uscAptNew1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.uscAptNew1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uscAptNew1.Location = new System.Drawing.Point(0, 0);
             this.uscAptNew1.Name = "uscAptNew1";
             this.uscAptNew1.Size = new System.Drawing.Size(864, 509);
             this.uscAptNew1.TabIndex = 0;
+            this.uscAptNew1.Load += new System.EventHandler(this.uscAptNew1_Load);
             // 
             // frmNewAppointment
             // 

@@ -16,5 +16,10 @@ namespace ByticHealth.Forms
         {
             InitializeComponent();
         }
+
+        private void uscAptNew1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

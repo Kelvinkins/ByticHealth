@@ -22,7 +22,7 @@ namespace ByticHealth.App_Data
         public int StaffID { get; set; }
         public DateTime AptDateTime { get; set; }
         public int AptStatus { get; set; }
-        public DateTime AptEndTime { get; set; }
+        public DateTime? AptEndTime { get; set; }
         public string Remark { get; set; }
 
     }

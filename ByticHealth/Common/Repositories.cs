@@ -254,6 +254,12 @@ namespace ByticHealth.Common
         int Id = db.PatientVitals.Count();
         return Id + id;
     }
+
+    public static int GetAppointmentID(int id)
+    {
+        int Id = db.Appointments.Count();
+        return Id + id;
+    }
 }
 
 
