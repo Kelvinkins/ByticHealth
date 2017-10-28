@@ -260,6 +260,12 @@ namespace ByticHealth.Common
         int Id = db.Appointments.Count();
         return Id + id;
     }
+
+    public static int GetAdmissionID(int id)
+    {
+        int Id = db.Admissions.Count();
+        return Id + id;
+    }
 }
 
 

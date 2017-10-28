@@ -144,5 +144,15 @@ namespace ByticHealth
             frm.Show();
 
         }
+
+        private void patientAdmissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPatAdmission frm = new frmPatAdmission();
+            frm.MdiParent = this;
+            frm.AutoScroll = true;
+            frm.Text = "PATIENT ADMISSION FORM";
+            frm.Show();
+
+        }
     }
 }

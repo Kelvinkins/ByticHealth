@@ -1,6 +1,6 @@
 ﻿namespace ByticHealth.UserControls
 {
-    partial class uscAptNew
+    partial class uscAdmission
     {
         /// <summary> 
         /// Required designer variable.
@@ -57,41 +57,40 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.rdbRoom = new System.Windows.Forms.RadioButton();
+            this.rdbWard = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbSpecialist = new System.Windows.Forms.ComboBox();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblSpNum = new System.Windows.Forms.Label();
+            this.lblStat = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbBed = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtSpFullName = new System.Windows.Forms.TextBox();
-            this.txtSpPhoneNo = new System.Windows.Forms.TextBox();
-            this.txtSpGender = new System.Windows.Forms.TextBox();
+            this.txtBedStatus = new System.Windows.Forms.TextBox();
+            this.txtBedRemark = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtWardRoom = new System.Windows.Forms.ComboBox();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dteAppointmentDate = new System.Windows.Forms.DateTimePicker();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dgvAdmissionHistory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.splitContainer12 = new System.Windows.Forms.SplitContainer();
+            this.dteAdmissionDate = new System.Windows.Forms.DateTimePicker();
+            this.dteAdmissionTime = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -142,15 +141,17 @@
             this.splitContainer10.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
             this.splitContainer11.Panel1.SuspendLayout();
             this.splitContainer11.Panel2.SuspendLayout();
             this.splitContainer11.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmissionHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
+            this.splitContainer12.Panel1.SuspendLayout();
+            this.splitContainer12.Panel2.SuspendLayout();
+            this.splitContainer12.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -503,8 +504,9 @@
             // 
             // splitContainer7.Panel1
             // 
+            this.splitContainer7.Panel1.Controls.Add(this.rdbRoom);
+            this.splitContainer7.Panel1.Controls.Add(this.rdbWard);
             this.splitContainer7.Panel1.Controls.Add(this.label10);
-            this.splitContainer7.Panel1.Controls.Add(this.cmbSpecialist);
             // 
             // splitContainer7.Panel2
             // 
@@ -513,23 +515,36 @@
             this.splitContainer7.SplitterDistance = 33;
             this.splitContainer7.TabIndex = 0;
             // 
+            // rdbRoom
+            // 
+            this.rdbRoom.AutoSize = true;
+            this.rdbRoom.Location = new System.Drawing.Point(171, 7);
+            this.rdbRoom.Name = "rdbRoom";
+            this.rdbRoom.Size = new System.Drawing.Size(53, 17);
+            this.rdbRoom.TabIndex = 4;
+            this.rdbRoom.Text = "Room";
+            this.rdbRoom.UseVisualStyleBackColor = true;
+            // 
+            // rdbWard
+            // 
+            this.rdbWard.AutoSize = true;
+            this.rdbWard.Checked = true;
+            this.rdbWard.Location = new System.Drawing.Point(114, 7);
+            this.rdbWard.Name = "rdbWard";
+            this.rdbWard.Size = new System.Drawing.Size(51, 17);
+            this.rdbWard.TabIndex = 3;
+            this.rdbWard.TabStop = true;
+            this.rdbWard.Text = "Ward";
+            this.rdbWard.UseVisualStyleBackColor = true;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 9);
+            this.label10.Location = new System.Drawing.Point(32, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 13);
+            this.label10.Size = new System.Drawing.Size(67, 13);
             this.label10.TabIndex = 2;
-            this.label10.Text = "Select Specialist:";
-            // 
-            // cmbSpecialist
-            // 
-            this.cmbSpecialist.FormattingEnabled = true;
-            this.cmbSpecialist.Location = new System.Drawing.Point(98, 4);
-            this.cmbSpecialist.Name = "cmbSpecialist";
-            this.cmbSpecialist.Size = new System.Drawing.Size(236, 21);
-            this.cmbSpecialist.TabIndex = 1;
-            this.cmbSpecialist.SelectedIndexChanged += new System.EventHandler(this.cmbSpecialist_SelectedIndexChanged);
+            this.label10.Text = "Select Type:";
             // 
             // splitContainer8
             // 
@@ -562,7 +577,7 @@
             // 
             // splitContainer9.Panel2
             // 
-            this.splitContainer9.Panel2.Controls.Add(this.lblSpNum);
+            this.splitContainer9.Panel2.Controls.Add(this.lblStat);
             this.splitContainer9.Size = new System.Drawing.Size(130, 189);
             this.splitContainer9.SplitterDistance = 141;
             this.splitContainer9.TabIndex = 0;
@@ -580,7 +595,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::ByticHealth.Properties.Resources.placeholder;
+            this.pictureBox2.Image = global::ByticHealth.Properties.Resources.ward;
             this.pictureBox2.Location = new System.Drawing.Point(3, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(120, 118);
@@ -588,96 +603,117 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // lblSpNum
+            // lblStat
             // 
-            this.lblSpNum.AutoSize = true;
-            this.lblSpNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpNum.Location = new System.Drawing.Point(29, 10);
-            this.lblSpNum.Name = "lblSpNum";
-            this.lblSpNum.Size = new System.Drawing.Size(27, 20);
-            this.lblSpNum.TabIndex = 1;
-            this.lblSpNum.Text = "---";
+            this.lblStat.AutoSize = true;
+            this.lblStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStat.Location = new System.Drawing.Point(29, 10);
+            this.lblStat.Name = "lblStat";
+            this.lblStat.Size = new System.Drawing.Size(27, 20);
+            this.lblStat.TabIndex = 1;
+            this.lblStat.Text = "---";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtSpFullName, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtSpPhoneNo, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtSpGender, 1, 4);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.74336F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.25664F));
+            this.tableLayoutPanel2.Controls.Add(this.cmbBed, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtBedStatus, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtBedRemark, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtWardRoom, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 9;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(226, 189);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // cmbBed
+            // 
+            this.cmbBed.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cmbBed.FormattingEnabled = true;
+            this.cmbBed.Location = new System.Drawing.Point(76, 35);
+            this.cmbBed.Name = "cmbBed";
+            this.cmbBed.Size = new System.Drawing.Size(147, 21);
+            this.cmbBed.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label12.Location = new System.Drawing.Point(3, 95);
+            this.label12.Location = new System.Drawing.Point(3, 119);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 13);
+            this.label12.Size = new System.Drawing.Size(67, 13);
             this.label12.TabIndex = 2;
-            this.label12.Text = "Gender:";
+            this.label12.Text = "Remark:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label13.Location = new System.Drawing.Point(3, 75);
+            this.label13.Location = new System.Drawing.Point(3, 71);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.Size = new System.Drawing.Size(67, 13);
             this.label13.TabIndex = 1;
-            this.label13.Text = "Phone No:";
+            this.label13.Text = "Bed Status:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label14.Location = new System.Drawing.Point(3, 55);
+            this.label14.Location = new System.Drawing.Point(3, 46);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.Size = new System.Drawing.Size(67, 13);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Full Name:";
+            this.label14.Text = "Bed";
             // 
-            // txtSpFullName
+            // txtBedStatus
             // 
-            this.txtSpFullName.Enabled = false;
-            this.txtSpFullName.Location = new System.Drawing.Point(87, 51);
-            this.txtSpFullName.Name = "txtSpFullName";
-            this.txtSpFullName.Size = new System.Drawing.Size(128, 20);
-            this.txtSpFullName.TabIndex = 6;
+            this.txtBedStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtBedStatus.Enabled = false;
+            this.txtBedStatus.Location = new System.Drawing.Point(76, 62);
+            this.txtBedStatus.Name = "txtBedStatus";
+            this.txtBedStatus.Size = new System.Drawing.Size(147, 20);
+            this.txtBedStatus.TabIndex = 7;
             // 
-            // txtSpPhoneNo
+            // txtBedRemark
             // 
-            this.txtSpPhoneNo.Enabled = false;
-            this.txtSpPhoneNo.Location = new System.Drawing.Point(87, 71);
-            this.txtSpPhoneNo.Name = "txtSpPhoneNo";
-            this.txtSpPhoneNo.Size = new System.Drawing.Size(128, 20);
-            this.txtSpPhoneNo.TabIndex = 7;
+            this.txtBedRemark.Enabled = false;
+            this.txtBedRemark.Location = new System.Drawing.Point(76, 87);
+            this.txtBedRemark.Multiline = true;
+            this.txtBedRemark.Name = "txtBedRemark";
+            this.txtBedRemark.Size = new System.Drawing.Size(147, 42);
+            this.txtBedRemark.TabIndex = 8;
             // 
-            // txtSpGender
+            // label15
             // 
-            this.txtSpGender.Enabled = false;
-            this.txtSpGender.Location = new System.Drawing.Point(87, 91);
-            this.txtSpGender.Name = "txtSpGender";
-            this.txtSpGender.Size = new System.Drawing.Size(128, 20);
-            this.txtSpGender.TabIndex = 8;
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label15.Location = new System.Drawing.Point(3, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Ward/Room";
+            // 
+            // txtWardRoom
+            // 
+            this.txtWardRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtWardRoom.FormattingEnabled = true;
+            this.txtWardRoom.Location = new System.Drawing.Point(76, 8);
+            this.txtWardRoom.Name = "txtWardRoom";
+            this.txtWardRoom.Size = new System.Drawing.Size(147, 21);
+            this.txtWardRoom.TabIndex = 12;
             // 
             // splitContainer10
             // 
@@ -695,7 +731,7 @@
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
             this.splitContainer10.Size = new System.Drawing.Size(837, 268);
-            this.splitContainer10.SplitterDistance = 149;
+            this.splitContainer10.SplitterDistance = 118;
             this.splitContainer10.TabIndex = 0;
             // 
             // groupBox3
@@ -704,10 +740,10 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(833, 145);
+            this.groupBox3.Size = new System.Drawing.Size(833, 114);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Appointment Details";
+            this.groupBox3.Text = "Admission Details";
             // 
             // tableLayoutPanel3
             // 
@@ -716,71 +752,25 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
-            this.tableLayoutPanel3.Controls.Add(this.label20, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.rtbRemark, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rtbRemark, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.splitContainer12, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 2, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 32);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.71429F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.28571F));
+            this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(827, 123);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(827, 79);
             this.tableLayoutPanel3.TabIndex = 2;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label20.Location = new System.Drawing.Point(3, 33);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(118, 13);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "Start DateTime:";
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.dateTimePicker1, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.dteAppointmentDate, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(127, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 40);
-            this.tableLayoutPanel5.TabIndex = 14;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(117, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            // 
-            // dteAppointmentDate
-            // 
-            this.dteAppointmentDate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dteAppointmentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dteAppointmentDate.Location = new System.Drawing.Point(3, 17);
-            this.dteAppointmentDate.Name = "dteAppointmentDate";
-            this.dteAppointmentDate.Size = new System.Drawing.Size(108, 20);
-            this.dteAppointmentDate.TabIndex = 11;
             // 
             // rtbRemark
             // 
-            this.rtbRemark.Location = new System.Drawing.Point(127, 78);
+            this.rtbRemark.Location = new System.Drawing.Point(127, 3);
             this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(228, 42);
+            this.rtbRemark.Size = new System.Drawing.Size(228, 41);
             this.rtbRemark.TabIndex = 10;
             this.rtbRemark.Text = "";
             // 
@@ -788,100 +778,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label18.Location = new System.Drawing.Point(3, 110);
+            this.label18.Location = new System.Drawing.Point(3, 34);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(118, 13);
             this.label18.TabIndex = 9;
             this.label18.Text = "Remark:";
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.dateTimePicker2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dateTimePicker3, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(127, 49);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(228, 23);
-            this.tableLayoutPanel6.TabIndex = 15;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(117, 3);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker2.TabIndex = 14;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(3, 3);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker3.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(3, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Start DateTime:";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Controls.Add(this.button9, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnSave, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(361, 92);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(228, 28);
-            this.tableLayoutPanel4.TabIndex = 18;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(155, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 22);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Delete";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(79, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 22);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Location = new System.Drawing.Point(3, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(70, 22);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // splitContainer11
             // 
@@ -897,9 +798,9 @@
             // 
             // splitContainer11.Panel2
             // 
-            this.splitContainer11.Panel2.Controls.Add(this.dgvAppointments);
-            this.splitContainer11.Size = new System.Drawing.Size(837, 115);
-            this.splitContainer11.SplitterDistance = 28;
+            this.splitContainer11.Panel2.Controls.Add(this.dgvAdmissionHistory);
+            this.splitContainer11.Size = new System.Drawing.Size(837, 146);
+            this.splitContainer11.SplitterDistance = 31;
             this.splitContainer11.TabIndex = 0;
             // 
             // panel1
@@ -910,7 +811,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 24);
+            this.panel1.Size = new System.Drawing.Size(833, 27);
             this.panel1.TabIndex = 61;
             // 
             // label19
@@ -919,25 +820,118 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(203, 22);
             this.label19.TabIndex = 3;
-            this.label19.Text = "TODAY\'S APPOINTMENTS";
+            this.label19.Text = "ADMISSION HISTORY";
             // 
-            // dgvAppointments
+            // dgvAdmissionHistory
             // 
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAppointments.Location = new System.Drawing.Point(0, 0);
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.Size = new System.Drawing.Size(833, 79);
-            this.dgvAppointments.TabIndex = 0;
+            this.dgvAdmissionHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdmissionHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAdmissionHistory.Location = new System.Drawing.Point(0, 0);
+            this.dgvAdmissionHistory.Name = "dgvAdmissionHistory";
+            this.dgvAdmissionHistory.Size = new System.Drawing.Size(833, 107);
+            this.dgvAdmissionHistory.TabIndex = 0;
             // 
-            // uscAptNew
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Location = new System.Drawing.Point(3, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Date:Time:";
+            // 
+            // splitContainer12
+            // 
+            this.splitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer12.Location = new System.Drawing.Point(127, 50);
+            this.splitContainer12.Name = "splitContainer12";
+            // 
+            // splitContainer12.Panel1
+            // 
+            this.splitContainer12.Panel1.Controls.Add(this.dteAdmissionDate);
+            // 
+            // splitContainer12.Panel2
+            // 
+            this.splitContainer12.Panel2.Controls.Add(this.dteAdmissionTime);
+            this.splitContainer12.Size = new System.Drawing.Size(228, 26);
+            this.splitContainer12.SplitterDistance = 115;
+            this.splitContainer12.TabIndex = 20;
+            // 
+            // dteAdmissionDate
+            // 
+            this.dteAdmissionDate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteAdmissionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dteAdmissionDate.Location = new System.Drawing.Point(0, 6);
+            this.dteAdmissionDate.Name = "dteAdmissionDate";
+            this.dteAdmissionDate.Size = new System.Drawing.Size(115, 20);
+            this.dteAdmissionDate.TabIndex = 0;
+            // 
+            // dteAdmissionTime
+            // 
+            this.dteAdmissionTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteAdmissionTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dteAdmissionTime.Location = new System.Drawing.Point(0, 6);
+            this.dteAdmissionTime.Name = "dteAdmissionTime";
+            this.dteAdmissionTime.Size = new System.Drawing.Size(109, 20);
+            this.dteAdmissionTime.TabIndex = 1;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSave, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(361, 50);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(228, 26);
+            this.tableLayoutPanel4.TabIndex = 21;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.Location = new System.Drawing.Point(155, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(70, 20);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Delete";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Location = new System.Drawing.Point(79, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(70, 20);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Update";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(3, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(70, 20);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // uscAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.splitContainer1);
-            this.Name = "uscAptNew";
+            this.Name = "uscAdmission";
             this.Size = new System.Drawing.Size(837, 506);
             this.Load += new System.EventHandler(this.uscAptNew_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -998,15 +992,17 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.splitContainer11.Panel1.ResumeLayout(false);
             this.splitContainer11.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmissionHistory)).EndInit();
+            this.splitContainer12.Panel1.ResumeLayout(false);
+            this.splitContainer12.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
+            this.splitContainer12.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1043,19 +1039,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbSpecialist;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblSpNum;
+        private System.Windows.Forms.Label lblStat;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtSpFullName;
-        private System.Windows.Forms.TextBox txtSpPhoneNo;
-        private System.Windows.Forms.TextBox txtSpGender;
+        private System.Windows.Forms.TextBox txtBedStatus;
+        private System.Windows.Forms.TextBox txtBedRemark;
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -1064,15 +1058,16 @@
         private System.Windows.Forms.SplitContainer splitContainer11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dgvAppointments;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dteAppointmentDate;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DataGridView dgvAdmissionHistory;
+        private System.Windows.Forms.RadioButton rdbRoom;
+        private System.Windows.Forms.RadioButton rdbWard;
+        private System.Windows.Forms.ComboBox cmbBed;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox txtWardRoom;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SplitContainer splitContainer12;
+        private System.Windows.Forms.DateTimePicker dteAdmissionDate;
+        private System.Windows.Forms.DateTimePicker dteAdmissionTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button6;
