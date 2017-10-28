@@ -1,0 +1,147 @@
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPatRegistration.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.MainWindow.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Properties.Resources.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscDashboard.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscInsuranceInfo.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientRegistration.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csproj.GenerateResource.Cache
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\ByticHealth.exe.config
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Print.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\report.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\resume.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Shape-Square.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Shape-Square2.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\spec.png
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\ByticHealth.exe
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\ByticHealth.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Client.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Common.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Controls.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Base.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Schedule.Base.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Windows.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Tools.Base.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Diff.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Common.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Controls.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Base.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Schedule.Base.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Tools.Base.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Windows.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Diff.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.exe
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.pdb
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientComplain.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientHistory.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Genetic.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Imaging.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Math.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Video.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Vision.dll
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Genetic.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Imaging.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Math.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Video.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\bin\Debug\AForge.Vision.xml
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.Main.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscFamilyHistory.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscCurrentMedication.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPastMedicalHistory.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscSubstanceUse.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscWomensProductiveHistory.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscEmployer.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscRelative.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.Find.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscBilling.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscNewBill.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscBills.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPdfToExcel.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscVital.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmNewAppointment.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAptNew.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAppointmentSchedule.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPatAdmission.resources
+C:\Users\ADMIN\Documents\Visual Studio 2015\Projects\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAdmission.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\ByticHealth.exe.config
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.exe
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.pdb
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Print.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\report.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\resume.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Shape-Square.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Shape-Square2.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\spec.png
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\ByticHealth.exe
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\ByticHealth.pdb
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Client.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Common.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Controls.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Base.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Schedule.Base.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Windows.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Tools.Base.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Diff.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Genetic.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Imaging.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Math.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Video.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\AForge.Vision.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Common.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Controls.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Base.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Schedule.Base.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Tools.Base.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Base.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Shared.Windows.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Microsoft.TeamFoundation.Diff.xml
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\Syncfusion.Grid.Windows.XmlSerializers.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.Find.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmNewAppointment.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPatAdmission.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPatRegistration.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmPdfToExcel.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.Main.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.MainWindow.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Properties.Resources.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAppointmentSchedule.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAdmission.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscAptNew.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscBilling.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscBills.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscCurrentMedication.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscDashboard.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscEmployer.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscFamilyHistory.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscInsuranceInfo.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscNewBill.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPastMedicalHistory.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientComplain.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientHistory.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscPatientRegistration.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscRelative.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscSubstanceUse.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscVital.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscWomensProductiveHistory.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csproj.GenerateResource.Cache

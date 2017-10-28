@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BHDBModelStoreContainer" CdmEntityContainer="BHDBEntities">
+    <EntitySetMapping Name="Billees">
+      <EntityTypeMapping TypeName="BHDBModel.Billee">
+        <MappingFragment StoreEntitySet="Billee">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="BilleeID" ColumnName="BilleeID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="IsPatient" ColumnName="IsPatient" />
+          <ScalarProperty Name="IsCoveredByInsurance" ColumnName="IsCoveredByInsurance" />
+          <ScalarProperty Name="PrimaryInsuranceID" ColumnName="PrimaryInsuranceID" />
+          <ScalarProperty Name="SecondaryInsuranceID" ColumnName="SecondaryInsuranceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employers">
+      <EntityTypeMapping TypeName="BHDBModel.Employer">
+        <MappingFragment StoreEntitySet="Employer">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="BHDBModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="IsLegalName" ColumnName="IsLegalName" />
+          <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+          <ScalarProperty Name="FormerName" ColumnName="FormerName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Referral" ColumnName="Referral" />
+          <ScalarProperty Name="ReferredByDoctor" ColumnName="ReferredByDoctor" />
+          <ScalarProperty Name="OtherPrimaryInsurance" ColumnName="OtherPrimaryInsurance" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="PassportPhoto" ColumnName="PassportPhoto" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="StaffCategoryID" ColumnName="StaffCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrimaryInsurances">
+      <EntityTypeMapping TypeName="BHDBModel.PrimaryInsurance">
+        <MappingFragment StoreEntitySet="PrimaryInsurance">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="PrimaryInsuranceID" ColumnName="PrimaryInsuranceID" />
+          <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+          <ScalarProperty Name="SubscriberName" ColumnName="SubscriberName" />
+          <ScalarProperty Name="SubscriberSSN" ColumnName="SubscriberSSN" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="GroupNo" ColumnName="GroupNo" />
+          <ScalarProperty Name="GroupPolicy" ColumnName="GroupPolicy" />
+          <ScalarProperty Name="Copayment" ColumnName="Copayment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relatives">
+      <EntityTypeMapping TypeName="BHDBModel.Relative">
+        <MappingFragment StoreEntitySet="Relative">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="RelativeID" ColumnName="RelativeID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="RelationshipToPatient" ColumnName="RelationshipToPatient" />
+          <ScalarProperty Name="HomePhoneNo" ColumnName="HomePhoneNo" />
+          <ScalarProperty Name="WorkPhoneNo" ColumnName="WorkPhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecondaryInsurances">
+      <EntityTypeMapping TypeName="BHDBModel.SecondaryInsurance">
+        <MappingFragment StoreEntitySet="SecondaryInsurance">
+          <ScalarProperty Name="PatNum" ColumnName="PatNum" />
+          <ScalarProperty Name="SecondaryInsuranceID" ColumnName="SecondaryInsuranceID" />
+          <ScalarProperty Name="InsuranceName" ColumnName="InsuranceName" />
+          <ScalarProperty Name="SubscriberName" ColumnName="SubscriberName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="GroupNo" ColumnName="GroupNo" />
+          <ScalarProperty Name="PolicyNo" ColumnName="PolicyNo" />
+          <ScalarProperty Name="RelationshipToPatient" ColumnName="RelationshipToPatient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="BHDBModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="StaffID" ColumnName="StaffID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+          <ScalarProperty Name="StaffCategoryCode" ColumnName="StaffCategoryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
