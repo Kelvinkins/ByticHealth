@@ -42,6 +42,9 @@ namespace ByticHealth.App_Data
         public virtual DbSet<Admission> Admissions { get; set; }
         public virtual DbSet<Ward> Wards { get; set; }
         public virtual DbSet<Bed> Beds { get; set; }
+        public virtual DbSet<RoomBed> RoomBeds { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

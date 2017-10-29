@@ -28,21 +28,21 @@ namespace ByticHealth.UserControls
 
             try
             {
-                 patient = db.Patients.Find(PatNum);
-          
+                patient = db.Patients.Find(PatNum);
 
-            using (var ms = new MemoryStream(patient.PassportPhoto))
-            {
-                picPassport.Image = Image.FromStream(ms);
 
-            }
-            txtDateOfBirth.Text = patient.DateOfBirth.ToString();
-            txtFullName.Text = patient.FirstName + " " + patient.LastName;
-            txtPhoneNo.Text = patient.CellPhone;
-            txtGender.Text = patient.Sex;
-            txtSSN.Text = patient.SSN;
-            lblPatNum.Text = patient.PatNum.ToString();
-            dgvAdmissionHistory.DataSource = db.Admissions.Where(adm => adm.PatNum == patient.PatNum).ToList();
+                using (var ms = new MemoryStream(patient.PassportPhoto))
+                {
+                    picPassport.Image = Image.FromStream(ms);
+
+                }
+                txtDateOfBirth.Text = patient.DateOfBirth.ToString();
+                txtFullName.Text = patient.FirstName + " " + patient.LastName;
+                txtPhoneNo.Text = patient.CellPhone;
+                txtGender.Text = patient.Sex;
+                txtSSN.Text = patient.SSN;
+                lblPatNum.Text = patient.PatNum.ToString();
+                dgvAdmissionHistory.DataSource = db.Admissions.Where(adm => adm.PatNum == patient.PatNum).ToList();
             }
             catch (Exception ex)
             {
@@ -64,6 +64,11 @@ namespace ByticHealth.UserControls
             //{
 
             //}
+
+
+            cmbWardRoom.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            cmbBed.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            //groupBoxAdmission.Enabled = rdbRoom.Checked || rdbWard.Checked;
         }
 
         private void cmbSpecialist_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,7 +97,8 @@ namespace ByticHealth.UserControls
                 AdmissionTime = dteAdmissionTime.Value.TimeOfDay,
                 AdmissionDateTime = dteAdmissionTime.Value,
                 PatNum = patient.PatNum,
-                BedNo=(int)cmbBed.SelectedValue,     
+                BedNo=(int)cmbBed.SelectedValue
+                     
             };
             db.Admissions.Add(admission);
             if(db.SaveChanges()>0)
@@ -104,6 +110,75 @@ namespace ByticHealth.UserControls
             else
             {
                 MessageBox.Show("Error saving record");
+            }
+        }
+
+        private void rdbWard_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbWardRoom.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            cmbBed.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            cmbWardRoom.DataSource = null;
+            cmbWardRoom.DataSource = db.Wards.ToList();
+            cmbWardRoom.ValueMember = "WardNo";
+            cmbWardRoom.DisplayMember = "Name";
+        }
+
+        private void rdbRoom_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbWardRoom.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            cmbBed.Enabled = rdbRoom.Checked || rdbWard.Checked;
+            cmbWardRoom.DataSource = null;
+            cmbWardRoom.DataSource = db.Rooms.ToList();
+            cmbWardRoom.ValueMember = "RoomNo";
+            cmbWardRoom.DisplayMember = "Name";
+        }
+
+        private void cmbWardRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rdbWard.Checked)
+                {
+                    int wardNo = Convert.ToInt32(cmbWardRoom.SelectedValue);
+                    cmbBed.DataSource = db.Beds.Where(b => b.WardNo == wardNo).ToList();
+                    cmbBed.ValueMember = "BedNo";
+                    cmbBed.DisplayMember = "Name";
+                }
+                else if (rdbRoom.Checked)
+                {
+                    int roomNo = Convert.ToInt32(cmbWardRoom.SelectedValue);
+                    cmbBed.DataSource = db.RoomBeds.Where(rb => rb.RoomNo == roomNo).ToList();
+                    cmbBed.ValueMember = "RoomBedNo";
+                    cmbBed.DisplayMember = "Name";
+                }
+            }catch(Exception)
+            {
+
+            }
+        }
+
+        private void cmbBed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rdbWard.Checked)
+                {
+                    int bedId = Convert.ToInt32(cmbBed.SelectedValue);
+                    var bed = db.Beds.Find(bedId);
+                    lblStat.Text = bed.WardNo + ":" + bed.BedNo;
+                    txtBedStatus.Text = bed.Status;
+                    txtBedRemark.Text = bed.remark;
+                }
+                else if (rdbRoom.Checked)
+                {
+                    int bedId = Convert.ToInt32(cmbBed.SelectedValue);
+                    var bed = db.RoomBeds.Find(bedId);
+                    lblStat.Text = bed.RoomNo + ":" + bed.RoomBedNo;
+                    txtBedStatus.Text = bed.Status;
+                    txtBedRemark.Text = bed.remark;
+                }
+            }catch(Exception)
+            {
             }
         }
     }

@@ -62,10 +62,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.splitContainer9 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAdmission = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblStat = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelAdmission = new System.Windows.Forms.TableLayoutPanel();
             this.cmbBed = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.txtBedStatus = new System.Windows.Forms.TextBox();
             this.txtBedRemark = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtWardRoom = new System.Windows.Forms.ComboBox();
+            this.cmbWardRoom = new System.Windows.Forms.ComboBox();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -132,9 +132,9 @@
             this.splitContainer9.Panel1.SuspendLayout();
             this.splitContainer9.Panel2.SuspendLayout();
             this.splitContainer9.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxAdmission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanelAdmission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
             this.splitContainer10.Panel2.SuspendLayout();
@@ -524,18 +524,18 @@
             this.rdbRoom.TabIndex = 4;
             this.rdbRoom.Text = "Room";
             this.rdbRoom.UseVisualStyleBackColor = true;
+            this.rdbRoom.CheckedChanged += new System.EventHandler(this.rdbRoom_CheckedChanged);
             // 
             // rdbWard
             // 
             this.rdbWard.AutoSize = true;
-            this.rdbWard.Checked = true;
             this.rdbWard.Location = new System.Drawing.Point(114, 7);
             this.rdbWard.Name = "rdbWard";
             this.rdbWard.Size = new System.Drawing.Size(51, 17);
             this.rdbWard.TabIndex = 3;
-            this.rdbWard.TabStop = true;
             this.rdbWard.Text = "Ward";
             this.rdbWard.UseVisualStyleBackColor = true;
+            this.rdbWard.CheckedChanged += new System.EventHandler(this.rdbWard_CheckedChanged);
             // 
             // label10
             // 
@@ -558,7 +558,7 @@
             // 
             // splitContainer8.Panel2
             // 
-            this.splitContainer8.Panel2.Controls.Add(this.tableLayoutPanel2);
+            this.splitContainer8.Panel2.Controls.Add(this.tableLayoutPanelAdmission);
             this.splitContainer8.Size = new System.Drawing.Size(360, 189);
             this.splitContainer8.SplitterDistance = 130;
             this.splitContainer8.TabIndex = 0;
@@ -573,7 +573,7 @@
             // 
             // splitContainer9.Panel1
             // 
-            this.splitContainer9.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer9.Panel1.Controls.Add(this.groupBoxAdmission);
             // 
             // splitContainer9.Panel2
             // 
@@ -582,15 +582,15 @@
             this.splitContainer9.SplitterDistance = 141;
             this.splitContainer9.TabIndex = 0;
             // 
-            // groupBox1
+            // groupBoxAdmission
             // 
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(126, 137);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.groupBoxAdmission.Controls.Add(this.pictureBox2);
+            this.groupBoxAdmission.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxAdmission.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxAdmission.Name = "groupBoxAdmission";
+            this.groupBoxAdmission.Size = new System.Drawing.Size(126, 137);
+            this.groupBoxAdmission.TabIndex = 3;
+            this.groupBoxAdmission.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -613,31 +613,31 @@
             this.lblStat.TabIndex = 1;
             this.lblStat.Text = "---";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelAdmission
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.74336F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.25664F));
-            this.tableLayoutPanel2.Controls.Add(this.cmbBed, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtBedStatus, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtBedRemark, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtWardRoom, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(226, 189);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.tableLayoutPanelAdmission.ColumnCount = 2;
+            this.tableLayoutPanelAdmission.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.74336F));
+            this.tableLayoutPanelAdmission.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.25664F));
+            this.tableLayoutPanelAdmission.Controls.Add(this.cmbBed, 1, 1);
+            this.tableLayoutPanelAdmission.Controls.Add(this.label12, 0, 3);
+            this.tableLayoutPanelAdmission.Controls.Add(this.label13, 0, 2);
+            this.tableLayoutPanelAdmission.Controls.Add(this.label14, 0, 1);
+            this.tableLayoutPanelAdmission.Controls.Add(this.txtBedStatus, 1, 2);
+            this.tableLayoutPanelAdmission.Controls.Add(this.txtBedRemark, 1, 3);
+            this.tableLayoutPanelAdmission.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanelAdmission.Controls.Add(this.cmbWardRoom, 1, 0);
+            this.tableLayoutPanelAdmission.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelAdmission.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelAdmission.Name = "tableLayoutPanelAdmission";
+            this.tableLayoutPanelAdmission.RowCount = 6;
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelAdmission.Size = new System.Drawing.Size(226, 189);
+            this.tableLayoutPanelAdmission.TabIndex = 1;
             // 
             // cmbBed
             // 
@@ -647,6 +647,7 @@
             this.cmbBed.Name = "cmbBed";
             this.cmbBed.Size = new System.Drawing.Size(147, 21);
             this.cmbBed.TabIndex = 13;
+            this.cmbBed.SelectedIndexChanged += new System.EventHandler(this.cmbBed_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -706,14 +707,15 @@
             this.label15.TabIndex = 10;
             this.label15.Text = "Ward/Room";
             // 
-            // txtWardRoom
+            // cmbWardRoom
             // 
-            this.txtWardRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtWardRoom.FormattingEnabled = true;
-            this.txtWardRoom.Location = new System.Drawing.Point(76, 8);
-            this.txtWardRoom.Name = "txtWardRoom";
-            this.txtWardRoom.Size = new System.Drawing.Size(147, 21);
-            this.txtWardRoom.TabIndex = 12;
+            this.cmbWardRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cmbWardRoom.FormattingEnabled = true;
+            this.cmbWardRoom.Location = new System.Drawing.Point(76, 8);
+            this.cmbWardRoom.Name = "cmbWardRoom";
+            this.cmbWardRoom.Size = new System.Drawing.Size(147, 21);
+            this.cmbWardRoom.TabIndex = 12;
+            this.cmbWardRoom.SelectedIndexChanged += new System.EventHandler(this.cmbWardRoom_SelectedIndexChanged);
             // 
             // splitContainer10
             // 
@@ -981,10 +983,10 @@
             this.splitContainer9.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
             this.splitContainer9.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.groupBoxAdmission.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanelAdmission.ResumeLayout(false);
+            this.tableLayoutPanelAdmission.PerformLayout();
             this.splitContainer10.Panel1.ResumeLayout(false);
             this.splitContainer10.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
@@ -1041,10 +1043,10 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.SplitContainer splitContainer9;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxAdmission;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblStat;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelAdmission;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -1063,7 +1065,7 @@
         private System.Windows.Forms.RadioButton rdbWard;
         private System.Windows.Forms.ComboBox cmbBed;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox txtWardRoom;
+        private System.Windows.Forms.ComboBox cmbWardRoom;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer12;
         private System.Windows.Forms.DateTimePicker dteAdmissionDate;

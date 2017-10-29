@@ -145,3 +145,5 @@ C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserCo
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscVital.resources
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscWomensProductiveHistory.resources
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csproj.GenerateResource.Cache
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.SqlServer.dll
