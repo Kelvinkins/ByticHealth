@@ -17,8 +17,13 @@ namespace ByticHealth.App_Data
         public string HomeAddress { get; set; }
         public string emailAddress { get; set; }
         public string Sex { get; set; }
-
+        public string JobTitle { get; set; }
+        public string PBRN { get; set; }//Professional body registration number
         public int? StaffCategoryCode { get; set; }
+        public byte[] Signature { get; set; }
+        public int StaffType { get; set; }
+
+
     }
 
     public class Doctor

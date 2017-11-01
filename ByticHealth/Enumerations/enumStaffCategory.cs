@@ -14,7 +14,16 @@ namespace ByticHealth.Enumerations
         Pharmacy=3,
         Reception=4,
         Laboratory=5,
-        Admission=6
+        Admission=6,
+      
+    }
+
+    enum enumStaffType
+    {
+        NA=0,
+        InStaff=1,
+        Consultant=2
+
     }
 
     enum enumMaritalStatus

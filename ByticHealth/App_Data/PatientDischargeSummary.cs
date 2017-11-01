@@ -30,6 +30,18 @@ namespace ByticHealth.App_Data
         public string ClinicalAlerts { get; set; }
         public string HospitalCourse { get; set; }
 
+        [ForeignKey("CompletedByStaffID")]
+        public Staff CompletedByStaff { get; set; }
+        public int? CompletedByStaffID { get; set; }
+        public DateTime DateOfCompletion { get; set; }
+        public byte[] ConsultantSignOff { get; set; }
+        public DateTime DateOfConsultantSignOff { get; set; }
+
+        [ForeignKey("DischargingConsultantID")]
+        public Staff DischargingConsultant { get; set; }
+        public int? DischargingConsultantID { get; set; }
+
+
     }
 
     public class Discharge
@@ -54,6 +66,10 @@ namespace ByticHealth.App_Data
         public bool? PatientDied { get; set; }
         public DateTime DateOfDirth { get; set; }
         public bool PostMortemFlag { get; set; }
+
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int? AdmNum { get; set; }
 
     }
 
