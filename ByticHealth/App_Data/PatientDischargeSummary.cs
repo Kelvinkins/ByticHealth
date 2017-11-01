@@ -29,6 +29,7 @@ namespace ByticHealth.App_Data
         public string PertinentClinicalInformation { get; set; }
         public string ClinicalAlerts { get; set; }
         public string HospitalCourse { get; set; }
+
     }
 
     public class Discharge
@@ -54,5 +55,65 @@ namespace ByticHealth.App_Data
         public DateTime DateOfDirth { get; set; }
         public bool PostMortemFlag { get; set; }
 
+    }
+
+    public class HospitalAction
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
+
+    }
+
+    public class GpAction {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
+
+
+    }
+
+    public class SocialCareAction
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
+    }
+
+    public class InformationGivenToPatientAndCarer  {
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
+    }
+
+    public class AdviceRecommendationAndFuturePlan
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
     }
 }

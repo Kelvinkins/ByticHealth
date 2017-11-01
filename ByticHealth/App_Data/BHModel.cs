@@ -54,6 +54,13 @@ namespace ByticHealth.App_Data
         public virtual DbSet<Immunisation> Immunisations { get; set; }
         public virtual DbSet<RelevantTreatmentsAndChangesMadeInTreatment> RelevantTreatmentsAndChangesMadeInTreatments { get; set; }
         public virtual DbSet<OperationAndProcedure> OperationAndProcedures { get; set; }
+        public virtual DbSet<MedicationOnDischarge> MedicationOnDischarges { get; set; }
+        public virtual DbSet<MeicationStoppedWithheald> MeicationStoppedWithhealds { get; set; }
+        public virtual DbSet<GpAction> GpActions { get; set; }
+        public virtual DbSet<AdviceRecommendationAndFuturePlan> AdviceRecommendationAndFuturePlans { get; set; }
+        public virtual DbSet<HospitalAction> HospitalActions { get; set; }
+        public virtual DbSet<InformationGivenToPatientAndCarer> InformationGivenToPatientAndCarers { get; set; }
+        public virtual DbSet<SocialCareAction> SocialCareActions { get; set; }
 
 
 

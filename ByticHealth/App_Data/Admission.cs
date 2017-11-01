@@ -172,4 +172,38 @@ namespace ByticHealth.App_Data
 
     }
 
+    public class MedicationOnDischarge
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Remark { get; set; }
+        [ForeignKey("DrugID")]
+        public virtual Drug Drug { get; set; }
+        public int DrugID { get; set; }
+        public int Quantity { get; set; }
+        public decimal price { get; set; }
+        public int Total { get; set; }
+
+        [ForeignKey("DgNum")]
+        public virtual Discharge Discharge { get; set; }
+        public int DgNum { get; set; }
+
+    }
+
+    public class MeicationStoppedWithheald
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Remark { get; set; }
+        [ForeignKey("DrugID")]
+        public virtual Drug Drug { get; set; }
+        public int DrugID { get; set; }
+        public int Dosage { get; set; }     
+    }
+
+
+
+
 }
