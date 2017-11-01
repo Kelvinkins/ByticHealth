@@ -149,6 +149,7 @@
     <Compile Include="App_Data\Employer.cs" />
     <Compile Include="App_Data\PastMedicalHistory.cs" />
     <Compile Include="App_Data\Patient.cs" />
+    <Compile Include="App_Data\PatientDischargeSummary.cs" />
     <Compile Include="App_Data\PrimaryInsurance.cs" />
     <Compile Include="App_Data\Relative.cs" />
     <Compile Include="App_Data\SecondaryInsurance.cs" />

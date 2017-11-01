@@ -25,6 +25,8 @@ namespace ByticHealth.App_Data
         public string Remark { get; set; }
         public DateTime AdmissionDate { get; set; }
         public DateTime AdmissionDateTime { get; set; }
+        public int AdmissionMethod { get; set; }
+
 
     }
 
@@ -36,6 +38,8 @@ namespace ByticHealth.App_Data
         public int WardNo { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int WardType { get; set; }
+
 
     }
 
@@ -52,33 +56,6 @@ namespace ByticHealth.App_Data
         public string Status { get; set; }
         public string remark { get; set; }
 
-
-
-    }
-
-    public class Room
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int RoomNo { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-
-    }
-
-
-    public class RoomBed
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int RoomBedNo { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        [ForeignKey("RoomNo")]
-        public virtual Room Ward { get; set; }
-        public int RoomNo { get; set; }
-        public string Status { get; set; }
-        public string remark { get; set; }
 
 
     }

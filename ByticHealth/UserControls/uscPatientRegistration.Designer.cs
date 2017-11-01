@@ -123,6 +123,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.picSignature = new System.Windows.Forms.PictureBox();
+            this.chkCancerPatient = new System.Windows.Forms.CheckBox();
             this.groupBox6.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -445,6 +446,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.chkCancerPatient);
             this.groupBox12.Controls.Add(this.groupBox20);
             this.groupBox12.Controls.Add(this.cmbOtherFamilyMember);
             this.groupBox12.Controls.Add(this.Label23);
@@ -1058,6 +1060,16 @@
             this.picSignature.TabIndex = 52;
             this.picSignature.TabStop = false;
             // 
+            // chkCancerPatient
+            // 
+            this.chkCancerPatient.AutoSize = true;
+            this.chkCancerPatient.Location = new System.Drawing.Point(659, 106);
+            this.chkCancerPatient.Name = "chkCancerPatient";
+            this.chkCancerPatient.Size = new System.Drawing.Size(96, 17);
+            this.chkCancerPatient.TabIndex = 32;
+            this.chkCancerPatient.Text = "Cancer Patient";
+            this.chkCancerPatient.UseVisualStyleBackColor = true;
+            // 
             // uscPatientRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1224,6 +1236,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.CheckBox chkCancerPatient;
 
         #endregion
         //private Syncfusion.Windows.Forms.Barcode.SfBarcode bcPatientNo;

@@ -81,6 +81,9 @@ namespace ByticHealth.App_Data
 
         [Column(TypeName = "numeric")]
         public decimal? StaffCategoryID { get; set; }
+        public bool CancerPatient { get; set; }
+        public int? PatientType { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Billee> Billees { get; set; }

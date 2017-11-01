@@ -128,8 +128,8 @@ namespace ByticHealth.UserControls
             cmbWardRoom.Enabled = rdbRoom.Checked || rdbWard.Checked;
             cmbBed.Enabled = rdbRoom.Checked || rdbWard.Checked;
             cmbWardRoom.DataSource = null;
-            cmbWardRoom.DataSource = db.Rooms.ToList();
-            cmbWardRoom.ValueMember = "RoomNo";
+            cmbWardRoom.DataSource = db.Wards.ToList();
+            cmbWardRoom.ValueMember = "WardNo";
             cmbWardRoom.DisplayMember = "Name";
         }
 
@@ -146,8 +146,8 @@ namespace ByticHealth.UserControls
                 }
                 else if (rdbRoom.Checked)
                 {
-                    int roomNo = Convert.ToInt32(cmbWardRoom.SelectedValue);
-                    cmbBed.DataSource = db.RoomBeds.Where(rb => rb.RoomNo == roomNo).ToList();
+                    int bedNo = Convert.ToInt32(cmbWardRoom.SelectedValue);
+                    cmbBed.DataSource = db.Beds.Where(rb => rb.BedNo == bedNo).ToList();
                     cmbBed.ValueMember = "RoomBedNo";
                     cmbBed.DisplayMember = "Name";
                 }
@@ -172,8 +172,8 @@ namespace ByticHealth.UserControls
                 else if (rdbRoom.Checked)
                 {
                     int bedId = Convert.ToInt32(cmbBed.SelectedValue);
-                    var bed = db.RoomBeds.Find(bedId);
-                    lblStat.Text = bed.RoomNo + ":" + bed.RoomBedNo;
+                    var bed = db.Beds.Find(bedId);
+                    lblStat.Text = bed.WardNo + ":" + bed.BedNo;
                     txtBedStatus.Text = bed.Status;
                     txtBedRemark.Text = bed.remark;
                 }

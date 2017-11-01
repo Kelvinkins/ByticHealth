@@ -241,7 +241,10 @@ namespace ByticHealth.UserControls
                 Referral = txtReferedDoctorName.Text,
                 MaritalStatus = Convert.ToInt32(cmbMaritalStatus.SelectedValue),
                 PassportPhoto = CommonCode.converterTo(picPassport.Image),
-                Signature = CommonCode.converterTo(picSignature.Image)
+                Signature = CommonCode.converterTo(picSignature.Image),
+                CancerPatient = chkCancerPatient.Checked,
+                PatientType = (int)Enumerations.PatientType.OT
+                
             };
 
             if (rdbLegalYes.Checked)
