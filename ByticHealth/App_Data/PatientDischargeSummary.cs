@@ -26,7 +26,9 @@ namespace ByticHealth.App_Data
         [ForeignKey("DgNum")]
         public virtual Discharge Discharge { get; set; }
         public int? DgNum { get; set; }
-
+        public string PertinentClinicalInformation { get; set; }
+        public string ClinicalAlerts { get; set; }
+        public string HospitalCourse { get; set; }
     }
 
     public class Discharge
@@ -46,6 +48,11 @@ namespace ByticHealth.App_Data
         public string Remark { get; set; }
         public DateTime DischargeDate { get; set; }
         public DateTime DischargeDateTime { get; set; }
+        public string HospitalSite { get; set; }
+        public string DischargeMethod { get; set; }
+        public bool? PatientDied { get; set; }
+        public DateTime DateOfDirth { get; set; }
+        public bool PostMortemFlag { get; set; }
 
     }
 }

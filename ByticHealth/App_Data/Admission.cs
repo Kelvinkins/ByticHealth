@@ -26,10 +26,122 @@ namespace ByticHealth.App_Data
         public DateTime AdmissionDate { get; set; }
         public DateTime AdmissionDateTime { get; set; }
         public int AdmissionMethod { get; set; }
+        public string SourceOfReferal { get; set; }
+        
 
 
     }
 
+
+    public class AdverseEvent
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("PatNum")]
+        public virtual Patient Patient { get; set; }
+        public int PatNum { get; set; }
+    }
+
+    public class PatientDiagnosis
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int IndexNo { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+        [ForeignKey("Code")]
+        public virtual Diagnosis Diagnosis { get; set; }
+        public string Code { get; set; }
+        public string Remark { get; set; }
+        public string DType { get; set; }
+
+
+
+    }
+    public class RelevantInvestigationsAndResult {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+    public class InfectionControlStatus {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+    public class Immunisation {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+    public class FunctionalState {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        public DateTime Date { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+    public class Diet {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+    public class RelevantTreatmentsAndChangesMadeInTreatment {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string Description { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+    }
+
+
+    public class Diagnosis
+    {
+        [Key]
+        public string Code { get; set; }
+        public string Description { get; set; }
+
+    }
+
+    public class OperationAndProcedure
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Description { get; set; }
+        public int Type { get; set; }
+        [ForeignKey("AdmNum")]
+        public virtual Admission Admission { get; set; }
+        public int AdmNum { get; set; }
+
+    }
 
     public class Ward
     {
