@@ -64,7 +64,6 @@ namespace ByticHealth.App_Data
         public string HospitalSite { get; set; }
         public string DischargeMethod { get; set; }
         public bool? PatientDied { get; set; }
-        public DateTime DateOfDirth { get; set; }
         public bool PostMortemFlag { get; set; }
 
         [ForeignKey("AdmNum")]

@@ -213,6 +213,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\uscDischarge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscDischarge.Designer.cs">
+      <DependentUpon>uscDischarge.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uscAppointmentSchedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -358,6 +364,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\uscDischarge.resx">
+      <DependentUpon>uscDischarge.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscAppointmentSchedule.resx">
       <DependentUpon>uscAppointmentSchedule.cs</DependentUpon>
     </EmbeddedResource>
