@@ -148,3 +148,5 @@ C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.csproj
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.dll
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscDischarge.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.Forms.frmDischargeSummary.resources
+C:\Users\ADMIN\Source\Repos\ByticHealth\ByticHealth\obj\Debug\ByticHealth.UserControls.uscDischargeSummary.resources

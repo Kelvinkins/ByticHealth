@@ -61,6 +61,7 @@
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takeVitalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.writeReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.patientAdmissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +111,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.patientAdmissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dischargeSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -353,7 +354,8 @@
             this.inventoryToolStripMenuItem,
             this.takeVitalsToolStripMenuItem,
             this.writeReportToolStripMenuItem,
-            this.patientAdmissionToolStripMenuItem});
+            this.patientAdmissionToolStripMenuItem,
+            this.dischargeSummaryToolStripMenuItem});
             this.viewMenu.Name = "viewMenu";
             this.viewMenu.Size = new System.Drawing.Size(56, 20);
             this.viewMenu.Text = "Patient";
@@ -361,26 +363,33 @@
             // billingToolStripMenuItem
             // 
             this.billingToolStripMenuItem.Name = "billingToolStripMenuItem";
-            this.billingToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.billingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.billingToolStripMenuItem.Text = "View all Patients";
             // 
             // inventoryToolStripMenuItem
             // 
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inventoryToolStripMenuItem.Text = "Update Patients";
             // 
             // takeVitalsToolStripMenuItem
             // 
             this.takeVitalsToolStripMenuItem.Name = "takeVitalsToolStripMenuItem";
-            this.takeVitalsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.takeVitalsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.takeVitalsToolStripMenuItem.Text = "Take vitals";
             // 
             // writeReportToolStripMenuItem
             // 
             this.writeReportToolStripMenuItem.Name = "writeReportToolStripMenuItem";
-            this.writeReportToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.writeReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.writeReportToolStripMenuItem.Text = "Write report";
+            // 
+            // patientAdmissionToolStripMenuItem
+            // 
+            this.patientAdmissionToolStripMenuItem.Name = "patientAdmissionToolStripMenuItem";
+            this.patientAdmissionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.patientAdmissionToolStripMenuItem.Text = "Patient Admission";
+            this.patientAdmissionToolStripMenuItem.Click += new System.EventHandler(this.patientAdmissionToolStripMenuItem_Click);
             // 
             // toolsMenu
             // 
@@ -755,12 +764,12 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // patientAdmissionToolStripMenuItem
+            // dischargeSummaryToolStripMenuItem
             // 
-            this.patientAdmissionToolStripMenuItem.Name = "patientAdmissionToolStripMenuItem";
-            this.patientAdmissionToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.patientAdmissionToolStripMenuItem.Text = "Patient Admission";
-            this.patientAdmissionToolStripMenuItem.Click += new System.EventHandler(this.patientAdmissionToolStripMenuItem_Click);
+            this.dischargeSummaryToolStripMenuItem.Name = "dischargeSummaryToolStripMenuItem";
+            this.dischargeSummaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dischargeSummaryToolStripMenuItem.Text = "Discharge Summary";
+            this.dischargeSummaryToolStripMenuItem.Click += new System.EventHandler(this.dischargeSummaryToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -871,6 +880,7 @@
         private System.Windows.Forms.ToolStripMenuItem convertersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pDFEXCELToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientAdmissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dischargeSummaryToolStripMenuItem;
     }
 }
 

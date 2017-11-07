@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -37,12 +39,11 @@
             this.uscAdmission1 = new ByticHealth.UserControls.uscAdmission();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uscDischarge1 = new ByticHealth.UserControls.uscDischarge();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -51,7 +52,6 @@
             this.splitContainer2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -68,9 +68,28 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(833, 504);
+            this.splitContainer1.Size = new System.Drawing.Size(833, 511);
             this.splitContainer1.SplitterDistance = 46;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(833, 46);
+            this.panel1.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(273, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 22);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "ADMISSION AND DISCHARGE WINDOW";
             // 
             // tabControl1
             // 
@@ -80,7 +99,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(833, 454);
+            this.tabControl1.Size = new System.Drawing.Size(833, 461);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -147,7 +166,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(825, 428);
+            this.tabPage2.Size = new System.Drawing.Size(825, 435);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Patient Discharge";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -161,30 +180,11 @@
             this.uscDischarge1.Size = new System.Drawing.Size(837, 506);
             this.uscDischarge1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 46);
-            this.panel1.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(273, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 22);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "ADMISSION AND DISCHARGE WINDOW";
-            // 
             // frmPatAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 504);
+            this.ClientSize = new System.Drawing.Size(833, 511);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmPatAdmission";
             this.Text = "frmPatAdmission";
@@ -192,6 +192,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -200,7 +201,6 @@
             this.splitContainer2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

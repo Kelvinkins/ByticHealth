@@ -33,7 +33,7 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.btnLookup = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
-            this.nupPatNum = new System.Windows.Forms.NumericUpDown();
+            this.nupAdmNum = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -111,7 +111,7 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPatNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdmNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -215,7 +215,7 @@
             // 
             this.splitContainer3.Panel1.Controls.Add(this.btnLookup);
             this.splitContainer3.Panel1.Controls.Add(this.btnFind);
-            this.splitContainer3.Panel1.Controls.Add(this.nupPatNum);
+            this.splitContainer3.Panel1.Controls.Add(this.nupAdmNum);
             this.splitContainer3.Panel1.Controls.Add(this.label2);
             // 
             // splitContainer3.Panel2
@@ -244,12 +244,12 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // nupPatNum
+            // nupAdmNum
             // 
-            this.nupPatNum.Location = new System.Drawing.Point(99, 5);
-            this.nupPatNum.Name = "nupPatNum";
-            this.nupPatNum.Size = new System.Drawing.Size(94, 20);
-            this.nupPatNum.TabIndex = 1;
+            this.nupAdmNum.Location = new System.Drawing.Point(99, 5);
+            this.nupAdmNum.Name = "nupAdmNum";
+            this.nupAdmNum.Size = new System.Drawing.Size(94, 20);
+            this.nupAdmNum.TabIndex = 1;
             // 
             // label2
             // 
@@ -1018,7 +1018,7 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(203, 22);
             this.label19.TabIndex = 3;
-            this.label19.Text = "ADMISSION HISTORY";
+            this.label19.Text = "DISCHARGE HISTORY";
             // 
             // dgvAdmissionHistory
             // 
@@ -1052,7 +1052,7 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nupPatNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdmNum)).EndInit();
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
@@ -1126,7 +1126,7 @@
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.Button btnLookup;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.NumericUpDown nupPatNum;
+        private System.Windows.Forms.NumericUpDown nupAdmNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox picPassport;

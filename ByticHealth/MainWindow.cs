@@ -154,5 +154,15 @@ namespace ByticHealth
             frm.Show();
 
         }
+
+        private void dischargeSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDischargeSummary frm = new frmDischargeSummary();
+            frm.MdiParent = this;
+            frm.AutoScroll = true;
+            frm.Text = "PATIENT DISCHARGE SUMMARY";
+            frm.Show();
+
+        }
     }
 }

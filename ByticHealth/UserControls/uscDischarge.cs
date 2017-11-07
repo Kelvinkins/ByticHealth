@@ -21,28 +21,32 @@ namespace ByticHealth.UserControls
         }
 
         BHModel db = new BHModel();
-        public static Patient patient;
+        public static Admission admission;
         private void btnFind_Click(object sender, EventArgs e)
         {
-            int PatNum = Convert.ToInt32(nupPatNum.Value);
+            int AdmNum = Convert.ToInt32(nupAdmNum.Value);
 
             try
             {
-                patient = db.Patients.Find(PatNum);
+                admission = db.Admissions.Find(AdmNum);
 
 
-                using (var ms = new MemoryStream(patient.PassportPhoto))
+                using (var ms = new MemoryStream(admission.Patient.PassportPhoto))
                 {
                     picPassport.Image = Image.FromStream(ms);
 
                 }
-                txtDateOfBirth.Text = patient.DateOfBirth.ToString();
-                txtFullName.Text = patient.FirstName + " " + patient.LastName;
-                txtPhoneNo.Text = patient.CellPhone;
-                txtGender.Text = patient.Sex;
-                txtSSN.Text = patient.SSN;
-                lblPatNum.Text = patient.PatNum.ToString();
-                dgvAdmissionHistory.DataSource = db.Admissions.Where(adm => adm.PatNum == patient.PatNum).ToList();
+                txtDateOfBirth.Text = admission.Patient.DateOfBirth.ToString();
+                txtFullName.Text = admission.Patient.FirstName + " " + admission.Patient.LastName;
+                txtPhoneNo.Text = admission.Patient.CellPhone;
+                txtGender.Text = admission.Patient.Sex;
+                txtSSN.Text = admission.Patient.SSN;
+                lblPatNum.Text = admission.Patient.PatNum.ToString();
+                txtBed.Text = admission.Bed.Name + " :" + admission.Bed.BedNo;
+                txtBedStatus.Text = admission.Bed.Status;
+                txtBedRemark.Text = admission.Bed.remark;
+                txtWardRoom.Text = admission.Bed.Ward.Name + " :" + admission.Bed.Ward.WardNo+" Type["+admission.Bed.Ward.WardType+"]";
+                dgvAdmissionHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
             }
             catch (Exception ex)
             {
@@ -90,27 +94,27 @@ namespace ByticHealth.UserControls
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var admission = new Admission
-            {
-                AdmNum=Computation.GetAdmissionID(1),
-                AdmissionDate = dteAdmissionDate.Value.Date,
-                AdmissionTime = dteAdmissionTime.Value.TimeOfDay,
-                AdmissionDateTime = dteAdmissionTime.Value,
-                PatNum = patient.PatNum,
-                //BedNo=(int)cmbBed.SelectedValue
+            //var admission = new Admission
+            //{
+            //    AdmNum=Computation.GetAdmissionID(1),
+            //    AdmissionDate = dteAdmissionDate.Value.Date,
+            //    AdmissionTime = dteAdmissionTime.Value.TimeOfDay,
+            //    AdmissionDateTime = dteAdmissionTime.Value,
+            //    PatNum = patient.PatNum,
+            //    //BedNo=(int)cmbBed.SelectedValue
                      
-            };
-            db.Admissions.Add(admission);
-            if(db.SaveChanges()>0)
-            {
-                dgvAdmissionHistory.DataSource = db.Admissions.Where(adm=>adm.PatNum==patient.PatNum).ToList();
-                MessageBox.Show("Record saved successfully");
+            //};
+            //db.Admissions.Add(admission);
+            //if(db.SaveChanges()>0)
+            //{
+            //    dgvAdmissionHistory.DataSource = db.Admissions.Where(adm=>adm.PatNum==patient.PatNum).ToList();
+            //    MessageBox.Show("Record saved successfully");
 
-            }
-            else
-            {
-                MessageBox.Show("Error saving record");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Error saving record");
+            //}
         }
 
         private void rdbWard_CheckedChanged(object sender, EventArgs e)
