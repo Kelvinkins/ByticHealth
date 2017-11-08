@@ -66,11 +66,15 @@ namespace ByticHealth.App_Data
         public int? ID { get; set; }
         public string DischargeMethod { get; set; }
         public bool? PatientDied { get; set; }
-        public bool PostMortemFlag { get; set; }
+        public bool? PostMortemFlag { get; set; }
 
         [ForeignKey("AdmNum")]
         public virtual Admission Admission { get; set; }
         public int? AdmNum { get; set; }
+        public DateTime? DeathDate { get; set; }
+        public DateTime? DeathTime { get; set; }
+
+
 
 
     }

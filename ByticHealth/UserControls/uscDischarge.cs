@@ -18,7 +18,14 @@ namespace ByticHealth.UserControls
         public uscDischarge()
         {
             InitializeComponent();
-            cmbDischargeType.DataSource = Enum.GetValues(typeof(Enumerations.DischargeMethod));
+            try
+            {
+                cmbDischargeType.DataSource = Enum.GetValues(typeof(Enumerations.DischargeMethod));
+               
+            }catch(Exception)
+            {
+
+            }
 
         }
 
@@ -27,9 +34,13 @@ namespace ByticHealth.UserControls
         private void btnFind_Click(object sender, EventArgs e)
         {
             int AdmNum = Convert.ToInt32(nupAdmNum.Value);
-
+          
             try
             {
+                cmbHospitalSite.DataSource = db.HospitalSites.ToList();
+                cmbHospitalSite.DisplayMember = "Name";
+                cmbHospitalSite.ValueMember = "ID";
+
                 admission = db.Admissions.Find(AdmNum);
                 if (admission.IsDischarged)
                 {
@@ -52,6 +63,7 @@ namespace ByticHealth.UserControls
                     txtBedStatus.Text = admission.Bed.Status;
                     txtBedRemark.Text = admission.Bed.remark;
                     txtAdmissionDate.Text = admission.AdmissionDate.Date.ToString();
+                    lblStat.Text = admission.Bed.Ward.WardNo + ":" + admission.Bed.BedNo;
                     txtAdmissionDateTime.Text = admission.AdmissionDateTime.Hour.ToString() + ":" + admission.AdmissionDateTime.Minute.ToString(); ;
                     txtWardRoom.Text = admission.Bed.Ward.Name + " :" + admission.Bed.Ward.WardNo + " Type[" + admission.Bed.Ward.WardType + "]";
                     dgvDischargeHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
@@ -118,13 +130,24 @@ namespace ByticHealth.UserControls
                 PatientDied = chkPatientDied.Checked,
                 PostMortemFlag = chkPostMortemFlag.Checked,
                 Remark = rtbRemark.Text,
-                IsDischarged = true
-                                       
-
+                DischargeDateTime=dteDischargeTime.Value,
+                DischargeDate=dteDichargeDate.Value.Date
+               
+               
+                                                      
             };
 
-            
             if(chkPatientDied.Checked)
+            {
+                discharge.DeathTime = dteDeathDate.Value.Date;
+                discharge.DeathDate = dteDeathTime.Value;
+            }
+            else
+            {
+                discharge.DeathTime = null;
+                discharge.DeathDate =null;
+            }
+         
             db.Discharges.Add(discharge);
             if (db.SaveChanges() > 0)
             {
@@ -223,6 +246,11 @@ namespace ByticHealth.UserControls
             {
                 MessageBox.Show("Sorry, Error has occured!");
             }
+        }
+
+        private void chkPatientDied_CheckedChanged(object sender, EventArgs e)
+        {
+            grbDeath.Enabled = chkPatientDied.Checked;
         }
     }
 }

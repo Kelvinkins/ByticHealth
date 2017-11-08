@@ -85,7 +85,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.chkPostMortemFlag = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
@@ -95,7 +94,6 @@
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbDischargeType = new System.Windows.Forms.ComboBox();
-            this.chkPatientDied = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmbHospitalSite = new System.Windows.Forms.ComboBox();
             this.rtbHospitalStateDescription = new System.Windows.Forms.RichTextBox();
@@ -103,6 +101,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvDischargeHistory = new System.Windows.Forms.DataGridView();
+            this.grbDeath = new System.Windows.Forms.GroupBox();
+            this.splitContainer16 = new System.Windows.Forms.SplitContainer();
+            this.chkPostMortemFlag = new System.Windows.Forms.CheckBox();
+            this.splitContainer15 = new System.Windows.Forms.SplitContainer();
+            this.label21 = new System.Windows.Forms.Label();
+            this.chkPatientDied = new System.Windows.Forms.CheckBox();
+            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
+            this.dteDeathDate = new System.Windows.Forms.DateTimePicker();
+            this.dteDeathTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -169,6 +176,19 @@
             this.splitContainer11.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDischargeHistory)).BeginInit();
+            this.grbDeath.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).BeginInit();
+            this.splitContainer16.Panel1.SuspendLayout();
+            this.splitContainer16.Panel2.SuspendLayout();
+            this.splitContainer16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
+            this.splitContainer15.Panel1.SuspendLayout();
+            this.splitContainer15.Panel2.SuspendLayout();
+            this.splitContainer15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
+            this.splitContainer14.Panel1.SuspendLayout();
+            this.splitContainer14.Panel2.SuspendLayout();
+            this.splitContainer14.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -186,7 +206,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer10);
-            this.splitContainer1.Size = new System.Drawing.Size(837, 506);
+            this.splitContainer1.Size = new System.Drawing.Size(848, 506);
             this.splitContainer1.SplitterDistance = 234;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -203,8 +223,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer6);
-            this.splitContainer2.Size = new System.Drawing.Size(833, 230);
-            this.splitContainer2.SplitterDistance = 410;
+            this.splitContainer2.Size = new System.Drawing.Size(844, 230);
+            this.splitContainer2.SplitterDistance = 415;
             this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer3
@@ -225,7 +245,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(410, 230);
+            this.splitContainer3.Size = new System.Drawing.Size(415, 230);
             this.splitContainer3.SplitterDistance = 30;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -277,8 +297,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer4.Size = new System.Drawing.Size(406, 192);
-            this.splitContainer4.SplitterDistance = 145;
+            this.splitContainer4.Size = new System.Drawing.Size(411, 192);
+            this.splitContainer4.SplitterDistance = 146;
             this.splitContainer4.TabIndex = 0;
             // 
             // splitContainer5
@@ -296,7 +316,7 @@
             // splitContainer5.Panel2
             // 
             this.splitContainer5.Panel2.Controls.Add(this.lblPatNum);
-            this.splitContainer5.Size = new System.Drawing.Size(145, 192);
+            this.splitContainer5.Size = new System.Drawing.Size(146, 192);
             this.splitContainer5.SplitterDistance = 142;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -306,7 +326,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(141, 138);
+            this.groupBox2.Size = new System.Drawing.Size(142, 138);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -316,7 +336,7 @@
             this.picPassport.Image = global::ByticHealth.Properties.Resources.placeholder;
             this.picPassport.Location = new System.Drawing.Point(3, 16);
             this.picPassport.Name = "picPassport";
-            this.picPassport.Size = new System.Drawing.Size(135, 119);
+            this.picPassport.Size = new System.Drawing.Size(136, 119);
             this.picPassport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPassport.TabIndex = 0;
             this.picPassport.TabStop = false;
@@ -365,7 +385,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(257, 192);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 192);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label20
@@ -380,7 +400,7 @@
             // txtFullName
             // 
             this.txtFullName.Enabled = false;
-            this.txtFullName.Location = new System.Drawing.Point(99, 29);
+            this.txtFullName.Location = new System.Drawing.Point(100, 29);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(128, 20);
             this.txtFullName.TabIndex = 6;
@@ -388,7 +408,7 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.Enabled = false;
-            this.txtPhoneNo.Location = new System.Drawing.Point(99, 55);
+            this.txtPhoneNo.Location = new System.Drawing.Point(100, 55);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(128, 20);
             this.txtPhoneNo.TabIndex = 7;
@@ -396,7 +416,7 @@
             // txtGender
             // 
             this.txtGender.Enabled = false;
-            this.txtGender.Location = new System.Drawing.Point(99, 75);
+            this.txtGender.Location = new System.Drawing.Point(100, 75);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(128, 20);
             this.txtGender.TabIndex = 8;
@@ -404,7 +424,7 @@
             // txtDateOfBirth
             // 
             this.txtDateOfBirth.Enabled = false;
-            this.txtDateOfBirth.Location = new System.Drawing.Point(99, 95);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(100, 95);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(128, 20);
             this.txtDateOfBirth.TabIndex = 9;
@@ -412,7 +432,7 @@
             // txtAge
             // 
             this.txtAge.Enabled = false;
-            this.txtAge.Location = new System.Drawing.Point(99, 115);
+            this.txtAge.Location = new System.Drawing.Point(100, 115);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(128, 20);
             this.txtAge.TabIndex = 10;
@@ -420,7 +440,7 @@
             // txtSSN
             // 
             this.txtSSN.Enabled = false;
-            this.txtSSN.Location = new System.Drawing.Point(99, 135);
+            this.txtSSN.Location = new System.Drawing.Point(100, 135);
             this.txtSSN.Name = "txtSSN";
             this.txtSSN.Size = new System.Drawing.Size(128, 20);
             this.txtSSN.TabIndex = 11;
@@ -491,7 +511,7 @@
             // txtAdmissionDate
             // 
             this.txtAdmissionDate.Enabled = false;
-            this.txtAdmissionDate.Location = new System.Drawing.Point(99, 155);
+            this.txtAdmissionDate.Location = new System.Drawing.Point(100, 155);
             this.txtAdmissionDate.Name = "txtAdmissionDate";
             this.txtAdmissionDate.Size = new System.Drawing.Size(128, 20);
             this.txtAdmissionDate.TabIndex = 14;
@@ -499,7 +519,7 @@
             // txtAdmissionDateTime
             // 
             this.txtAdmissionDateTime.Enabled = false;
-            this.txtAdmissionDateTime.Location = new System.Drawing.Point(99, 175);
+            this.txtAdmissionDateTime.Location = new System.Drawing.Point(100, 175);
             this.txtAdmissionDateTime.Name = "txtAdmissionDateTime";
             this.txtAdmissionDateTime.Size = new System.Drawing.Size(128, 20);
             this.txtAdmissionDateTime.TabIndex = 15;
@@ -519,7 +539,7 @@
             // splitContainer6.Panel2
             // 
             this.splitContainer6.Panel2.Controls.Add(this.splitContainer7);
-            this.splitContainer6.Size = new System.Drawing.Size(419, 230);
+            this.splitContainer6.Size = new System.Drawing.Size(425, 230);
             this.splitContainer6.SplitterDistance = 51;
             this.splitContainer6.TabIndex = 0;
             // 
@@ -558,7 +578,7 @@
             // splitContainer7.Panel2
             // 
             this.splitContainer7.Panel2.Controls.Add(this.splitContainer8);
-            this.splitContainer7.Size = new System.Drawing.Size(364, 230);
+            this.splitContainer7.Size = new System.Drawing.Size(370, 230);
             this.splitContainer7.SplitterDistance = 33;
             this.splitContainer7.TabIndex = 0;
             // 
@@ -570,7 +590,7 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 29);
+            this.panel2.Size = new System.Drawing.Size(366, 29);
             this.panel2.TabIndex = 62;
             // 
             // label10
@@ -594,8 +614,8 @@
             // splitContainer8.Panel2
             // 
             this.splitContainer8.Panel2.Controls.Add(this.tableLayoutPanelAdmission);
-            this.splitContainer8.Size = new System.Drawing.Size(360, 189);
-            this.splitContainer8.SplitterDistance = 130;
+            this.splitContainer8.Size = new System.Drawing.Size(366, 189);
+            this.splitContainer8.SplitterDistance = 132;
             this.splitContainer8.TabIndex = 0;
             // 
             // splitContainer9
@@ -613,7 +633,7 @@
             // splitContainer9.Panel2
             // 
             this.splitContainer9.Panel2.Controls.Add(this.lblStat);
-            this.splitContainer9.Size = new System.Drawing.Size(130, 189);
+            this.splitContainer9.Size = new System.Drawing.Size(132, 189);
             this.splitContainer9.SplitterDistance = 141;
             this.splitContainer9.TabIndex = 0;
             // 
@@ -623,7 +643,7 @@
             this.groupBoxAdmission.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxAdmission.Location = new System.Drawing.Point(0, 0);
             this.groupBoxAdmission.Name = "groupBoxAdmission";
-            this.groupBoxAdmission.Size = new System.Drawing.Size(126, 137);
+            this.groupBoxAdmission.Size = new System.Drawing.Size(128, 137);
             this.groupBoxAdmission.TabIndex = 3;
             this.groupBoxAdmission.TabStop = false;
             // 
@@ -633,7 +653,7 @@
             this.pictureBox2.Image = global::ByticHealth.Properties.Resources.ward;
             this.pictureBox2.Location = new System.Drawing.Point(3, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 118);
+            this.pictureBox2.Size = new System.Drawing.Size(122, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -671,7 +691,7 @@
             this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanelAdmission.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelAdmission.Size = new System.Drawing.Size(226, 189);
+            this.tableLayoutPanelAdmission.Size = new System.Drawing.Size(230, 189);
             this.tableLayoutPanelAdmission.TabIndex = 1;
             // 
             // label12
@@ -680,7 +700,7 @@
             this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label12.Location = new System.Drawing.Point(3, 119);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 13);
+            this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 2;
             this.label12.Text = "Remark:";
             // 
@@ -690,7 +710,7 @@
             this.label13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label13.Location = new System.Drawing.Point(3, 71);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 13);
+            this.label13.Size = new System.Drawing.Size(69, 13);
             this.label13.TabIndex = 1;
             this.label13.Text = "Bed Status:";
             // 
@@ -700,7 +720,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label14.Location = new System.Drawing.Point(3, 46);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 13);
+            this.label14.Size = new System.Drawing.Size(69, 13);
             this.label14.TabIndex = 0;
             this.label14.Text = "Bed";
             // 
@@ -708,15 +728,15 @@
             // 
             this.txtBedStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtBedStatus.Enabled = false;
-            this.txtBedStatus.Location = new System.Drawing.Point(76, 62);
+            this.txtBedStatus.Location = new System.Drawing.Point(78, 62);
             this.txtBedStatus.Name = "txtBedStatus";
-            this.txtBedStatus.Size = new System.Drawing.Size(147, 20);
+            this.txtBedStatus.Size = new System.Drawing.Size(149, 20);
             this.txtBedStatus.TabIndex = 7;
             // 
             // txtBedRemark
             // 
             this.txtBedRemark.Enabled = false;
-            this.txtBedRemark.Location = new System.Drawing.Point(76, 87);
+            this.txtBedRemark.Location = new System.Drawing.Point(78, 87);
             this.txtBedRemark.Multiline = true;
             this.txtBedRemark.Name = "txtBedRemark";
             this.txtBedRemark.Size = new System.Drawing.Size(147, 42);
@@ -728,7 +748,7 @@
             this.label15.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label15.Location = new System.Drawing.Point(3, 19);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.Size = new System.Drawing.Size(69, 13);
             this.label15.TabIndex = 10;
             this.label15.Text = "Ward/Room";
             // 
@@ -736,18 +756,18 @@
             // 
             this.txtWardRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtWardRoom.Enabled = false;
-            this.txtWardRoom.Location = new System.Drawing.Point(76, 9);
+            this.txtWardRoom.Location = new System.Drawing.Point(78, 9);
             this.txtWardRoom.Name = "txtWardRoom";
-            this.txtWardRoom.Size = new System.Drawing.Size(147, 20);
+            this.txtWardRoom.Size = new System.Drawing.Size(149, 20);
             this.txtWardRoom.TabIndex = 14;
             // 
             // txtBed
             // 
             this.txtBed.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtBed.Enabled = false;
-            this.txtBed.Location = new System.Drawing.Point(76, 36);
+            this.txtBed.Location = new System.Drawing.Point(78, 36);
             this.txtBed.Name = "txtBed";
-            this.txtBed.Size = new System.Drawing.Size(147, 20);
+            this.txtBed.Size = new System.Drawing.Size(149, 20);
             this.txtBed.TabIndex = 15;
             // 
             // splitContainer10
@@ -765,7 +785,7 @@
             // splitContainer10.Panel2
             // 
             this.splitContainer10.Panel2.Controls.Add(this.splitContainer11);
-            this.splitContainer10.Size = new System.Drawing.Size(837, 268);
+            this.splitContainer10.Size = new System.Drawing.Size(848, 268);
             this.splitContainer10.SplitterDistance = 148;
             this.splitContainer10.TabIndex = 0;
             // 
@@ -775,7 +795,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(833, 144);
+            this.groupBox3.Size = new System.Drawing.Size(844, 144);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Admission Details";
@@ -787,18 +807,18 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.32861F));
+            this.tableLayoutPanel3.Controls.Add(this.chkPatientDied, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnDischargeSummary, 3, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chkPostMortemFlag, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.rtbRemark, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.splitContainer12, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.splitContainer13, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chkPatientDied, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label16, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.cmbHospitalSite, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.rtbHospitalStateDescription, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.grbDeath, 3, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, -4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -806,15 +826,15 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(827, 145);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(838, 145);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnDischargeSummary
             // 
             this.btnDischargeSummary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDischargeSummary.Location = new System.Drawing.Point(595, 123);
+            this.btnDischargeSummary.Location = new System.Drawing.Point(602, 123);
             this.btnDischargeSummary.Name = "btnDischargeSummary";
-            this.btnDischargeSummary.Size = new System.Drawing.Size(229, 19);
+            this.btnDischargeSummary.Size = new System.Drawing.Size(233, 19);
             this.btnDischargeSummary.TabIndex = 30;
             this.btnDischargeSummary.Text = "Discharge Summary";
             this.btnDischargeSummary.UseVisualStyleBackColor = true;
@@ -829,19 +849,19 @@
             this.tableLayoutPanel4.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSave, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(595, 91);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(602, 91);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(229, 26);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(233, 26);
             this.tableLayoutPanel4.TabIndex = 29;
             // 
             // button9
             // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(155, 3);
+            this.button9.Location = new System.Drawing.Point(157, 3);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(71, 20);
+            this.button9.Size = new System.Drawing.Size(73, 20);
             this.button9.TabIndex = 3;
             this.button9.Text = "Delete";
             this.button9.UseVisualStyleBackColor = true;
@@ -849,9 +869,9 @@
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(79, 3);
+            this.button6.Location = new System.Drawing.Point(80, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 20);
+            this.button6.Size = new System.Drawing.Size(71, 20);
             this.button6.TabIndex = 2;
             this.button6.Text = "Update";
             this.button6.UseVisualStyleBackColor = true;
@@ -861,22 +881,11 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSave.Location = new System.Drawing.Point(3, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(70, 20);
+            this.btnSave.Size = new System.Drawing.Size(71, 20);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // chkPostMortemFlag
-            // 
-            this.chkPostMortemFlag.AutoSize = true;
-            this.chkPostMortemFlag.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chkPostMortemFlag.Location = new System.Drawing.Point(595, 65);
-            this.chkPostMortemFlag.Name = "chkPostMortemFlag";
-            this.chkPostMortemFlag.Size = new System.Drawing.Size(229, 17);
-            this.chkPostMortemFlag.TabIndex = 25;
-            this.chkPostMortemFlag.Text = "Post Mortem Flag?";
-            this.chkPostMortemFlag.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -884,7 +893,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.Size = new System.Drawing.Size(119, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "Discharge Date";
             // 
@@ -894,23 +903,23 @@
             this.label18.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label18.Location = new System.Drawing.Point(3, 72);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(118, 13);
+            this.label18.Size = new System.Drawing.Size(119, 13);
             this.label18.TabIndex = 9;
             this.label18.Text = "Remark:";
             // 
             // rtbRemark
             // 
             this.rtbRemark.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rtbRemark.Location = new System.Drawing.Point(127, 25);
+            this.rtbRemark.Location = new System.Drawing.Point(128, 25);
             this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(228, 57);
+            this.rtbRemark.Size = new System.Drawing.Size(231, 57);
             this.rtbRemark.TabIndex = 10;
             this.rtbRemark.Text = "";
             // 
             // splitContainer12
             // 
             this.splitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer12.Location = new System.Drawing.Point(127, 88);
+            this.splitContainer12.Location = new System.Drawing.Point(128, 88);
             this.splitContainer12.Name = "splitContainer12";
             // 
             // splitContainer12.Panel1
@@ -920,8 +929,8 @@
             // splitContainer12.Panel2
             // 
             this.splitContainer12.Panel2.Controls.Add(this.dteDischargeTime);
-            this.splitContainer12.Size = new System.Drawing.Size(228, 29);
-            this.splitContainer12.SplitterDistance = 135;
+            this.splitContainer12.Size = new System.Drawing.Size(231, 29);
+            this.splitContainer12.SplitterDistance = 136;
             this.splitContainer12.TabIndex = 20;
             // 
             // dteDichargeDate
@@ -930,7 +939,7 @@
             this.dteDichargeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dteDichargeDate.Location = new System.Drawing.Point(0, 9);
             this.dteDichargeDate.Name = "dteDichargeDate";
-            this.dteDichargeDate.Size = new System.Drawing.Size(135, 20);
+            this.dteDichargeDate.Size = new System.Drawing.Size(136, 20);
             this.dteDichargeDate.TabIndex = 0;
             // 
             // dteDischargeTime
@@ -939,13 +948,13 @@
             this.dteDischargeTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dteDischargeTime.Location = new System.Drawing.Point(0, 9);
             this.dteDischargeTime.Name = "dteDischargeTime";
-            this.dteDischargeTime.Size = new System.Drawing.Size(89, 20);
+            this.dteDischargeTime.Size = new System.Drawing.Size(91, 20);
             this.dteDischargeTime.TabIndex = 1;
             // 
             // splitContainer13
             // 
             this.splitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer13.Location = new System.Drawing.Point(361, 88);
+            this.splitContainer13.Location = new System.Drawing.Point(365, 88);
             this.splitContainer13.Name = "splitContainer13";
             // 
             // splitContainer13.Panel1
@@ -955,8 +964,8 @@
             // splitContainer13.Panel2
             // 
             this.splitContainer13.Panel2.Controls.Add(this.cmbDischargeType);
-            this.splitContainer13.Size = new System.Drawing.Size(228, 29);
-            this.splitContainer13.SplitterDistance = 87;
+            this.splitContainer13.Size = new System.Drawing.Size(231, 29);
+            this.splitContainer13.SplitterDistance = 88;
             this.splitContainer13.TabIndex = 23;
             this.splitContainer13.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer13_SplitterMoved);
             // 
@@ -976,19 +985,8 @@
             this.cmbDischargeType.FormattingEnabled = true;
             this.cmbDischargeType.Location = new System.Drawing.Point(0, 8);
             this.cmbDischargeType.Name = "cmbDischargeType";
-            this.cmbDischargeType.Size = new System.Drawing.Size(137, 21);
+            this.cmbDischargeType.Size = new System.Drawing.Size(139, 21);
             this.cmbDischargeType.TabIndex = 0;
-            // 
-            // chkPatientDied
-            // 
-            this.chkPatientDied.AutoSize = true;
-            this.chkPatientDied.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chkPatientDied.Location = new System.Drawing.Point(361, 65);
-            this.chkPatientDied.Name = "chkPatientDied";
-            this.chkPatientDied.Size = new System.Drawing.Size(228, 17);
-            this.chkPatientDied.TabIndex = 24;
-            this.chkPatientDied.Text = "Patient Died?";
-            this.chkPatientDied.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -996,7 +994,7 @@
             this.label16.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label16.Location = new System.Drawing.Point(3, 132);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 13);
+            this.label16.Size = new System.Drawing.Size(119, 13);
             this.label16.TabIndex = 26;
             this.label16.Text = "Hospital Site";
             // 
@@ -1004,9 +1002,9 @@
             // 
             this.cmbHospitalSite.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbHospitalSite.FormattingEnabled = true;
-            this.cmbHospitalSite.Location = new System.Drawing.Point(127, 123);
+            this.cmbHospitalSite.Location = new System.Drawing.Point(128, 123);
             this.cmbHospitalSite.Name = "cmbHospitalSite";
-            this.cmbHospitalSite.Size = new System.Drawing.Size(228, 21);
+            this.cmbHospitalSite.Size = new System.Drawing.Size(231, 21);
             this.cmbHospitalSite.TabIndex = 27;
             this.cmbHospitalSite.SelectedIndexChanged += new System.EventHandler(this.cmbHospitalSite_SelectedIndexChanged);
             // 
@@ -1014,9 +1012,9 @@
             // 
             this.rtbHospitalStateDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbHospitalStateDescription.Enabled = false;
-            this.rtbHospitalStateDescription.Location = new System.Drawing.Point(361, 123);
+            this.rtbHospitalStateDescription.Location = new System.Drawing.Point(365, 123);
             this.rtbHospitalStateDescription.Name = "rtbHospitalStateDescription";
-            this.rtbHospitalStateDescription.Size = new System.Drawing.Size(228, 19);
+            this.rtbHospitalStateDescription.Size = new System.Drawing.Size(231, 19);
             this.rtbHospitalStateDescription.TabIndex = 28;
             this.rtbHospitalStateDescription.Text = "";
             // 
@@ -1035,7 +1033,7 @@
             // splitContainer11.Panel2
             // 
             this.splitContainer11.Panel2.Controls.Add(this.dgvDischargeHistory);
-            this.splitContainer11.Size = new System.Drawing.Size(837, 116);
+            this.splitContainer11.Size = new System.Drawing.Size(848, 116);
             this.splitContainer11.SplitterDistance = 35;
             this.splitContainer11.TabIndex = 0;
             // 
@@ -1047,7 +1045,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 31);
+            this.panel1.Size = new System.Drawing.Size(844, 31);
             this.panel1.TabIndex = 61;
             // 
             // label19
@@ -1064,8 +1062,122 @@
             this.dgvDischargeHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDischargeHistory.Location = new System.Drawing.Point(0, 0);
             this.dgvDischargeHistory.Name = "dgvDischargeHistory";
-            this.dgvDischargeHistory.Size = new System.Drawing.Size(833, 73);
+            this.dgvDischargeHistory.Size = new System.Drawing.Size(844, 73);
             this.dgvDischargeHistory.TabIndex = 0;
+            // 
+            // grbDeath
+            // 
+            this.grbDeath.Controls.Add(this.splitContainer16);
+            this.grbDeath.Enabled = false;
+            this.grbDeath.Location = new System.Drawing.Point(602, 3);
+            this.grbDeath.Name = "grbDeath";
+            this.grbDeath.Size = new System.Drawing.Size(226, 79);
+            this.grbDeath.TabIndex = 32;
+            this.grbDeath.TabStop = false;
+            this.grbDeath.Text = "Death";
+            // 
+            // splitContainer16
+            // 
+            this.splitContainer16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer16.Location = new System.Drawing.Point(3, 16);
+            this.splitContainer16.Name = "splitContainer16";
+            this.splitContainer16.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer16.Panel1
+            // 
+            this.splitContainer16.Panel1.Controls.Add(this.splitContainer15);
+            // 
+            // splitContainer16.Panel2
+            // 
+            this.splitContainer16.Panel2.Controls.Add(this.chkPostMortemFlag);
+            this.splitContainer16.Size = new System.Drawing.Size(220, 60);
+            this.splitContainer16.SplitterDistance = 31;
+            this.splitContainer16.TabIndex = 0;
+            // 
+            // chkPostMortemFlag
+            // 
+            this.chkPostMortemFlag.AutoSize = true;
+            this.chkPostMortemFlag.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.chkPostMortemFlag.Location = new System.Drawing.Point(0, 8);
+            this.chkPostMortemFlag.Name = "chkPostMortemFlag";
+            this.chkPostMortemFlag.Size = new System.Drawing.Size(220, 17);
+            this.chkPostMortemFlag.TabIndex = 26;
+            this.chkPostMortemFlag.Text = "Post Mortem Flag?";
+            this.chkPostMortemFlag.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer15
+            // 
+            this.splitContainer15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer15.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer15.Name = "splitContainer15";
+            // 
+            // splitContainer15.Panel1
+            // 
+            this.splitContainer15.Panel1.Controls.Add(this.label21);
+            // 
+            // splitContainer15.Panel2
+            // 
+            this.splitContainer15.Panel2.Controls.Add(this.splitContainer14);
+            this.splitContainer15.Size = new System.Drawing.Size(220, 31);
+            this.splitContainer15.SplitterDistance = 73;
+            this.splitContainer15.TabIndex = 1;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label21.Location = new System.Drawing.Point(0, 18);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(62, 13);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Death Date";
+            // 
+            // chkPatientDied
+            // 
+            this.chkPatientDied.AutoSize = true;
+            this.chkPatientDied.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.chkPatientDied.Location = new System.Drawing.Point(365, 65);
+            this.chkPatientDied.Name = "chkPatientDied";
+            this.chkPatientDied.Size = new System.Drawing.Size(231, 17);
+            this.chkPatientDied.TabIndex = 33;
+            this.chkPatientDied.Text = "Patient Died?";
+            this.chkPatientDied.UseVisualStyleBackColor = true;
+            this.chkPatientDied.CheckedChanged += new System.EventHandler(this.chkPatientDied_CheckedChanged);
+            // 
+            // splitContainer14
+            // 
+            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer14.Name = "splitContainer14";
+            // 
+            // splitContainer14.Panel1
+            // 
+            this.splitContainer14.Panel1.Controls.Add(this.dteDeathDate);
+            // 
+            // splitContainer14.Panel2
+            // 
+            this.splitContainer14.Panel2.Controls.Add(this.dteDeathTime);
+            this.splitContainer14.Size = new System.Drawing.Size(143, 31);
+            this.splitContainer14.SplitterDistance = 58;
+            this.splitContainer14.TabIndex = 0;
+            // 
+            // dteDeathDate
+            // 
+            this.dteDeathDate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteDeathDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dteDeathDate.Location = new System.Drawing.Point(0, 11);
+            this.dteDeathDate.Name = "dteDeathDate";
+            this.dteDeathDate.Size = new System.Drawing.Size(58, 20);
+            this.dteDeathDate.TabIndex = 2;
+            // 
+            // dteDeathTime
+            // 
+            this.dteDeathTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteDeathTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dteDeathTime.Location = new System.Drawing.Point(0, 11);
+            this.dteDeathTime.Name = "dteDeathTime";
+            this.dteDeathTime.Size = new System.Drawing.Size(81, 20);
+            this.dteDeathTime.TabIndex = 0;
             // 
             // uscDischarge
             // 
@@ -1075,7 +1187,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.splitContainer1);
             this.Name = "uscDischarge";
-            this.Size = new System.Drawing.Size(837, 506);
+            this.Size = new System.Drawing.Size(848, 506);
             this.Load += new System.EventHandler(this.uscAptNew_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1151,6 +1263,21 @@
             this.splitContainer11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDischargeHistory)).EndInit();
+            this.grbDeath.ResumeLayout(false);
+            this.splitContainer16.Panel1.ResumeLayout(false);
+            this.splitContainer16.Panel2.ResumeLayout(false);
+            this.splitContainer16.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer16)).EndInit();
+            this.splitContainer16.ResumeLayout(false);
+            this.splitContainer15.Panel1.ResumeLayout(false);
+            this.splitContainer15.Panel1.PerformLayout();
+            this.splitContainer15.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
+            this.splitContainer15.ResumeLayout(false);
+            this.splitContainer14.Panel1.ResumeLayout(false);
+            this.splitContainer14.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
+            this.splitContainer14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1217,8 +1344,6 @@
         private System.Windows.Forms.SplitContainer splitContainer13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbDischargeType;
-        private System.Windows.Forms.CheckBox chkPostMortemFlag;
-        private System.Windows.Forms.CheckBox chkPatientDied;
         private System.Windows.Forms.Button btnDischargeSummary;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button button9;
@@ -1232,5 +1357,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtAdmissionDate;
         private System.Windows.Forms.TextBox txtAdmissionDateTime;
+        private System.Windows.Forms.CheckBox chkPatientDied;
+        private System.Windows.Forms.GroupBox grbDeath;
+        private System.Windows.Forms.SplitContainer splitContainer16;
+        private System.Windows.Forms.SplitContainer splitContainer15;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.CheckBox chkPostMortemFlag;
+        private System.Windows.Forms.SplitContainer splitContainer14;
+        private System.Windows.Forms.DateTimePicker dteDeathDate;
+        private System.Windows.Forms.DateTimePicker dteDeathTime;
     }
 }
