@@ -30,6 +30,9 @@ namespace ByticHealth.App_Data
         [ForeignKey("ID")]
         public virtual HospitalSite HospitalSite { get; set; }
         public int? ID { get; set; }
+        public bool IsDischarged { get; set; }
+        public DateTime? DischargeDate { get; set; }
+
 
 
     }

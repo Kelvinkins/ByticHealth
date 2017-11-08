@@ -243,7 +243,7 @@ namespace ByticHealth.UserControls
                 PassportPhoto = CommonCode.converterTo(picPassport.Image),
                 Signature = CommonCode.converterTo(picSignature.Image),
                 CancerPatient = chkCancerPatient.Checked,
-                PatientType = (int)Enumerations.PatientType.OT
+                PatientType = (int)Enumerations.PatientType.OPD
                 
             };
 

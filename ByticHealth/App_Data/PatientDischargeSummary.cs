@@ -72,6 +72,7 @@ namespace ByticHealth.App_Data
         public virtual Admission Admission { get; set; }
         public int? AdmNum { get; set; }
 
+
     }
 
     public class HospitalAction

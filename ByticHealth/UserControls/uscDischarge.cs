@@ -31,26 +31,32 @@ namespace ByticHealth.UserControls
             try
             {
                 admission = db.Admissions.Find(AdmNum);
-
-
-                using (var ms = new MemoryStream(admission.Patient.PassportPhoto))
+                if (admission.IsDischarged)
                 {
-                    picPassport.Image = Image.FromStream(ms);
+                    MessageBox.Show("Sorry, this patient was discharged on: " + admission.DischargeDate);
+                }
+                else
+                {
+                    using (var ms = new MemoryStream(admission.Patient.PassportPhoto))
+                    {
+                        picPassport.Image = Image.FromStream(ms);
+
+                    }
+                    txtDateOfBirth.Text = admission.Patient.DateOfBirth.ToString();
+                    txtFullName.Text = admission.Patient.FirstName + " " + admission.Patient.LastName;
+                    txtPhoneNo.Text = admission.Patient.CellPhone;
+                    txtGender.Text = admission.Patient.Sex;
+                    txtSSN.Text = admission.Patient.SSN;
+                    lblPatNum.Text = admission.Patient.PatNum.ToString();
+                    txtBed.Text = admission.Bed.Name + " :" + admission.Bed.BedNo;
+                    txtBedStatus.Text = admission.Bed.Status;
+                    txtBedRemark.Text = admission.Bed.remark;
+                    txtAdmissionDate.Text = admission.AdmissionDate.Date.ToString();
+                    txtAdmissionDateTime.Text = admission.AdmissionDateTime.Hour.ToString() + ":" + admission.AdmissionDateTime.Minute.ToString(); ;
+                    txtWardRoom.Text = admission.Bed.Ward.Name + " :" + admission.Bed.Ward.WardNo + " Type[" + admission.Bed.Ward.WardType + "]";
+                    dgvDischargeHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
 
                 }
-                txtDateOfBirth.Text = admission.Patient.DateOfBirth.ToString();
-                txtFullName.Text = admission.Patient.FirstName + " " + admission.Patient.LastName;
-                txtPhoneNo.Text = admission.Patient.CellPhone;
-                txtGender.Text = admission.Patient.Sex;
-                txtSSN.Text = admission.Patient.SSN;
-                lblPatNum.Text = admission.Patient.PatNum.ToString();
-                txtBed.Text = admission.Bed.Name + " :" + admission.Bed.BedNo;
-                txtBedStatus.Text = admission.Bed.Status;
-                txtBedRemark.Text = admission.Bed.remark;
-                txtAdmissionDate.Text = admission.AdmissionDate.Date.ToString() ;
-                txtAdmissionDateTime.Text = admission.AdmissionDateTime.Hour.ToString() + ":" + admission.AdmissionDateTime.Minute.ToString(); ;
-                txtWardRoom.Text = admission.Bed.Ward.Name + " :" + admission.Bed.Ward.WardNo+" Type["+admission.Bed.Ward.WardType+"]";
-                dgvDischargeHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
             }
             catch (Exception ex)
             {
@@ -110,12 +116,15 @@ namespace ByticHealth.UserControls
                 AdmNum = admission.AdmNum,
                 ID = (int)cmbHospitalSite.SelectedValue,
                 PatientDied = chkPatientDied.Checked,
-                PostMortemFlag=chkPostMortemFlag.Checked,
-                Remark=rtbRemark.Text,
-                DischargeDate=dteDichargeDate.Value.Date,
-                DischargeDateTime=dteDischargeTime.Value,                           
+                PostMortemFlag = chkPostMortemFlag.Checked,
+                Remark = rtbRemark.Text,
+                IsDischarged = true
+                                       
 
             };
+
+            
+            if(chkPatientDied.Checked)
             db.Discharges.Add(discharge);
             if (db.SaveChanges() > 0)
             {
