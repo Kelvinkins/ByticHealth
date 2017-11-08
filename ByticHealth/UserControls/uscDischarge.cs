@@ -18,6 +18,8 @@ namespace ByticHealth.UserControls
         public uscDischarge()
         {
             InitializeComponent();
+            cmbDischargeType.DataSource = Enum.GetValues(typeof(Enumerations.DischargeMethod));
+
         }
 
         BHModel db = new BHModel();
@@ -45,8 +47,10 @@ namespace ByticHealth.UserControls
                 txtBed.Text = admission.Bed.Name + " :" + admission.Bed.BedNo;
                 txtBedStatus.Text = admission.Bed.Status;
                 txtBedRemark.Text = admission.Bed.remark;
+                txtAdmissionDate.Text = admission.AdmissionDate.Date.ToString() ;
+                txtAdmissionDateTime.Text = admission.AdmissionDateTime.Hour.ToString() + ":" + admission.AdmissionDateTime.Minute.ToString(); ;
                 txtWardRoom.Text = admission.Bed.Ward.Name + " :" + admission.Bed.Ward.WardNo+" Type["+admission.Bed.Ward.WardType+"]";
-                dgvAdmissionHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
+                dgvDischargeHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
             }
             catch (Exception ex)
             {
@@ -94,27 +98,35 @@ namespace ByticHealth.UserControls
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //var admission = new Admission
-            //{
-            //    AdmNum=Computation.GetAdmissionID(1),
-            //    AdmissionDate = dteAdmissionDate.Value.Date,
-            //    AdmissionTime = dteAdmissionTime.Value.TimeOfDay,
-            //    AdmissionDateTime = dteAdmissionTime.Value,
-            //    PatNum = patient.PatNum,
-            //    //BedNo=(int)cmbBed.SelectedValue
-                     
-            //};
-            //db.Admissions.Add(admission);
-            //if(db.SaveChanges()>0)
-            //{
-            //    dgvAdmissionHistory.DataSource = db.Admissions.Where(adm=>adm.PatNum==patient.PatNum).ToList();
-            //    MessageBox.Show("Record saved successfully");
+            var discharge = new Discharge
+            {
+                //AdmNum = Computation.GetAdmissionID(1),
+                //AdmissionDate = dteAdmissionDate.Value.Date,
+                //AdmissionTime = dteAdmissionTime.Value.TimeOfDay,
+                //AdmissionDateTime = dteAdmissionTime.Value,
+                //PatNum = patient.PatNum,
+                //BedNo=(int)cmbBed.SelectedValue
+                DgNum = Computation.GetDischargeID(1),
+                AdmNum = admission.AdmNum,
+                ID = (int)cmbHospitalSite.SelectedValue,
+                PatientDied = chkPatientDied.Checked,
+                PostMortemFlag=chkPostMortemFlag.Checked,
+                Remark=rtbRemark.Text,
+                DischargeDate=dteDichargeDate.Value.Date,
+                DischargeDateTime=dteDischargeTime.Value,                           
 
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Error saving record");
-            //}
+            };
+            db.Discharges.Add(discharge);
+            if (db.SaveChanges() > 0)
+            {
+                dgvDischargeHistory.DataSource = db.Discharges.Where(adm => adm.PatNum == admission.Patient.PatNum).ToList();
+                MessageBox.Show("Record saved successfully");
+
+            }
+            else
+            {
+                MessageBox.Show("Error saving record");
+            }
         }
 
         private void rdbWard_CheckedChanged(object sender, EventArgs e)
@@ -189,6 +201,19 @@ namespace ByticHealth.UserControls
         private void splitContainer13_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
+        }
+
+        private void cmbHospitalSite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(cmbHospitalSite.SelectedValue);
+                rtbHospitalStateDescription.Text = db.HospitalSites.Find(id).Description;
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Sorry, Error has occured!");
+            }
         }
     }
 }

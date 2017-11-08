@@ -27,11 +27,23 @@ namespace ByticHealth.App_Data
         public DateTime AdmissionDateTime { get; set; }
         public int AdmissionMethod { get; set; }
         public string SourceOfReferal { get; set; }
-        
+        [ForeignKey("ID")]
+        public virtual HospitalSite HospitalSite { get; set; }
+        public int? ID { get; set; }
 
 
     }
 
+
+    public class HospitalSite
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+
+    }
 
     public class AdverseEvent
     {

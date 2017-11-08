@@ -41,18 +41,22 @@
             this.picPassport = new System.Windows.Forms.PictureBox();
             this.lblPatNum = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtPhoneNo = new System.Windows.Forms.TextBox();
             this.txtGender = new System.Windows.Forms.TextBox();
             this.txtDateOfBirth = new System.Windows.Forms.TextBox();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtSSN = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtAdmissionDate = new System.Windows.Forms.TextBox();
+            this.txtAdmissionDateTime = new System.Windows.Forms.TextBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -86,19 +90,19 @@
             this.label18 = new System.Windows.Forms.Label();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
-            this.dteAdmissionDate = new System.Windows.Forms.DateTimePicker();
-            this.dteAdmissionTime = new System.Windows.Forms.DateTimePicker();
+            this.dteDichargeDate = new System.Windows.Forms.DateTimePicker();
+            this.dteDischargeTime = new System.Windows.Forms.DateTimePicker();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbDischargeType = new System.Windows.Forms.ComboBox();
             this.chkPatientDied = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.cmbHospitalState = new System.Windows.Forms.ComboBox();
+            this.cmbHospitalSite = new System.Windows.Forms.ComboBox();
             this.rtbHospitalStateDescription = new System.Windows.Forms.RichTextBox();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.dgvAdmissionHistory = new System.Windows.Forms.DataGridView();
+            this.dgvDischargeHistory = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -164,7 +168,7 @@
             this.splitContainer11.Panel2.SuspendLayout();
             this.splitContainer11.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmissionHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDischargeHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -332,18 +336,22 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtFullName, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtPhoneNo, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtGender, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtDateOfBirth, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtAge, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtSSN, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label20, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.txtFullName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtPhoneNo, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtGender, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtDateOfBirth, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtAge, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txtSSN, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label17, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtAdmissionDate, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtAdmissionDateTime, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -360,70 +368,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(257, 192);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label5
+            // label20
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label5.Location = new System.Drawing.Point(3, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Gender:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label4.Location = new System.Drawing.Point(3, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Phone No:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(3, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Full Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Location = new System.Drawing.Point(3, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Date Of Birth:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Location = new System.Drawing.Point(3, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Age:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Location = new System.Drawing.Point(3, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "SSN:";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 172);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(83, 13);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Admission Time:";
             // 
             // txtFullName
             // 
             this.txtFullName.Enabled = false;
-            this.txtFullName.Location = new System.Drawing.Point(99, 55);
+            this.txtFullName.Location = new System.Drawing.Point(99, 29);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(128, 20);
             this.txtFullName.TabIndex = 6;
@@ -431,7 +388,7 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.Enabled = false;
-            this.txtPhoneNo.Location = new System.Drawing.Point(99, 75);
+            this.txtPhoneNo.Location = new System.Drawing.Point(99, 55);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(128, 20);
             this.txtPhoneNo.TabIndex = 7;
@@ -439,7 +396,7 @@
             // txtGender
             // 
             this.txtGender.Enabled = false;
-            this.txtGender.Location = new System.Drawing.Point(99, 95);
+            this.txtGender.Location = new System.Drawing.Point(99, 75);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(128, 20);
             this.txtGender.TabIndex = 8;
@@ -447,7 +404,7 @@
             // txtDateOfBirth
             // 
             this.txtDateOfBirth.Enabled = false;
-            this.txtDateOfBirth.Location = new System.Drawing.Point(99, 115);
+            this.txtDateOfBirth.Location = new System.Drawing.Point(99, 95);
             this.txtDateOfBirth.Name = "txtDateOfBirth";
             this.txtDateOfBirth.Size = new System.Drawing.Size(128, 20);
             this.txtDateOfBirth.TabIndex = 9;
@@ -455,7 +412,7 @@
             // txtAge
             // 
             this.txtAge.Enabled = false;
-            this.txtAge.Location = new System.Drawing.Point(99, 135);
+            this.txtAge.Location = new System.Drawing.Point(99, 115);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(128, 20);
             this.txtAge.TabIndex = 10;
@@ -463,10 +420,89 @@
             // txtSSN
             // 
             this.txtSSN.Enabled = false;
-            this.txtSSN.Location = new System.Drawing.Point(99, 155);
+            this.txtSSN.Location = new System.Drawing.Point(99, 135);
             this.txtSSN.Name = "txtSSN";
             this.txtSSN.Size = new System.Drawing.Size(128, 20);
             this.txtSSN.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Full Name:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Phone No:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Gender:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 92);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Date Of Birth:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Age:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "SSN:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 152);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(83, 13);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Admission Date:";
+            // 
+            // txtAdmissionDate
+            // 
+            this.txtAdmissionDate.Enabled = false;
+            this.txtAdmissionDate.Location = new System.Drawing.Point(99, 155);
+            this.txtAdmissionDate.Name = "txtAdmissionDate";
+            this.txtAdmissionDate.Size = new System.Drawing.Size(128, 20);
+            this.txtAdmissionDate.TabIndex = 14;
+            // 
+            // txtAdmissionDateTime
+            // 
+            this.txtAdmissionDateTime.Enabled = false;
+            this.txtAdmissionDateTime.Location = new System.Drawing.Point(99, 175);
+            this.txtAdmissionDateTime.Name = "txtAdmissionDateTime";
+            this.txtAdmissionDateTime.Size = new System.Drawing.Size(128, 20);
+            this.txtAdmissionDateTime.TabIndex = 15;
             // 
             // splitContainer6
             // 
@@ -761,16 +797,16 @@
             this.tableLayoutPanel3.Controls.Add(this.splitContainer13, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.chkPatientDied, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label16, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.cmbHospitalState, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.cmbHospitalSite, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.rtbHospitalStateDescription, 2, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, -16);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, -4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(827, 157);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(827, 145);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // btnDischargeSummary
@@ -778,7 +814,7 @@
             this.btnDischargeSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDischargeSummary.Location = new System.Drawing.Point(595, 123);
             this.btnDischargeSummary.Name = "btnDischargeSummary";
-            this.btnDischargeSummary.Size = new System.Drawing.Size(229, 31);
+            this.btnDischargeSummary.Size = new System.Drawing.Size(229, 19);
             this.btnDischargeSummary.TabIndex = 30;
             this.btnDischargeSummary.Text = "Discharge Summary";
             this.btnDischargeSummary.UseVisualStyleBackColor = true;
@@ -829,6 +865,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // chkPostMortemFlag
             // 
@@ -878,32 +915,32 @@
             // 
             // splitContainer12.Panel1
             // 
-            this.splitContainer12.Panel1.Controls.Add(this.dteAdmissionDate);
+            this.splitContainer12.Panel1.Controls.Add(this.dteDichargeDate);
             // 
             // splitContainer12.Panel2
             // 
-            this.splitContainer12.Panel2.Controls.Add(this.dteAdmissionTime);
+            this.splitContainer12.Panel2.Controls.Add(this.dteDischargeTime);
             this.splitContainer12.Size = new System.Drawing.Size(228, 29);
             this.splitContainer12.SplitterDistance = 135;
             this.splitContainer12.TabIndex = 20;
             // 
-            // dteAdmissionDate
+            // dteDichargeDate
             // 
-            this.dteAdmissionDate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dteAdmissionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dteAdmissionDate.Location = new System.Drawing.Point(0, 9);
-            this.dteAdmissionDate.Name = "dteAdmissionDate";
-            this.dteAdmissionDate.Size = new System.Drawing.Size(135, 20);
-            this.dteAdmissionDate.TabIndex = 0;
+            this.dteDichargeDate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteDichargeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dteDichargeDate.Location = new System.Drawing.Point(0, 9);
+            this.dteDichargeDate.Name = "dteDichargeDate";
+            this.dteDichargeDate.Size = new System.Drawing.Size(135, 20);
+            this.dteDichargeDate.TabIndex = 0;
             // 
-            // dteAdmissionTime
+            // dteDischargeTime
             // 
-            this.dteAdmissionTime.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dteAdmissionTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dteAdmissionTime.Location = new System.Drawing.Point(0, 9);
-            this.dteAdmissionTime.Name = "dteAdmissionTime";
-            this.dteAdmissionTime.Size = new System.Drawing.Size(89, 20);
-            this.dteAdmissionTime.TabIndex = 1;
+            this.dteDischargeTime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dteDischargeTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dteDischargeTime.Location = new System.Drawing.Point(0, 9);
+            this.dteDischargeTime.Name = "dteDischargeTime";
+            this.dteDischargeTime.Size = new System.Drawing.Size(89, 20);
+            this.dteDischargeTime.TabIndex = 1;
             // 
             // splitContainer13
             // 
@@ -957,20 +994,21 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label16.Location = new System.Drawing.Point(3, 144);
+            this.label16.Location = new System.Drawing.Point(3, 132);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(118, 13);
             this.label16.TabIndex = 26;
             this.label16.Text = "Hospital Site";
             // 
-            // cmbHospitalState
+            // cmbHospitalSite
             // 
-            this.cmbHospitalState.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cmbHospitalState.FormattingEnabled = true;
-            this.cmbHospitalState.Location = new System.Drawing.Point(127, 133);
-            this.cmbHospitalState.Name = "cmbHospitalState";
-            this.cmbHospitalState.Size = new System.Drawing.Size(228, 21);
-            this.cmbHospitalState.TabIndex = 27;
+            this.cmbHospitalSite.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cmbHospitalSite.FormattingEnabled = true;
+            this.cmbHospitalSite.Location = new System.Drawing.Point(127, 123);
+            this.cmbHospitalSite.Name = "cmbHospitalSite";
+            this.cmbHospitalSite.Size = new System.Drawing.Size(228, 21);
+            this.cmbHospitalSite.TabIndex = 27;
+            this.cmbHospitalSite.SelectedIndexChanged += new System.EventHandler(this.cmbHospitalSite_SelectedIndexChanged);
             // 
             // rtbHospitalStateDescription
             // 
@@ -978,7 +1016,7 @@
             this.rtbHospitalStateDescription.Enabled = false;
             this.rtbHospitalStateDescription.Location = new System.Drawing.Point(361, 123);
             this.rtbHospitalStateDescription.Name = "rtbHospitalStateDescription";
-            this.rtbHospitalStateDescription.Size = new System.Drawing.Size(228, 31);
+            this.rtbHospitalStateDescription.Size = new System.Drawing.Size(228, 19);
             this.rtbHospitalStateDescription.TabIndex = 28;
             this.rtbHospitalStateDescription.Text = "";
             // 
@@ -996,7 +1034,7 @@
             // 
             // splitContainer11.Panel2
             // 
-            this.splitContainer11.Panel2.Controls.Add(this.dgvAdmissionHistory);
+            this.splitContainer11.Panel2.Controls.Add(this.dgvDischargeHistory);
             this.splitContainer11.Size = new System.Drawing.Size(837, 116);
             this.splitContainer11.SplitterDistance = 35;
             this.splitContainer11.TabIndex = 0;
@@ -1020,14 +1058,14 @@
             this.label19.TabIndex = 3;
             this.label19.Text = "DISCHARGE HISTORY";
             // 
-            // dgvAdmissionHistory
+            // dgvDischargeHistory
             // 
-            this.dgvAdmissionHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdmissionHistory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAdmissionHistory.Location = new System.Drawing.Point(0, 0);
-            this.dgvAdmissionHistory.Name = "dgvAdmissionHistory";
-            this.dgvAdmissionHistory.Size = new System.Drawing.Size(833, 73);
-            this.dgvAdmissionHistory.TabIndex = 0;
+            this.dgvDischargeHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDischargeHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDischargeHistory.Location = new System.Drawing.Point(0, 0);
+            this.dgvDischargeHistory.Name = "dgvDischargeHistory";
+            this.dgvDischargeHistory.Size = new System.Drawing.Size(833, 73);
+            this.dgvDischargeHistory.TabIndex = 0;
             // 
             // uscDischarge
             // 
@@ -1112,7 +1150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
             this.splitContainer11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdmissionHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDischargeHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1134,7 +1172,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1167,12 +1204,12 @@
         private System.Windows.Forms.SplitContainer splitContainer11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DataGridView dgvAdmissionHistory;
+        private System.Windows.Forms.DataGridView dgvDischargeHistory;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer12;
-        private System.Windows.Forms.DateTimePicker dteAdmissionDate;
-        private System.Windows.Forms.DateTimePicker dteAdmissionTime;
+        private System.Windows.Forms.DateTimePicker dteDichargeDate;
+        private System.Windows.Forms.DateTimePicker dteDischargeTime;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtWardRoom;
@@ -1188,7 +1225,12 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox cmbHospitalState;
+        private System.Windows.Forms.ComboBox cmbHospitalSite;
         private System.Windows.Forms.RichTextBox rtbHospitalStateDescription;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtAdmissionDate;
+        private System.Windows.Forms.TextBox txtAdmissionDateTime;
     }
 }

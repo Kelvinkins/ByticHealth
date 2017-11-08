@@ -36,7 +36,14 @@ namespace ByticHealth.Enumerations
     enum PatientType
     {
         Select = 0,
-        IP = 1,
-        OT = 2
+        IPD = 1,
+        OPD = 2
+    }
+
+    enum DischargeMethod
+    {
+        Select = 0,
+        CD = 1,
+        SD = 2
     }
 }

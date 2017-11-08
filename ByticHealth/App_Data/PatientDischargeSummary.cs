@@ -61,7 +61,9 @@ namespace ByticHealth.App_Data
         public string Remark { get; set; }
         public DateTime DischargeDate { get; set; }
         public DateTime DischargeDateTime { get; set; }
-        public string HospitalSite { get; set; }
+        [ForeignKey("ID")]
+        public virtual HospitalSite HospitalSite { get; set; }
+        public int? ID { get; set; }
         public string DischargeMethod { get; set; }
         public bool? PatientDied { get; set; }
         public bool PostMortemFlag { get; set; }

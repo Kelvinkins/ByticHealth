@@ -266,6 +266,13 @@ namespace ByticHealth.Common
         int Id = db.Admissions.Count();
         return Id + id;
     }
+
+
+    public static int GetDischargeID(int id)
+    {
+        int Id = db.Discharges.Count();
+        return Id + id;
+    }
 }
 
 

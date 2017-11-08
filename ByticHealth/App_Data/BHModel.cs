@@ -61,6 +61,7 @@ namespace ByticHealth.App_Data
         public virtual DbSet<HospitalAction> HospitalActions { get; set; }
         public virtual DbSet<InformationGivenToPatientAndCarer> InformationGivenToPatientAndCarers { get; set; }
         public virtual DbSet<SocialCareAction> SocialCareActions { get; set; }
+        public virtual DbSet<HospitalSite> HospitalSites { get; set; }
 
 
 
