@@ -64,7 +64,7 @@ namespace ByticHealth.App_Data
         [ForeignKey("ID")]
         public virtual HospitalSite HospitalSite { get; set; }
         public int? ID { get; set; }
-        public string DischargeMethod { get; set; }
+        public int DischargeMethod { get; set; }
         public bool? PatientDied { get; set; }
         public bool? PostMortemFlag { get; set; }
 

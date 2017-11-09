@@ -60,7 +60,20 @@ namespace ByticHealth.UserControls
                     txtSSN.Text = admission.Patient.SSN;
                     lblPatNum.Text = admission.Patient.PatNum.ToString();
                     txtBed.Text = admission.Bed.Name + " :" + admission.Bed.BedNo;
-                    txtBedStatus.Text = admission.Bed.Status;
+                    if (admission.Bed.Status == 1)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Available.ToString();
+                    }
+                    else if (admission.Bed.Status == 2)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Unavailable.ToString();
+
+                    }
+                    else
+                    {
+                        txtBedStatus.Text = "Unknown";
+
+                    }
                     txtBedRemark.Text = admission.Bed.remark;
                     txtAdmissionDate.Text = admission.AdmissionDate.Date.ToString();
                     lblStat.Text = admission.Bed.Ward.WardNo + ":" + admission.Bed.BedNo;
@@ -131,10 +144,12 @@ namespace ByticHealth.UserControls
                 PostMortemFlag = chkPostMortemFlag.Checked,
                 Remark = rtbRemark.Text,
                 DischargeDateTime=dteDischargeTime.Value,
-                DischargeDate=dteDichargeDate.Value.Date
-               
-               
-                                                      
+                DischargeDate=dteDichargeDate.Value.Date,
+                BedNo=admission.BedNo,
+                PatNum =admission.PatNum,
+                DischargeMethod=(int)cmbDischargeType.SelectedValue
+
+
             };
 
             if(chkPatientDied.Checked)
@@ -147,7 +162,15 @@ namespace ByticHealth.UserControls
                 discharge.DeathTime = null;
                 discharge.DeathDate =null;
             }
-         
+
+            var patient = db.Patients.Find(admission.PatNum);
+            patient.PatientType =(int)Enumerations.PatientType.OPD;
+            var admin = db.Admissions.Find(admission.AdmNum);
+            admin.IsDischarged = true;
+            admin.DischargeDate = discharge.DischargeDate;
+            var bed = db.Beds.Find(admission.BedNo);
+            bed.Status = (int)Enumerations.BedStatus.Available;
+                
             db.Discharges.Add(discharge);
             if (db.SaveChanges() > 0)
             {

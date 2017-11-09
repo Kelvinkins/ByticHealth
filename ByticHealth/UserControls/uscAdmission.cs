@@ -100,6 +100,11 @@ namespace ByticHealth.UserControls
                 BedNo=(int)cmbBed.SelectedValue
                      
             };
+            var pat = db.Patients.Find(admission.PatNum);
+            pat.PatientType = (int)Enumerations.PatientType.IPD;
+            var bed = db.Beds.Find(admission.BedNo);
+            bed.Status =(int) Enumerations.BedStatus.Unavailable;
+
             db.Admissions.Add(admission);
             if(db.SaveChanges()>0)
             {
@@ -166,7 +171,20 @@ namespace ByticHealth.UserControls
                     int bedId = Convert.ToInt32(cmbBed.SelectedValue);
                     var bed = db.Beds.Find(bedId);
                     lblStat.Text = bed.WardNo + ":" + bed.BedNo;
-                    txtBedStatus.Text = bed.Status;
+                    if (bed.Status == 1)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Available.ToString();
+                    }
+                    else if(bed.Status==2)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Unavailable.ToString();
+
+                    }
+                    else
+                    {
+                        txtBedStatus.Text = "Unknown";
+
+                    }
                     txtBedRemark.Text = bed.remark;
                 }
                 else if (rdbRoom.Checked)
@@ -174,7 +192,20 @@ namespace ByticHealth.UserControls
                     int bedId = Convert.ToInt32(cmbBed.SelectedValue);
                     var bed = db.Beds.Find(bedId);
                     lblStat.Text = bed.WardNo + ":" + bed.BedNo;
-                    txtBedStatus.Text = bed.Status;
+                    if (bed.Status == 1)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Available.ToString();
+                    }
+                    else if (bed.Status == 2)
+                    {
+                        txtBedStatus.Text = Enumerations.BedStatus.Unavailable.ToString();
+
+                    }
+                    else
+                    {
+                        txtBedStatus.Text = "Unknown";
+
+                    }
                     txtBedRemark.Text = bed.remark;
                 }
             }catch(Exception)

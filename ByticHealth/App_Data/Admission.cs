@@ -180,7 +180,7 @@ namespace ByticHealth.App_Data
         [ForeignKey("WardNo")]
         public virtual Ward Ward { get; set; }
         public int WardNo { get; set; }
-        public string Status { get; set; }
+        public int? Status { get; set; }
         public string remark { get; set; }
 
 
