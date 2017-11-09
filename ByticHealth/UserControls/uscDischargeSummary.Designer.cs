@@ -37,35 +37,35 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFullname = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtAdmissionDate = new System.Windows.Forms.TextBox();
+            this.txtDischargeDate = new System.Windows.Forms.TextBox();
+            this.txtSSN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.picPassport = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtAdmissionType = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtPmFlag = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDead = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtDischargeMethod = new System.Windows.Forms.TextBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.txtDischargeCode = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtbRemark = new System.Windows.Forms.RichTextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbInformationGivenToPatientCarer = new System.Windows.Forms.RichTextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.rtbAdviceAndRecommendation = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -147,10 +147,10 @@
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.txtFullname, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txtPhone, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtAdmissionDate, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtDischargeDate, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtSSN, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(142, 40);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -207,37 +207,37 @@
             this.txtFullname.Size = new System.Drawing.Size(413, 20);
             this.txtFullname.TabIndex = 0;
             // 
-            // textBox2
+            // txtPhone
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(101, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(413, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtPhone.Enabled = false;
+            this.txtPhone.Location = new System.Drawing.Point(101, 32);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(413, 20);
+            this.txtPhone.TabIndex = 1;
             // 
-            // textBox3
+            // txtAdmissionDate
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(101, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(413, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtAdmissionDate.Enabled = false;
+            this.txtAdmissionDate.Location = new System.Drawing.Point(101, 61);
+            this.txtAdmissionDate.Name = "txtAdmissionDate";
+            this.txtAdmissionDate.Size = new System.Drawing.Size(413, 20);
+            this.txtAdmissionDate.TabIndex = 2;
             // 
-            // textBox4
+            // txtDischargeDate
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(101, 88);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(413, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtDischargeDate.Enabled = false;
+            this.txtDischargeDate.Location = new System.Drawing.Point(101, 88);
+            this.txtDischargeDate.Name = "txtDischargeDate";
+            this.txtDischargeDate.Size = new System.Drawing.Size(413, 20);
+            this.txtDischargeDate.TabIndex = 3;
             // 
-            // textBox5
+            // txtSSN
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(101, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(413, 20);
-            this.textBox5.TabIndex = 4;
+            this.txtSSN.Enabled = false;
+            this.txtSSN.Location = new System.Drawing.Point(101, 112);
+            this.txtSSN.Name = "txtSSN";
+            this.txtSSN.Size = new System.Drawing.Size(413, 20);
+            this.txtSSN.TabIndex = 4;
             // 
             // label1
             // 
@@ -284,7 +284,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox10);
+            this.groupBox5.Controls.Add(this.txtAdmissionType);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(399, 3);
             this.groupBox5.Name = "groupBox5";
@@ -293,17 +293,17 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Admission Type";
             // 
-            // textBox10
+            // txtAdmissionType
             // 
-            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(3, 16);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(134, 20);
-            this.textBox10.TabIndex = 0;
+            this.txtAdmissionType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAdmissionType.Location = new System.Drawing.Point(3, 16);
+            this.txtAdmissionType.Name = "txtAdmissionType";
+            this.txtAdmissionType.Size = new System.Drawing.Size(134, 20);
+            this.txtAdmissionType.TabIndex = 0;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.txtPmFlag);
             this.groupBox4.Location = new System.Drawing.Point(279, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(81, 45);
@@ -311,17 +311,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "PM-Flag";
             // 
-            // textBox9
+            // txtPmFlag
             // 
-            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(3, 16);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(75, 20);
-            this.textBox9.TabIndex = 0;
+            this.txtPmFlag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPmFlag.Location = new System.Drawing.Point(3, 16);
+            this.txtPmFlag.Name = "txtPmFlag";
+            this.txtPmFlag.Size = new System.Drawing.Size(75, 20);
+            this.txtPmFlag.TabIndex = 0;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.txtDead);
             this.groupBox3.Location = new System.Drawing.Point(187, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(81, 45);
@@ -329,17 +329,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dead?";
             // 
-            // textBox8
+            // txtDead
             // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(3, 16);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(75, 20);
-            this.textBox8.TabIndex = 0;
+            this.txtDead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDead.Location = new System.Drawing.Point(3, 16);
+            this.txtDead.Name = "txtDead";
+            this.txtDead.Size = new System.Drawing.Size(75, 20);
+            this.txtDead.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtAge);
             this.groupBox2.Location = new System.Drawing.Point(95, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(81, 45);
@@ -347,17 +347,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Age";
             // 
-            // textBox7
+            // txtAge
             // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(3, 16);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(75, 20);
-            this.textBox7.TabIndex = 0;
+            this.txtAge.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAge.Location = new System.Drawing.Point(3, 16);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(75, 20);
+            this.txtAge.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtGender);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(86, 45);
@@ -365,17 +365,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gender";
             // 
-            // textBox6
+            // txtGender
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(3, 16);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(80, 20);
-            this.textBox6.TabIndex = 0;
+            this.txtGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGender.Location = new System.Drawing.Point(3, 16);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(80, 20);
+            this.txtGender.TabIndex = 0;
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.txtDischargeMethod);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(399, 54);
             this.groupBox6.Name = "groupBox6";
@@ -384,13 +384,13 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Discharge Method";
             // 
-            // textBox11
+            // txtDischargeMethod
             // 
-            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Location = new System.Drawing.Point(3, 16);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(134, 20);
-            this.textBox11.TabIndex = 0;
+            this.txtDischargeMethod.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDischargeMethod.Location = new System.Drawing.Point(3, 16);
+            this.txtDischargeMethod.Name = "txtDischargeMethod";
+            this.txtDischargeMethod.Size = new System.Drawing.Size(134, 20);
+            this.txtDischargeMethod.TabIndex = 0;
             // 
             // splitContainer2
             // 
@@ -447,7 +447,7 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.richTextBox2);
+            this.groupBox8.Controls.Add(this.rtbRemark);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox8.Location = new System.Drawing.Point(3, 171);
             this.groupBox8.Name = "groupBox8";
@@ -456,18 +456,18 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Remark";
             // 
-            // richTextBox2
+            // rtbRemark
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(675, 72);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.rtbRemark.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbRemark.Location = new System.Drawing.Point(3, 16);
+            this.rtbRemark.Name = "rtbRemark";
+            this.rtbRemark.Size = new System.Drawing.Size(675, 72);
+            this.rtbRemark.TabIndex = 0;
+            this.rtbRemark.Text = "";
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.richTextBox1);
+            this.groupBox7.Controls.Add(this.rtbInformationGivenToPatientCarer);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
@@ -476,18 +476,18 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Information given to patient and carer";
             // 
-            // richTextBox1
+            // rtbInformationGivenToPatientCarer
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(675, 59);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbInformationGivenToPatientCarer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbInformationGivenToPatientCarer.Location = new System.Drawing.Point(3, 16);
+            this.rtbInformationGivenToPatientCarer.Name = "rtbInformationGivenToPatientCarer";
+            this.rtbInformationGivenToPatientCarer.Size = new System.Drawing.Size(675, 59);
+            this.rtbInformationGivenToPatientCarer.TabIndex = 0;
+            this.rtbInformationGivenToPatientCarer.Text = "";
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.richTextBox3);
+            this.groupBox9.Controls.Add(this.rtbAdviceAndRecommendation);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox9.Location = new System.Drawing.Point(3, 87);
             this.groupBox9.Name = "groupBox9";
@@ -496,14 +496,14 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Advice, Recommendations and future plan";
             // 
-            // richTextBox3
+            // rtbAdviceAndRecommendation
             // 
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(675, 59);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
+            this.rtbAdviceAndRecommendation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbAdviceAndRecommendation.Location = new System.Drawing.Point(3, 16);
+            this.rtbAdviceAndRecommendation.Name = "rtbAdviceAndRecommendation";
+            this.rtbAdviceAndRecommendation.Size = new System.Drawing.Size(675, 59);
+            this.rtbAdviceAndRecommendation.TabIndex = 0;
+            this.rtbAdviceAndRecommendation.Text = "";
             // 
             // uscDischargeSummary
             // 
@@ -557,35 +557,35 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtFullname;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtAdmissionDate;
+        private System.Windows.Forms.TextBox txtDischargeDate;
+        private System.Windows.Forms.TextBox txtSSN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox picPassport;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtAdmissionType;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPmFlag;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDead;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtGender;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtDischargeMethod;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TextBox txtDischargeCode;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtbRemark;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbInformationGivenToPatientCarer;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox rtbAdviceAndRecommendation;
     }
 }

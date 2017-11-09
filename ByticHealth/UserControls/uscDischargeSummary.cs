@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ByticHealth.App_Data;
+using System.IO;
 
 namespace ByticHealth.UserControls
 {
@@ -37,6 +38,47 @@ namespace ByticHealth.UserControls
                 {
 
                     txtFullname.Text = discharge.Patient.FirstName + " " + discharge.Patient.LastName + " [" + discharge.Patient.PatNum + "]";
+                    txtPhone.Text = discharge.Patient.CellPhone + "," + discharge.Patient.HomePhoneNo;
+                    txtAdmissionDate.Text = discharge.Admission.AdmissionDate.ToShortDateString();
+                    txtDischargeDate.Text = discharge.DischargeDate.ToShortDateString();
+                    using (var ms = new MemoryStream(discharge.Patient.PassportPhoto))
+                    {
+                        picPassport.Image = Image.FromStream(ms);
+
+                    }
+                    if (discharge.DischargeMethod==(int)Enumerations.DischargeMethod.CD)
+                    {
+                        txtDischargeMethod.Text = Enumerations.DischargeMethod.CD.ToString();
+
+                    }
+                    else if(discharge.DischargeMethod==(int)Enumerations.DischargeMethod.SD)
+                    {
+                        txtDischargeMethod.Text = Enumerations.DischargeMethod.SD.ToString();
+                    }
+                    txtGender.Text = discharge.Patient.Sex;
+                    txtDead.Text = discharge.PatientDied.ToString();
+                    if(discharge.Admission.AdmissionMethod==(int)Enumerations.AdmissionMethod.Elective)
+                    {
+                        txtAdmissionType.Text = Enumerations.AdmissionMethod.Elective.ToString();
+
+
+                    }
+                    else if(discharge.Admission.AdmissionMethod==(int) Enumerations.AdmissionMethod.Emmergency)
+                    {
+                        txtAdmissionType.Text = Enumerations.AdmissionMethod.Emmergency.ToString();
+                    }
+                    else if(discharge.Admission.AdmissionMethod==(int)Enumerations.AdmissionMethod.Transfer)
+                    {
+                        txtAdmissionType.Text = Enumerations.AdmissionMethod.Transfer.ToString();
+                    }
+                    else
+                    {
+                        txtAdmissionType.Text = Enumerations.AdmissionMethod.NA.ToString();
+                    }
+
+                    txtPmFlag.Text = discharge.PostMortemFlag.ToString();
+                    txtSSN.Text = discharge.Patient.SSN;
+                    
                 }
                 else
                 {

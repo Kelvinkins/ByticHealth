@@ -46,4 +46,13 @@ namespace ByticHealth.Enumerations
         CD = 1,
         SD = 2
     }
+
+    enum AdmissionMethod
+    {
+        Select=0,
+        Elective=1,
+        Emmergency=2,
+        Transfer=3,
+        NA=4
+    }
 }
