@@ -20,6 +20,7 @@ namespace ByticHealth.UserControls
         }
 
         BHModel db = new BHModel();
+        public static int AdmNum;
         public static Discharge discharge;
         public uscDischargeSummary(int DsgNum)
         {
@@ -41,6 +42,7 @@ namespace ByticHealth.UserControls
                     txtPhone.Text = discharge.Patient.CellPhone + "," + discharge.Patient.HomePhoneNo;
                     txtAdmissionDate.Text = discharge.Admission.AdmissionDate.ToShortDateString();
                     txtDischargeDate.Text = discharge.DischargeDate.ToShortDateString();
+                    AdmNum = Convert.ToInt32(discharge.AdmNum);
                     using (var ms = new MemoryStream(discharge.Patient.PassportPhoto))
                     {
                         picPassport.Image = Image.FromStream(ms);
@@ -88,6 +90,36 @@ namespace ByticHealth.UserControls
             {
 
             }
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var dischargeSum = new DischargeSummary
+            {
+                AdmNum = Convert.ToInt32(discharge.AdmNum),
+                DgNum = discharge.DgNum,
+                PatNum = discharge.PatNum,
+                SumID = Computation.GetDischargeSummaryID(1),
+
+
+
+            };
+
+            db.DischargeSummaries.Add(dischargeSum);
+            if(db.SaveChanges()>0)
+            {
+                MessageBox.Show("Saved successfully");
+            }
+            else
+            {
+                MessageBox.Show("Error saving record");
+            }
+
         }
     }
 }

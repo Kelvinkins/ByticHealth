@@ -60,6 +60,10 @@
             this.txtDischargeCode = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.rtbRemark = new System.Windows.Forms.RichTextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -85,6 +89,7 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -296,6 +301,7 @@
             // txtAdmissionType
             // 
             this.txtAdmissionType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAdmissionType.Enabled = false;
             this.txtAdmissionType.Location = new System.Drawing.Point(3, 16);
             this.txtAdmissionType.Name = "txtAdmissionType";
             this.txtAdmissionType.Size = new System.Drawing.Size(134, 20);
@@ -314,6 +320,7 @@
             // txtPmFlag
             // 
             this.txtPmFlag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPmFlag.Enabled = false;
             this.txtPmFlag.Location = new System.Drawing.Point(3, 16);
             this.txtPmFlag.Name = "txtPmFlag";
             this.txtPmFlag.Size = new System.Drawing.Size(75, 20);
@@ -332,6 +339,7 @@
             // txtDead
             // 
             this.txtDead.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDead.Enabled = false;
             this.txtDead.Location = new System.Drawing.Point(3, 16);
             this.txtDead.Name = "txtDead";
             this.txtDead.Size = new System.Drawing.Size(75, 20);
@@ -350,6 +358,7 @@
             // txtAge
             // 
             this.txtAge.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAge.Enabled = false;
             this.txtAge.Location = new System.Drawing.Point(3, 16);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(75, 20);
@@ -368,6 +377,7 @@
             // txtGender
             // 
             this.txtGender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGender.Enabled = false;
             this.txtGender.Location = new System.Drawing.Point(3, 16);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(80, 20);
@@ -387,6 +397,7 @@
             // txtDischargeMethod
             // 
             this.txtDischargeMethod.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDischargeMethod.Enabled = false;
             this.txtDischargeMethod.Location = new System.Drawing.Point(3, 16);
             this.txtDischargeMethod.Name = "txtDischargeMethod";
             this.txtDischargeMethod.Size = new System.Drawing.Size(134, 20);
@@ -431,27 +442,78 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.groupBox8, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.groupBox7, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.groupBox9, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(687, 265);
             this.tableLayoutPanel4.TabIndex = 0;
+            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(456, 235);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 27);
+            this.tableLayoutPanel5.TabIndex = 22;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.Location = new System.Drawing.Point(155, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(70, 21);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Delete";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Location = new System.Drawing.Point(79, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(70, 21);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Update";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(3, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(70, 21);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.rtbRemark);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox8.Location = new System.Drawing.Point(3, 171);
+            this.groupBox8.Location = new System.Drawing.Point(3, 135);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(681, 91);
+            this.groupBox8.Size = new System.Drawing.Size(681, 94);
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Remark";
@@ -461,7 +523,7 @@
             this.rtbRemark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbRemark.Location = new System.Drawing.Point(3, 16);
             this.rtbRemark.Name = "rtbRemark";
-            this.rtbRemark.Size = new System.Drawing.Size(675, 72);
+            this.rtbRemark.Size = new System.Drawing.Size(675, 75);
             this.rtbRemark.TabIndex = 0;
             this.rtbRemark.Text = "";
             // 
@@ -471,7 +533,7 @@
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(681, 78);
+            this.groupBox7.Size = new System.Drawing.Size(681, 60);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Information given to patient and carer";
@@ -481,7 +543,7 @@
             this.rtbInformationGivenToPatientCarer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbInformationGivenToPatientCarer.Location = new System.Drawing.Point(3, 16);
             this.rtbInformationGivenToPatientCarer.Name = "rtbInformationGivenToPatientCarer";
-            this.rtbInformationGivenToPatientCarer.Size = new System.Drawing.Size(675, 59);
+            this.rtbInformationGivenToPatientCarer.Size = new System.Drawing.Size(675, 41);
             this.rtbInformationGivenToPatientCarer.TabIndex = 0;
             this.rtbInformationGivenToPatientCarer.Text = "";
             // 
@@ -489,9 +551,9 @@
             // 
             this.groupBox9.Controls.Add(this.rtbAdviceAndRecommendation);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(3, 87);
+            this.groupBox9.Location = new System.Drawing.Point(3, 69);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(681, 78);
+            this.groupBox9.Size = new System.Drawing.Size(681, 60);
             this.groupBox9.TabIndex = 3;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Advice, Recommendations and future plan";
@@ -501,7 +563,7 @@
             this.rtbAdviceAndRecommendation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtbAdviceAndRecommendation.Location = new System.Drawing.Point(3, 16);
             this.rtbAdviceAndRecommendation.Name = "rtbAdviceAndRecommendation";
-            this.rtbAdviceAndRecommendation.Size = new System.Drawing.Size(675, 59);
+            this.rtbAdviceAndRecommendation.Size = new System.Drawing.Size(675, 41);
             this.rtbAdviceAndRecommendation.TabIndex = 0;
             this.rtbAdviceAndRecommendation.Text = "";
             // 
@@ -509,6 +571,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.splitContainer1);
             this.Name = "uscDischargeSummary";
             this.Size = new System.Drawing.Size(687, 557);
@@ -540,6 +603,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -587,5 +651,9 @@
         private System.Windows.Forms.RichTextBox rtbInformationGivenToPatientCarer;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RichTextBox rtbAdviceAndRecommendation;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSave;
     }
 }

@@ -267,6 +267,12 @@ namespace ByticHealth.Common
         return Id + id;
     }
 
+    public static int GetDischargeSummaryID(int id)
+    {
+        int Id = db.DischargeSummaries.Count();
+        return Id + id;
+    }
+
 
     public static int GetDischargeID(int id)
     {
