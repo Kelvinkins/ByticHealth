@@ -79,7 +79,7 @@ namespace ByticHealth.App_Data
 
     }
 
-    public class HospitalAction
+    public class Action
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -88,54 +88,55 @@ namespace ByticHealth.App_Data
         [ForeignKey("DgNum")]
         public virtual Discharge Discharge { get; set; }
         public int DgNum { get; set; }
+        public int ActionType { get; set; }
 
     }
 
-    public class GpAction {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
-        public string Description { get; set; }
-        [ForeignKey("DgNum")]
-        public virtual Discharge Discharge { get; set; }
-        public int DgNum { get; set; }
+    //public class GpAction {
+    //    [Key]
+    //    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    //    public int ID { get; set; }
+    //    public string Description { get; set; }
+    //    [ForeignKey("DgNum")]
+    //    public virtual Discharge Discharge { get; set; }
+    //    public int DgNum { get; set; }
 
 
-    }
+    //}
 
-    public class SocialCareAction
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
-        public string Description { get; set; }
+    //public class SocialCareAction
+    //{
+    //    [Key]
+    //    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    //    public int ID { get; set; }
+    //    public string Description { get; set; }
 
-        [ForeignKey("DgNum")]
-        public virtual Discharge Discharge { get; set; }
-        public int DgNum { get; set; }
-    }
+    //    [ForeignKey("DgNum")]
+    //    public virtual Discharge Discharge { get; set; }
+    //    public int DgNum { get; set; }
+    //}
 
-    public class InformationGivenToPatientAndCarer  {
+    //public class InformationGivenToPatientAndCarer  {
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
-        public string Description { get; set; }
+    //    [Key]
+    //    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    //    public int ID { get; set; }
+    //    public string Description { get; set; }
 
-        [ForeignKey("DgNum")]
-        public virtual Discharge Discharge { get; set; }
-        public int DgNum { get; set; }
-    }
+    //    [ForeignKey("DgNum")]
+    //    public virtual Discharge Discharge { get; set; }
+    //    public int DgNum { get; set; }
+    //}
 
-    public class AdviceRecommendationAndFuturePlan
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int ID { get; set; }
-        public string Description { get; set; }
+    //public class AdviceRecommendationAndFuturePlan
+    //{
+    //    [Key]
+    //    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    //    public int ID { get; set; }
+    //    public string Description { get; set; }
 
-        [ForeignKey("DgNum")]
-        public virtual Discharge Discharge { get; set; }
-        public int DgNum { get; set; }
-    }
+    //    [ForeignKey("DgNum")]
+    //    public virtual Discharge Discharge { get; set; }
+    //    public int DgNum { get; set; }
+    //}
 }

@@ -71,7 +71,7 @@ namespace ByticHealth.App_Data
         public virtual Diagnosis Diagnosis { get; set; }
         public string Code { get; set; }
         public string Remark { get; set; }
-        public string DType { get; set; }
+        public int DType { get; set; }
 
 
 

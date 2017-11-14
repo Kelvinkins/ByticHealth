@@ -80,7 +80,14 @@ namespace ByticHealth.UserControls
 
                     txtPmFlag.Text = discharge.PostMortemFlag.ToString();
                     txtSSN.Text = discharge.Patient.SSN;
-                    
+                    dgvDiagnosis.DataSource = db.PatientDiagnoses.Where(p => p.Admission.AdmNum == discharge.AdmNum).ToList();
+                    dgvOperationAndProcedure.DataSource = db.OperationAndProcedures.Where(p => p.Admission.AdmNum == discharge.AdmNum).ToList();
+                    dgvDiet.DataSource = db.Diets.Where(p => p.Admission.AdmNum == discharge.AdmNum).ToList();
+                    dgvImmunization.DataSource = db.Immunisations.Where(p => p.Admission.AdmNum == discharge.AdmNum).ToList();
+                    dgvMedicationDischarge.DataSource = db.MedicationOnDischarges.Where(p => p.Discharge.DgNum == discharge.DgNum).ToList();
+                    dgvMedicationStoppedOrWithheld.DataSource = db.MedicationOnDischarges.Where(p => p.Discharge.DgNum == discharge.DgNum).ToList();
+                    dgvActions.DataSource = db.Actions.Where(p => p.Discharge.DgNum == discharge.DgNum).ToList();
+
                 }
                 else
                 {

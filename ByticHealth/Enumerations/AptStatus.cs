@@ -55,4 +55,13 @@ namespace ByticHealth.Enumerations
         Transfer=3,
         NA=4
     }
+
+    enum ActionType
+    {
+        HospitalAction=1,
+        GpAction=2,
+        SocialCareAction=3,
+        IGPAC=4,
+        ARAFP=5
+    }
 }
