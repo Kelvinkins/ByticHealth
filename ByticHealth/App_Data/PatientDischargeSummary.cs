@@ -18,7 +18,7 @@ namespace ByticHealth.App_Data
         public int? PatNum { get; set; }
         [ForeignKey("StaffID")]
         public Staff Staff { get; set; }
-        public int StaffID { get; set; }
+        public int? StaffID { get; set; }
         [ForeignKey("AdmNum")]
         public virtual Admission Admission { get; set; }
         public int AdmNum { get; set; }

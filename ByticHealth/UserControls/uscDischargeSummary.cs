@@ -17,11 +17,14 @@ namespace ByticHealth.UserControls
         public uscDischargeSummary()
         {
             InitializeComponent();
+            cmbActionType.DataSource = Enum.GetValues(typeof(Enumerations.ActionType));
+
         }
 
         BHModel db = new BHModel();
         public static int AdmNum;
         public static Discharge discharge;
+        public static DischargeSummary dsummary;
         public uscDischargeSummary(int DsgNum)
         {
             InitializeComponent();
@@ -112,14 +115,15 @@ namespace ByticHealth.UserControls
                 DgNum = discharge.DgNum,
                 PatNum = discharge.PatNum,
                 SumID = Computation.GetDischargeSummaryID(1),
-
-
+                DateOfCompletion=DateTime.Now.Date,
+                DateOfConsultantSignOff=DateTime.Now.Date
 
             };
 
             db.DischargeSummaries.Add(dischargeSum);
             if(db.SaveChanges()>0)
             {
+                dsummary = dischargeSum;
                 MessageBox.Show("Saved successfully");
             }
             else
@@ -127,6 +131,34 @@ namespace ByticHealth.UserControls
                 MessageBox.Show("Error saving record");
             }
 
+        }
+
+        private void btnSaveActions_Click(object sender, EventArgs e)
+        {
+            var action = new App_Data.Action
+            {
+                ID = Computation.GetActionID(1),
+                ActionType = (int)cmbActionType.SelectedValue,
+                Description = rtbActionDetails.Text
+
+            };
+
+            if(dsummary==null)
+            {
+                MessageBox.Show("Sorry, this Patient Discharge Summary is not yet saved");
+            }
+            else
+            {
+                db.Actions.Add(action);
+                if(db.SaveChanges()>0)
+                {
+                    MessageBox.Show("Action saved successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error saving record");
+                }
+            }
         }
     }
 }

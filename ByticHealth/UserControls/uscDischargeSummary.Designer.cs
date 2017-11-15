@@ -63,23 +63,14 @@
             this.txtDischargeCode = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.grbAdviceGivenToPatient = new System.Windows.Forms.GroupBox();
             this.dgvOperationAndProcedure = new System.Windows.Forms.DataGridView();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgvDiagnosis = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.dgvActions = new System.Windows.Forms.DataGridView();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dgvImmunization = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgvMedicationDischarge = new System.Windows.Forms.DataGridView();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -90,17 +81,21 @@
             this.grbInformationGivenToPatient = new System.Windows.Forms.GroupBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSaveActions = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.rtbActionDetails = new System.Windows.Forms.RichTextBox();
             this.grbActionType = new System.Windows.Forms.GroupBox();
             this.cmbActionType = new System.Windows.Forms.ComboBox();
+            this.dgvActions = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -126,17 +121,13 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.grbAdviceGivenToPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperationAndProcedure)).BeginInit();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosis)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).BeginInit();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImmunization)).BeginInit();
-            this.tableLayoutPanel8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicationDischarge)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -152,7 +143,6 @@
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
@@ -163,6 +153,8 @@
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             this.grbActionType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -551,7 +543,6 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.grbAdviceGivenToPatient, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.groupBox8, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -564,54 +555,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(450, 250);
             this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.button9, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(219, 221);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 26);
-            this.tableLayoutPanel5.TabIndex = 22;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(155, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 20);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Delete";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(79, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 20);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Location = new System.Drawing.Point(3, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(70, 20);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // grbAdviceGivenToPatient
             // 
@@ -657,9 +600,9 @@
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel5, 0, 5);
             this.tableLayoutPanel7.Controls.Add(this.groupBox13, 0, 4);
             this.tableLayoutPanel7.Controls.Add(this.groupBox11, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 5);
             this.tableLayoutPanel7.Controls.Add(this.groupBox9, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.groupBox10, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.groupBox12, 0, 3);
@@ -679,7 +622,6 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.dgvActions);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox13.Location = new System.Drawing.Point(3, 383);
             this.groupBox13.Name = "groupBox13";
@@ -687,15 +629,6 @@
             this.groupBox13.TabIndex = 27;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Actions";
-            // 
-            // dgvActions
-            // 
-            this.dgvActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvActions.Location = new System.Drawing.Point(3, 16);
-            this.dgvActions.Name = "dgvActions";
-            this.dgvActions.Size = new System.Drawing.Size(500, 83);
-            this.dgvActions.TabIndex = 1;
             // 
             // groupBox11
             // 
@@ -716,53 +649,6 @@
             this.dgvImmunization.Name = "dgvImmunization";
             this.dgvImmunization.Size = new System.Drawing.Size(500, 55);
             this.dgvImmunization.TabIndex = 1;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Controls.Add(this.button4, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button5, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(281, 491);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(228, 31);
-            this.tableLayoutPanel8.TabIndex = 24;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(155, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 25);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(79, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 25);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Update";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Location = new System.Drawing.Point(3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(70, 25);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Save";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
@@ -844,7 +730,7 @@
             this.grbInformationGivenToPatient.Size = new System.Drawing.Size(966, 525);
             this.grbInformationGivenToPatient.TabIndex = 3;
             this.grbInformationGivenToPatient.TabStop = false;
-            this.grbInformationGivenToPatient.Text = "Information given to patient and carer";
+            this.grbInformationGivenToPatient.Text = "Information Given To Patient";
             // 
             // splitContainer4
             // 
@@ -869,7 +755,7 @@
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer5.Panel1.Controls.Add(this.dgvActions);
             // 
             // splitContainer5.Panel2
             // 
@@ -878,15 +764,6 @@
             this.splitContainer5.Size = new System.Drawing.Size(960, 326);
             this.splitContainer5.SplitterDistance = 219;
             this.splitContainer5.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(960, 219);
-            this.dataGridView1.TabIndex = 0;
             // 
             // splitContainer7
             // 
@@ -909,7 +786,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnSaveActions, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 1);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -938,15 +815,16 @@
             this.button2.Text = "Update";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSaveActions
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 20);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSaveActions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSaveActions.Location = new System.Drawing.Point(3, 3);
+            this.btnSaveActions.Name = "btnSaveActions";
+            this.btnSaveActions.Size = new System.Drawing.Size(135, 20);
+            this.btnSaveActions.TabIndex = 1;
+            this.btnSaveActions.Text = "Save";
+            this.btnSaveActions.UseVisualStyleBackColor = true;
+            this.btnSaveActions.Click += new System.EventHandler(this.btnSaveActions_Click);
             // 
             // groupBox7
             // 
@@ -1005,6 +883,63 @@
             this.cmbActionType.Size = new System.Drawing.Size(287, 21);
             this.cmbActionType.TabIndex = 0;
             // 
+            // dgvActions
+            // 
+            this.dgvActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvActions.Location = new System.Drawing.Point(0, 0);
+            this.dgvActions.Name = "dgvActions";
+            this.dgvActions.Size = new System.Drawing.Size(960, 219);
+            this.dgvActions.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(281, 491);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 31);
+            this.tableLayoutPanel5.TabIndex = 28;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.Location = new System.Drawing.Point(155, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(70, 25);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Delete";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Location = new System.Drawing.Point(79, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(70, 25);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Update";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(3, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(70, 25);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // uscDischargeSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1047,17 +982,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.grbAdviceGivenToPatient.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperationAndProcedure)).EndInit();
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosis)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).EndInit();
             this.groupBox11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvImmunization)).EndInit();
-            this.tableLayoutPanel8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicationDischarge)).EndInit();
             this.groupBox10.ResumeLayout(false);
@@ -1073,7 +1004,6 @@
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
@@ -1084,6 +1014,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             this.grbActionType.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1125,21 +1057,16 @@
         private System.Windows.Forms.TextBox txtDischargeCode;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox grbAdviceGivenToPatient;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox grbInformationGivenToPatient;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSaveActions;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.RichTextBox rtbActionDetails;
@@ -1155,13 +1082,13 @@
         private System.Windows.Forms.DataGridView dgvDiet;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.DataGridView dgvImmunization;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.DataGridView dgvMedicationStoppedOrWithheld;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.DataGridView dgvActions;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSave;
     }
 }
