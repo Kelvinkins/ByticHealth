@@ -21,7 +21,7 @@ namespace ByticHealth.Forms
         public static uscRelative uscRelate;
         public static uscPatientHistory uscPatHistory;
         public static uscBilling uscPatBill;
-        public static uscVital uscVit;
+        public static uscPatientMaintenance maintain;
         public frmPatRegistration(int PatNum)
         {
             InitializeComponent();
@@ -79,12 +79,12 @@ namespace ByticHealth.Forms
                 uscPatBill.AutoScroll = true;
                 splitContainerPatientBills.Panel2.Controls.Add(uscPatBill);
             }
-            else if(tabControl1.SelectedTab.Name== "tabPagePatientVitals")
+            else if(tabControl1.SelectedTab.Name== "tabPagePatientMaintenance")
             {
-                uscVit = new uscVital(uscPatientRegistration.PatNum);
-                uscVit.Dock = DockStyle.Fill;
-                uscVit.AutoScroll = true;
-                splitContainerPatientVital.Panel2.Controls.Add(uscVit);
+                maintain = new uscPatientMaintenance(uscPatientRegistration.PatNum);
+                maintain.Dock = DockStyle.Fill;
+                maintain.AutoScroll = true;
+                splitContainerPatientMaintenace.Panel2.Controls.Add(maintain);
             }
 
         }

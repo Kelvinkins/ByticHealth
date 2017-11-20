@@ -40,6 +40,7 @@ namespace ByticHealth.App_Data
         [ForeignKey("DischargingConsultantID")]
         public Staff DischargingConsultant { get; set; }
         public int? DischargingConsultantID { get; set; }
+        public bool? Closed { get; set; }
 
 
     }

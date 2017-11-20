@@ -43,7 +43,7 @@ namespace ByticHealth.UserControls
             txtSSN.Text = patient.SSN;
             lblPatNum.Text = patient.PatNum.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Sorry, there is no patient with the entered code,\n Please try again");
             }

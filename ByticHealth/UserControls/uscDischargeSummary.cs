@@ -40,7 +40,21 @@ namespace ByticHealth.UserControls
                 discharge = db.Discharges.Find(DsgNum);
                 if (discharge != null)
                 {
+                    dsummary = db.DischargeSummaries.Where(ds => ds.DgNum == discharge.DgNum).FirstOrDefault();
+                    if (dsummary != null)
+                    {
+                        if (Convert.ToBoolean(dsummary.Closed))
+                        {
+                            lblMessage.Text = "This, Discharge summary has been closed, you can no longer make changes it.";
 
+                        }
+                        else
+                        {
+                            btnSave.Enabled = false;
+                            lblMessage.Text = "This Discharge Summary has been processed you can only actions";
+                        }
+                    }
+                
                     txtFullname.Text = discharge.Patient.FirstName + " " + discharge.Patient.LastName + " [" + discharge.Patient.PatNum + "]";
                     txtPhone.Text = discharge.Patient.CellPhone + "," + discharge.Patient.HomePhoneNo;
                     txtAdmissionDate.Text = discharge.Admission.AdmissionDate.ToShortDateString();
@@ -149,15 +163,34 @@ namespace ByticHealth.UserControls
             }
             else
             {
+                action.DgNum = Convert.ToInt32(dsummary.DgNum);
                 db.Actions.Add(action);
                 if(db.SaveChanges()>0)
                 {
+                    cmbActionType.DataSource = Enum.GetValues(typeof(Enumerations.ActionType));
                     MessageBox.Show("Action saved successfully!");
                 }
                 else
                 {
                     MessageBox.Show("Error saving record");
                 }
+            }
+        }
+
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            var ds = db.DischargeSummaries.Find(dsummary.SumID);
+            ds.Closed = true;
+            if (db.SaveChanges() > 0)
+            {
+                btnSaveActions.Enabled = false;
+                MessageBox.Show("This, Discharge summary has been closed, you can no longer make changes it.");
+                lblMessage.Text = "This, Discharge summary has been closed, you can no longer make changes it.";
+            }
+            else
+            {
+                btnSaveActions.Enabled = true;
+
             }
         }
     }

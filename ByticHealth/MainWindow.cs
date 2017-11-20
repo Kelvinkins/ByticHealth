@@ -14,7 +14,7 @@ namespace ByticHealth
 {
     public  partial class MainWindow : Form
     {
-        private int childFormNumber = 0;
+        //private int childFormNumber = 0;
 
         public MainWindow()
         {

@@ -37,7 +37,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPageRelative = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPagePatientVitals = new System.Windows.Forms.TabPage();
+            this.tabPagePatientMaintenance = new System.Windows.Forms.TabPage();
+            this.splitContainerPatientMaintenace = new System.Windows.Forms.SplitContainer();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPagePatientBill = new System.Windows.Forms.TabPage();
             this.splitContainerPatientBills = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,26 +52,23 @@
             this.Prescriptions = new System.Windows.Forms.TabPage();
             this.Insurance = new System.Windows.Forms.TabPage();
             this.uscInsuranceInfo1 = new ByticHealth.UserControls.uscInsuranceInfo();
-            this.splitContainerPatientVital = new System.Windows.Forms.SplitContainer();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPagePatientHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPagePatientVitals.SuspendLayout();
+            this.tabPagePatientMaintenance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientMaintenace)).BeginInit();
+            this.splitContainerPatientMaintenace.Panel1.SuspendLayout();
+            this.splitContainerPatientMaintenace.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabPagePatientBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientBills)).BeginInit();
             this.splitContainerPatientBills.Panel1.SuspendLayout();
             this.splitContainerPatientBills.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Insurance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientVital)).BeginInit();
-            this.splitContainerPatientVital.Panel1.SuspendLayout();
-            this.splitContainerPatientVital.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,7 +78,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPageRelative);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPagePatientVitals);
+            this.tabControl1.Controls.Add(this.tabPagePatientMaintenance);
             this.tabControl1.Controls.Add(this.tabPagePatientBill);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
@@ -177,15 +177,48 @@
             this.tabPage5.Text = "Dependants";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPagePatientVitals
+            // tabPagePatientMaintenance
             // 
-            this.tabPagePatientVitals.Controls.Add(this.splitContainerPatientVital);
-            this.tabPagePatientVitals.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePatientVitals.Name = "tabPagePatientVitals";
-            this.tabPagePatientVitals.Size = new System.Drawing.Size(1031, 582);
-            this.tabPagePatientVitals.TabIndex = 8;
-            this.tabPagePatientVitals.Text = "Vitals";
-            this.tabPagePatientVitals.UseVisualStyleBackColor = true;
+            this.tabPagePatientMaintenance.Controls.Add(this.splitContainerPatientMaintenace);
+            this.tabPagePatientMaintenance.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatientMaintenance.Name = "tabPagePatientMaintenance";
+            this.tabPagePatientMaintenance.Size = new System.Drawing.Size(1031, 582);
+            this.tabPagePatientMaintenance.TabIndex = 8;
+            this.tabPagePatientMaintenance.Text = "Maintenance";
+            this.tabPagePatientMaintenance.UseVisualStyleBackColor = true;
+            // 
+            // splitContainerPatientMaintenace
+            // 
+            this.splitContainerPatientMaintenace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerPatientMaintenace.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerPatientMaintenace.Name = "splitContainerPatientMaintenace";
+            this.splitContainerPatientMaintenace.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainerPatientMaintenace.Panel1
+            // 
+            this.splitContainerPatientMaintenace.Panel1.Controls.Add(this.panel3);
+            this.splitContainerPatientMaintenace.Size = new System.Drawing.Size(1031, 582);
+            this.splitContainerPatientMaintenace.SplitterDistance = 30;
+            this.splitContainerPatientMaintenace.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1031, 30);
+            this.panel3.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(361, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "PATIENT MAINTENANCE";
             // 
             // tabPagePatientBill
             // 
@@ -295,39 +328,6 @@
             this.uscInsuranceInfo1.Size = new System.Drawing.Size(1025, 576);
             this.uscInsuranceInfo1.TabIndex = 0;
             // 
-            // splitContainerPatientVital
-            // 
-            this.splitContainerPatientVital.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerPatientVital.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerPatientVital.Name = "splitContainerPatientVital";
-            this.splitContainerPatientVital.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainerPatientVital.Panel1
-            // 
-            this.splitContainerPatientVital.Panel1.Controls.Add(this.panel3);
-            this.splitContainerPatientVital.Size = new System.Drawing.Size(1031, 582);
-            this.splitContainerPatientVital.SplitterDistance = 30;
-            this.splitContainerPatientVital.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1031, 30);
-            this.panel3.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(361, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "PATIENT VITALS";
-            // 
             // frmPatRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,17 +345,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.tabPagePatientVitals.ResumeLayout(false);
+            this.tabPagePatientMaintenance.ResumeLayout(false);
+            this.splitContainerPatientMaintenace.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientMaintenace)).EndInit();
+            this.splitContainerPatientMaintenace.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.tabPagePatientBill.ResumeLayout(false);
             this.splitContainerPatientBills.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientBills)).EndInit();
             this.splitContainerPatientBills.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.Insurance.ResumeLayout(false);
-            this.splitContainerPatientVital.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerPatientVital)).EndInit();
-            this.splitContainerPatientVital.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -366,7 +366,7 @@
         private System.Windows.Forms.TabPage tabPageRelative;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPagePatientBill;
-        private System.Windows.Forms.TabPage tabPagePatientVitals;
+        private System.Windows.Forms.TabPage tabPagePatientMaintenance;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage10;
@@ -381,7 +381,7 @@
         private System.Windows.Forms.SplitContainer splitContainerPatientBills;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.SplitContainer splitContainerPatientVital;
+        private System.Windows.Forms.SplitContainer splitContainerPatientMaintenace;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
 

@@ -68,6 +68,10 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgvDiagnosis = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.dgvImmunization = new System.Windows.Forms.DataGridView();
@@ -81,6 +85,7 @@
             this.grbInformationGivenToPatient = new System.Windows.Forms.GroupBox();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.dgvActions = new System.Windows.Forms.DataGridView();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -91,11 +96,8 @@
             this.rtbActionDetails = new System.Windows.Forms.RichTextBox();
             this.grbActionType = new System.Windows.Forms.GroupBox();
             this.cmbActionType = new System.Windows.Forms.ComboBox();
-            this.dgvActions = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.btnProcess = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -126,6 +128,8 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosis)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImmunization)).BeginInit();
             this.groupBox9.SuspendLayout();
@@ -138,11 +142,13 @@
             this.grbInformationGivenToPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
             this.splitContainer7.Panel2.SuspendLayout();
             this.splitContainer7.SuspendLayout();
@@ -153,8 +159,6 @@
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
             this.grbActionType.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).BeginInit();
-            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -620,8 +624,57 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(512, 525);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Controls.Add(this.button9, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button6, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(281, 491);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 31);
+            this.tableLayoutPanel5.TabIndex = 28;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.Location = new System.Drawing.Point(155, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(70, 25);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Delete";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.Location = new System.Drawing.Point(79, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(70, 25);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Update";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.Location = new System.Drawing.Point(3, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(70, 25);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.lblMessage);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox13.Location = new System.Drawing.Point(3, 383);
             this.groupBox13.Name = "groupBox13";
@@ -742,6 +795,10 @@
             // splitContainer4.Panel1
             // 
             this.splitContainer4.Panel1.Controls.Add(this.splitContainer5);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.btnProcess);
             this.splitContainer4.Size = new System.Drawing.Size(960, 506);
             this.splitContainer4.SplitterDistance = 326;
             this.splitContainer4.TabIndex = 0;
@@ -764,6 +821,15 @@
             this.splitContainer5.Size = new System.Drawing.Size(960, 326);
             this.splitContainer5.SplitterDistance = 219;
             this.splitContainer5.TabIndex = 0;
+            // 
+            // dgvActions
+            // 
+            this.dgvActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvActions.Location = new System.Drawing.Point(0, 0);
+            this.dgvActions.Name = "dgvActions";
+            this.dgvActions.Size = new System.Drawing.Size(960, 219);
+            this.dgvActions.TabIndex = 2;
             // 
             // splitContainer7
             // 
@@ -883,62 +949,28 @@
             this.cmbActionType.Size = new System.Drawing.Size(287, 21);
             this.cmbActionType.TabIndex = 0;
             // 
-            // dgvActions
+            // lblMessage
             // 
-            this.dgvActions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActions.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvActions.Location = new System.Drawing.Point(0, 0);
-            this.dgvActions.Name = "dgvActions";
-            this.dgvActions.Size = new System.Drawing.Size(960, 219);
-            this.dgvActions.TabIndex = 2;
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Uighur", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.Green;
+            this.lblMessage.Location = new System.Drawing.Point(46, 36);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(15, 26);
+            this.lblMessage.TabIndex = 0;
+            this.lblMessage.Text = ".";
             // 
-            // tableLayoutPanel5
+            // btnProcess
             // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.button9, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button6, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnSave, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(281, 491);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 31);
-            this.tableLayoutPanel5.TabIndex = 28;
-            // 
-            // button9
-            // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Location = new System.Drawing.Point(155, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 25);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Delete";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Location = new System.Drawing.Point(79, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 25);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Update";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSave.Location = new System.Drawing.Point(3, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(70, 25);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnProcess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProcess.Location = new System.Drawing.Point(806, 4);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(151, 23);
+            this.btnProcess.TabIndex = 0;
+            this.btnProcess.Text = "Process";
+            this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // uscDischargeSummary
             // 
@@ -987,6 +1019,9 @@
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosis)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvImmunization)).EndInit();
             this.groupBox9.ResumeLayout(false);
@@ -998,12 +1033,14 @@
             this.tabPage2.ResumeLayout(false);
             this.grbInformationGivenToPatient.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).EndInit();
             this.splitContainer7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
             this.splitContainer7.ResumeLayout(false);
@@ -1014,8 +1051,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             this.grbActionType.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvActions)).EndInit();
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1090,5 +1125,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Button btnProcess;
     }
 }

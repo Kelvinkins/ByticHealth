@@ -315,6 +315,12 @@
     <Compile Include="UserControls\uscPatientHistory.Designer.cs">
       <DependentUpon>uscPatientHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\uscPatientMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscPatientMaintenance.Designer.cs">
+      <DependentUpon>uscPatientMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uscPatientRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -426,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscPatientHistory.resx">
       <DependentUpon>uscPatientHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uscPatientMaintenance.resx">
+      <DependentUpon>uscPatientMaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uscPatientRegistration.resx">
       <DependentUpon>uscPatientRegistration.cs</DependentUpon>
